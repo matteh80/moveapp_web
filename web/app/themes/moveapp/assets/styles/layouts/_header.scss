@@ -1,0 +1,59 @@
+header {
+
+  .container {
+    @media(min-width: $grid-float-breakpoint) {
+      display: table;
+    }
+
+
+    .brand {
+      height: 70px;
+      display: none;
+      @media(min-width: $grid-float-breakpoint) {
+        display: block;
+      }
+
+      img {
+        max-height: 100%;
+        padding: 15px 0;
+      }
+    }
+
+    #button-wrapper {
+      text-align: right;
+      display: table-cell;
+      vertical-align: middle;
+
+      button {
+        display: none;
+        @media(min-width: $grid-float-breakpoint) {
+          display: inline-block;
+        }
+        font-size: 16px;
+        border-radius: 40px;
+        padding: 10px 30px;
+        color: whitesmoke;
+        transition: background-color 200ms, border-radius 200ms;
+
+        &:first-of-type {
+          background-color: $buttongray;
+          &:hover {
+            background-color: darken($buttongray, 15%);
+          }
+        }
+        &:last-of-type {
+          background-color: $blue;
+          &:hover {
+            background-color: darken($blue, 15%);
+          }
+        }
+      }
+    }
+  }
+
+  nav {
+    @media(min-width: $grid-float-breakpoint) {
+      background-color: $lightgray;
+    }
+  }
+}

@@ -1,0 +1,371 @@
+section {
+  padding: 50px 0;
+  position: relative;
+  z-index: 1;
+
+  &:after {
+    z-index: 2;
+    content: '';
+    background: url("../../assets/images/shadow.png") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: -20px;
+  }
+
+  h2 {
+    font-family: "Futura LT";
+    font-size: 48px;
+    margin-bottom: 40px;
+    @media(min-width: $screen-md-min) {
+      font-size: 60px;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+.infoheader {
+  position: relative;
+  padding: 100px 0;
+  background: url("../../assets/images/header_bg.jpg");
+  background-size: cover;
+  background-position: 0% 100%;
+  @media(min-width: $screen-md-min) {
+    background-position: 30% 100%;
+  }
+  
+
+
+  h1 {
+    font-family: "Futura LT Heavy";
+    font-size: 48px;
+    margin-bottom: 20px;
+    background-color: rgba(255, 255, 255, 0.65);
+    @media(min-width: $screen-md-min) {
+      font-size: 70px;
+      margin-bottom: 50px;
+    }
+  }
+
+  h4 {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.65);
+    @media(min-width: $screen-md-min) {
+      font-size: 26px;
+    }
+  }
+
+  button {
+    margin-top: 50px;
+    @media(min-width: $screen-md-min) {
+      font-size: 26px;
+    }
+  }
+
+  .appstore-wrapper {
+    margin-top: 80px;
+  }
+}
+
+.news {
+  z-index: 3;
+
+  .news-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+
+    article {
+      margin: 0;
+      padding: 0px;
+      position: relative;
+      overflow: hidden;
+
+      .title-wrapper {
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        margin-left: 0;
+
+        h2 {
+          background-color: #fff;
+          font-size: 20px;
+          @media(min-width: $screen-sm-min) {
+            font-size: 24px;
+          }
+          @media(min-width: $screen-md-min) {
+            font-size: 20px;
+          }
+          @media(min-width: $screen-lg-min) {
+            font-size: 24px;
+          }
+          padding: 10px 10px 10px 30px;
+          margin-bottom: 10px;
+        }
+
+        .date {
+          color: #fff;
+          background-color: #000;
+          display: inline-block;
+          padding: 5px 15px;
+          font-family: "Futura LT";
+          font-size: 13px;
+          position: relative;
+          bottom: -20px;
+          left: 50px;
+        }
+
+        .read-more {
+          color: $brand-primary;
+          background-color: #000;
+          display: inline-block;
+          padding: 5px 15px;
+          font-family: "Futura LT";
+          font-size: 13px;
+          position: relative;
+          bottom: 10px;
+          left: 50px;
+        }
+      }
+
+      &.large {
+
+        .title-wrapper{
+          margin-right: 20px;
+
+          h2 {
+            font-size: 20px;
+            padding: 10px 10px 10px 50px;
+            margin-bottom: 20px;
+            @media(min-width: $screen-sm-min) {
+              font-size: 36px;
+            }
+            @media(min-width: $screen-md-min) {
+              font-size: 32px;
+            }
+            @media(min-width: $screen-lg-min) {
+              font-size: 40px;
+            }
+          }
+
+          .date {
+            padding: 5px 15px;
+            font-size: 13px;
+            @media(min-width: $screen-md-min) {
+              font-size: 18px;
+            }
+            bottom: -20px;
+            left: 50px;
+          }
+
+          .read-more {
+            padding: 5px 15px;
+            font-family: "Futura LT";
+            font-size: 13px;
+            @media(min-width: $screen-md-min) {
+              font-size: 16px;
+            }
+            bottom: 20px;
+            left: 50px;
+          }
+        }
+      }
+      
+      img {
+        width: 100%;
+        transition: transform 250ms ease-out;
+      }
+
+      &:hover img, :focus img{
+        transform: scale(1.1,1.1);
+      }
+
+    }
+  }
+  .button-wrapper {
+    margin: 80px auto 30px;
+  }
+}
+
+.films {
+  background-color: #f6f5f5;
+  z-index: inherit;
+  
+  .filmer-wrapper {
+    .thumbs-wrapper {
+      margin-bottom: 25px;
+
+      .thumb {
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+
+        video {
+          &:after {
+            content: '\f466';
+            font-family: Genericons;
+          }
+        }
+
+        .title-wrapper {
+          bottom: 0;
+          left: 0;
+          position: absolute;
+          margin-left: 0;
+
+          h2 {
+            background-color: #fff;
+            color: #000;
+            &.inverted {
+              background-color: #000;
+              color: #fff;
+            }
+            font-size: 20px;
+            @media(min-width: $screen-sm-min) {
+              font-size: 24px;
+            }
+            @media(min-width: $screen-md-min) {
+              font-size: 20px;
+            }
+            @media(min-width: $screen-lg-min) {
+              font-size: 24px;
+            }
+            padding: 10px 10px 10px 30px;
+            margin-bottom: 20px;
+          }
+        }
+
+        img {
+          &.img-responsive {
+            width: 100%;
+            height: auto;
+          }
+        }
+        .play-btn {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left:-32.5px;
+          margin-top: -32.5px;
+        }
+      }
+    }
+    .text-wrapper {
+      padding: 0 100px;
+    }
+  }
+}
+
+.appen {
+  padding-top: 0;
+  .header {
+    img {
+      width: 100%;
+    }
+  }
+  .appen-wrapper {
+    @media(min-width: $screen-md-min) {
+      column-count: 2;
+      column-gap: 40px;
+      padding: 0 100px;
+    }
+  }
+
+  .round {
+    margin-top: 50px;
+    &:before {
+      content: '';
+      height: 100px;
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+    &:nth-of-type(1):before {
+      background: url("../../assets/images/round_play.png");
+    }
+    &:nth-of-type(2):before {
+      background: url("../../assets/images/round_gps.png");
+    }
+    &:nth-of-type(3):before {
+      background: url("../../assets/images/round_profile.png");
+    }
+    &:nth-of-type(4):before {
+      background: url("../../assets/images/round_calendar.png");
+    }
+  }
+}
+
+.kent {
+  background-color: #f6f5f5;
+  z-index: inherit;
+
+  img {
+    margin: 0 auto;
+  }
+
+  .kent-wrapper {
+    display: table;
+    
+    blockquote {
+      display: table-cell;
+      vertical-align: middle;
+      border-color: transparent;
+      &:before {
+        content: '';
+        width: 60px;
+        height: 45px;
+        background: url("../../assets/images/quote_yellow.png");
+        display: block;
+        margin-bottom: 30px;
+      }
+
+      .small {
+        font-size: 16px;
+        color: $gray;
+      }
+    }
+  }
+}
+
+.abonnemang {
+  .abonnemang-wrapper {
+    @media(min-width: $screen-md-min) {
+      padding: 0 100px;
+    }
+    
+    .panel {
+      @media(min-width: $screen-md-min) {
+        padding: 50px;
+      }
+    }
+
+    h2 {
+      font-family: "Futura LT Heavy";
+      font-size: 50px;
+      text-align: center;
+      @media(min-width: $screen-md-min) {
+        text-align: left;
+      }
+    }
+    h4 {
+      font-size: 46px;
+      font-family: "Helvetica Neue LT Std 55";
+      margin-bottom: 0;
+    }
+    h5 {
+      font-size: 26px;
+      font-family: "Helvetica Neue LT Std 55";
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+    .btn {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+    .appstore-wrapper{
+      img {
+        margin: 0 auto;
+      }
+    }
+  }
+}

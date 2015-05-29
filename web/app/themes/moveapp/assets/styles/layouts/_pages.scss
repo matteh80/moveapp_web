@@ -1,0 +1,9 @@
+.page-header {
+  h1 {
+    font-size: 32px;
+    padding-left: 15px;
+    @media(min-width: $screen-md-min) {
+      font-size: 50px;
+    }
+  }
+}
