@@ -1,24 +1,24 @@
 @font-face {
   font-family: 'Futura LT Heavy';
-  src: url('../../assets/fonts/FuturaLT-Heavy.ttf');
+  src: url('../../dist/fonts/FuturaLT-Heavy.ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Futura LT';
-  src: url('../../assets/fonts/FuturaLT.ttf');
+  src: url('../../dist/fonts/FuturaLT.ttf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Helvetica Neue LT Std 55';
-  src: url('../../assets/fonts/HelveticaNeueLTStd-55.otf');
+  src: url('../../dist/fonts/HelveticaNeueLTStd-55.otf');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'Helvetica Neue LT Std 65';
-  src: url('../../assets/fonts/HelveticaNeueLTStd-65.otf');
+  src: url('../../dist/fonts/HelveticaNeueLTStd-65.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,21 +26,9 @@
 body {
   font-family: "Helvetica Neue LT Std 55"
 }
-.btn {
-  border-radius: 40px;
-  color: #fff;
-  background-color: $blue;
-  font-size: 18px;
-  padding: 10px 20px;
-  color: #fff;
-  transition: background-color 200ms, padding 500ms, border-radius 500ms;
 
-  &:hover, :focus {
-    color: #fff;
-    background-color: darken($blue, 15%);
-    padding: 10px 50px;
-    border-radius: 1px;
-  }
+a {
+  color: darken($brand-primary, 35%);
 }
 
 h1, h2, h3, h4, h5, h6 {

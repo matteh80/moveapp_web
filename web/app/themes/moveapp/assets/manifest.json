@@ -6,6 +6,9 @@
       ],
       "main": true
     },
+    "remote-api.js": {
+      "vendor": ["assets/scripts/remote-api.js"]
+    },
     "main.css": {
       "files": [
         "styles/main.scss"
@@ -22,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://moveapp.dev"
+    "devUrl": "http://localhost/MoveApp/bedrock/web/"
   }
 }

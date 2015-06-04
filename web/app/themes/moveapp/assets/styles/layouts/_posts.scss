@@ -1,0 +1,65 @@
+.main {
+  article {
+    margin-top: 50px;
+
+    header {
+      .thumb {
+        position: relative;
+
+        img {
+
+        }
+
+        .text {
+          position: absolute;
+          bottom: 10px;
+
+          h1 {
+            background-color: #000;
+            color: #fff;
+            &.inverted {
+              background-color: #000;
+              color: #fff;
+            }
+            font-size: 18px;
+            @media(min-width: $screen-sm-min) {
+              font-size: 24px;
+            }
+            @media(min-width: $screen-md-min) {
+              font-size: 32px;
+            }
+            @media(min-width: $screen-lg-min) {
+              font-size: 38px;
+            }
+            padding: 10px 10px 10px 30px;
+            margin-bottom: 20px;
+          }
+          time {
+            font-family: "Futura LT";
+            position: absolute;
+
+            left: 5%;
+            padding: 5px;
+            background: #fff;
+            font-size: 13px;
+            top: -8px;
+            @media(min-width: $screen-md-min) {
+              font-size: 18px;
+              top: -15px;
+            }
+          }
+          .byline {
+            display: none;
+          }
+        }
+      }
+    }
+    .entry-content {
+      margin-top: 20px;
+      
+      .tags {
+        color: darken($brand-primary, 25%);
+      }
+    }
+  }
+}

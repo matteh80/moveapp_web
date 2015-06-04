@@ -6,39 +6,42 @@
                 <h4><p>Välj bland 100-tals träningsfilmer, allt samlat i en liten app.</p>
 
                     <p>99 kr i månaden, en prova på månad gratis. Inga bindningstider.</p></h4>
-                <button class="btn">Påbörja min gratismånad!</button>
+                <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
             </div>
         </div>
         <div class="appstore-wrapper row">
             <div class="col-sm-4 col-md-3 col-md-offset-6">
                 <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/playstore.png"
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png"
                          class="img-responsive"/>
                 </a>
             </div>
             <div class="col-sm-4 col-md-3">
-                <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/appstore.png"
+                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                          class="img-responsive"/>
                 </a>
             </div>
         </div>
     </div>
 </section>
+<?php
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => 5,
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'post_status' => 'publish'
+);
+$posts = get_posts($args);
+if($posts):
+?>
 <section class="row news">
     <div class="container">
         <h2 class="text-center">Nyheter</h2>
     </div>
     <div class="row news-wrapper">
         <?php
-        $args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 5,
-            'orderby' => 'date',
-            'order' => 'DESC',
-            'post_status' => 'publish'
-        );
-        $posts = get_posts($args);
         $x = 0;
         foreach ($posts as $post) {
             setup_postdata($post);
@@ -58,7 +61,7 @@
                         <h2>
                             <?php the_title();?>
                         </h2>
-                        <div class="read-more">Läs mer &raquo;</div>
+                        <a href="<?php echo get_permalink($post->ID); ?>"><div class="read-more">Läs mer &raquo;</div></a>
                     </div>
 
                     
@@ -72,107 +75,118 @@
 
     </div>
     <div class="container text-center button-wrapper">
-        <button class="btn text-center">Visa alla nyheter</button>
+        <?php
+        function get_page_id_by_slug($slug){
+            global $wpdb;
+            $id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."'AND post_type = 'page'");
+            return $id;
+        }
+        $nyheterurl = get_permalink(get_page_id_by_slug('nyheter'));
+        ?>
+        <a href="<?= $nyheterurl;?>"><button class="btn text-center">Visa alla nyheter</button></a>
     </div>
 </section>
+<?php endif; ?>
 <section class="row films">
     <div class="container">
         <h2 class="text-center">Filmerna</h2>
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/cc_appletv.png" class="cc_appletv" />
     </div>
     <div class="container-fluid filmer-wrapper">
         <div class="row thumbs-wrapper">
 <!--            Video 1 - Fokus-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
-                    <h2 class="inverted">Fokus</h2>
+                    <h2>Fokus</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video1.mp4" type="video/mp4">
+                <video id="video1" width="100%" height="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video1.png" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 <!--            Video 2 - Gravidyoga-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Gravidyoga</h2>
                 </div>
-                <video width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video2.mp4" type="video/mp4">
+                <video width="100%" height="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video2.png" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 <!--            Video 3 - Core-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Core</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video3.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video3.png" height="100%" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 
 <!--            VIDEO 4 - Styrka-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
-                    <h2 class="inverted">Styrka</h2>
+                    <h2>Styrka</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video4.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video4.png" height="100%" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 <!--            VIDEO 5 - pilates-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Pilates</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video5.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video5.png" height="100%" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 <!--            VIDEO 6 - Kampsportsfys-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
-                    <h2 class="inverted">Puls</h2>
+                    <h2>Puls</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video6.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video6.png" height="100%" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 <!--            Video 7 - Yoga-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
-                    <h2 class="inverted">Yoga</h2>
+                    <h2>Yoga</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video7.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video7.png" height="100%" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video7.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
 <!--            Video 8 - Dans-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
-                    <h2 class="inverted">Dans</h2>
+                    <h2>Dans</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" preload="metadata">
-                    <source src="<?php bloginfo('stylesheet_directory'); ?>/assets/videos/video8.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video8.png" height="100%" preload="none">
+                    <source src="<?= get_template_directory_uri(); ?>/videos/video8.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/play_btn.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
             </div>
         </div>
         <div class="container text-wrapper">
-            <div class="col-lg-7">
+            <div class="col-lg-12">
+                <h3><strong>Vi har 100-tals träningspass att välja mellan</strong></h3>
                 <p>
                     Träningspassen är mellan 5-60 minuter långa och du kan välja mellan att köra hårda fyspass, yoga och pilates, jobba på sexpacket, dansa loss, träna styrka,
                     kämpa upp uthållighet eller fixa till det där flåset. Utbudet är stort och varierat och växer ständigt.
@@ -188,7 +202,7 @@
 </section>
 <section class="row appen">
     <div class="header">
-        <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/appen_header.png" class="img-responsive" />
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/appen_header.png" class="img-responsive" />
     </div>
     <div class="container">
         <h2 class="text-center">Appen</h2>
@@ -234,7 +248,7 @@
 <section class="row kent">
     <div class="container">
         <div class="col-md-4">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/kent.png" class="img-responsive" />
+            <img src="<?= get_template_directory_uri(); ?>/dist/images/kent.png" class="img-responsive" />
         </div>
         <div class="col-md-8 kent-wrapper">
             <blockquote>
@@ -267,17 +281,17 @@
                 <h5>
                     Inga bindningstider
                 </h5>
-                <button class="btn">Påbörja min gratismånad!</button>
+                <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
                 <div class="appstore-wrapper">
                     <div class="col-sm-6 col-md-5 col-md-offset-1">
                         <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/playstore.png"
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png"
                                  class="img-responsive"/>
                         </a>
                     </div>
                     <div class="col-sm-6 col-md-5">
-                        <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
-                            <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/appstore.png"
+                        <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">
+                            <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                                  class="img-responsive"/>
                         </a>
                     </div>

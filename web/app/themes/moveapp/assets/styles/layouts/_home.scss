@@ -1,4 +1,22 @@
-section {
+body.home {
+  .btn {
+    border-radius: 40px;
+    color: #fff;
+    background-color: $blue;
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #fff;
+    transition: background-color 200ms, padding 500ms, border-radius 500ms;
+
+    &:hover, :focus {
+      color: #fff;
+      background-color: darken($blue, 15%);
+      padding: 10px 50px;
+      //border-radius: 1px;
+    }
+  }
+}
+section.row{
   padding: 50px 0;
   position: relative;
   z-index: 1;
@@ -6,7 +24,7 @@ section {
   &:after {
     z-index: 2;
     content: '';
-    background: url("../../assets/images/shadow.png") no-repeat;
+    background: url("../../dist/images/sect_shadow.png") no-repeat;
     background-size: contain;
     width: 100%;
     height: 20px;
@@ -28,11 +46,16 @@ section {
 .infoheader {
   position: relative;
   padding: 100px 0;
-  background: url("../../assets/images/header_bg.jpg");
+  background: url("../../dist/images/header_bg.jpg");
   background-size: cover;
   background-position: 0% 100%;
   @media(min-width: $screen-md-min) {
     background-position: 30% 100%;
+  }
+
+  &:after {
+    bottom: 0px !important;
+    background-color: #f6f5f5 !important;
   }
   
 
@@ -59,17 +82,23 @@ section {
   button {
     margin-top: 50px;
     @media(min-width: $screen-md-min) {
-      font-size: 26px;
+      font-size: 26px !important;
     }
   }
 
   .appstore-wrapper {
     margin-top: 80px;
+    margin-bottom: 100px;
   }
 }
 
 .news {
   z-index: 3;
+  
+  &:after {
+    bottom: 0px !important;
+    background-color: #f6f5f5 !important;
+  }
 
   .news-wrapper {
     margin-left: 0;
@@ -125,6 +154,14 @@ section {
           position: relative;
           bottom: 10px;
           left: 50px;
+
+          transition: all 500ms;
+
+          &:hover {
+            padding: 5px 35px;
+            background-color: $brand-primary;
+            color: #fff;
+          }
         }
       }
 
@@ -167,6 +204,14 @@ section {
             }
             bottom: 20px;
             left: 50px;
+
+            transition: all 500ms;
+
+            &:hover {
+              padding: 5px 35px;
+              background-color: $brand-primary;
+              color: #fff;
+            }
           }
         }
       }
@@ -190,6 +235,19 @@ section {
 .films {
   background-color: #f6f5f5;
   z-index: inherit;
+
+  .container {
+    position: relative;
+    .cc_appletv {
+      position: absolute;
+      top: 25%; right: 0;
+      @media(max-width: $screen-sm-min) {
+        display: none;
+      }
+    }
+  }
+  
+
   
   .filmer-wrapper {
     .thumbs-wrapper {
@@ -199,6 +257,11 @@ section {
         position: relative;
         padding-left: 0;
         padding-right: 0;
+        margin-top: -5px;
+
+        &:nth-of-type(5), &:nth-of-type(6), &:nth-of-type(7), &:nth-of-type(8) {
+
+        }
 
         video {
           &:after {
@@ -208,14 +271,14 @@ section {
         }
 
         .title-wrapper {
-          bottom: 0;
+          bottom: 10px;
           left: 0;
           position: absolute;
           margin-left: 0;
 
           h2 {
-            background-color: #fff;
-            color: #000;
+            background-color: #000;
+            color: #fff;
             &.inverted {
               background-color: #000;
               color: #fff;
@@ -251,13 +314,16 @@ section {
       }
     }
     .text-wrapper {
-      padding: 0 100px;
+      @media(min-width: $screen-md-min) {
+        padding: 0 100px;
+      }
     }
   }
 }
 
 .appen {
-  padding-top: 0;
+  padding-top: 0px !important;
+  z-index: inherit !important;
   .header {
     img {
       width: 100%;
@@ -281,16 +347,16 @@ section {
       margin: 0 auto;
     }
     &:nth-of-type(1):before {
-      background: url("../../assets/images/round_play.png");
+      background: url("../../dist/images/round_play.png");
     }
     &:nth-of-type(2):before {
-      background: url("../../assets/images/round_gps.png");
+      background: url("../../dist/images/round_gps.png");
     }
     &:nth-of-type(3):before {
-      background: url("../../assets/images/round_profile.png");
+      background: url("../../dist/images/round_profile.png");
     }
     &:nth-of-type(4):before {
-      background: url("../../assets/images/round_calendar.png");
+      background: url("../../dist/images/round_calendar.png");
     }
   }
 }
@@ -314,14 +380,14 @@ section {
         content: '';
         width: 60px;
         height: 45px;
-        background: url("../../assets/images/quote_yellow.png");
+        background: url("../../dist/images/quote_yellow.png");
         display: block;
         margin-bottom: 30px;
       }
 
       .small {
         font-size: 16px;
-        color: $gray;
+        color: $gray-light;
       }
     }
   }
@@ -341,14 +407,18 @@ section {
 
     h2 {
       font-family: "Futura LT Heavy";
-      font-size: 50px;
+      font-size: 36px;
       text-align: center;
       @media(min-width: $screen-md-min) {
         text-align: left;
+        font-size: 50px;
       }
     }
     h4 {
-      font-size: 46px;
+      font-size: 32px;
+      @media(min-width: $screen-md-min) {
+        font-size: 46px;
+      }
       font-family: "Helvetica Neue LT Std 55";
       margin-bottom: 0;
     }
@@ -359,10 +429,14 @@ section {
       margin-bottom: 30px;
     }
     .btn {
-      font-size: 24px;
+      font-size: 16px;
+      @media(min-width: $screen-md-min) {
+        font-size: 24px;
+      }
       margin-bottom: 30px;
     }
     .appstore-wrapper{
+      margin-bottom: 30px;
       img {
         margin: 0 auto;
       }

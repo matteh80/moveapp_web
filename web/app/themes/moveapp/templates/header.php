@@ -1,11 +1,11 @@
 <header class="banner" role="banner">
   <div class="container">
     <a class="brand" href="<?= esc_url(home_url('/')); ?>">
-      <img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo.png" class="img-responsive" />
+      <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive" />
     </a>
     <div id="button-wrapper">
-      <button class="btn">Logga in</button>
-      <button class="btn">Nytt konto</button>
+      <button class="btn" disabled>Logga in</button>
+      <a href="http://app.moveapp.se/register"><button class="btn">Nytt konto</button></a>
     </div>
   </div>
     <nav role="navbar navbar-default">
@@ -18,7 +18,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/logo.png" class="img-responsive" /></a>
+          <a class="navbar-brand" href="#"><img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive" /></a>
         </div>
         <?php
         if (has_nav_menu('primary_navigation')) :
@@ -39,3 +39,19 @@
       </div>
     </nav>
 </header>
+<div id="login-wrapper" class="col-md-2 col-md-offset-8">
+    <form id="login-form">
+        <div class="form-group">
+            <input type="email" class="form-control" id="username" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" id="password" placeholder="Password" required>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox"> Check me out
+            </label>
+        </div>
+        <button type="submit" id="btn_login" class="btn btn-default text-center">Submit</button>
+    </form>
+</div>

@@ -19,6 +19,7 @@ $sage_includes = [
   'lib/titles.php',                // Page titles
   'lib/extras.php',                // Custom functions
   'lib/navwalker.php',             // WP Bootstrap Navwalker
+  'lib/faq-post-type.php',         // FAQ Custom Post Type
 ];
 
 foreach ($sage_includes as $file) {

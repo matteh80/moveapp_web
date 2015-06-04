@@ -20,6 +20,7 @@ header {
     }
 
     #button-wrapper {
+      position: relative;
       text-align: right;
       display: table-cell;
       vertical-align: middle;
@@ -55,5 +56,22 @@ header {
     @media(min-width: $grid-float-breakpoint) {
       background-color: $lightgray;
     }
+  }
+}
+
+#login-wrapper {
+  display: none;
+  position: absolute;
+  top: 130px;
+  z-index: 99;
+  background: $gray-lighter;
+  color: #000;
+  padding: 10px;
+
+  .btn {
+    background-color: $gray-light;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
   }
 }
