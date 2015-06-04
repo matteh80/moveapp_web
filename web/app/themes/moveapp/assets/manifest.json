@@ -25,6 +25,6 @@
     }
   },
   "config": {
-    "devUrl": "http://localhost/MoveApp/bedrock/web/"
+    "devUrl": "http://moveapp.dev"
   }
 }
