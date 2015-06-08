@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "07dd85371456253ffba1c0ec34eba9fb",
+    "hash": "543f980073b2825637b104dd5bf97e5d",
     "packages": [
         {
             "name": "composer/installers",
@@ -233,6 +233,26 @@
                 "environment"
             ],
             "time": "2014-10-16 14:50:21"
+        },
+        {
+            "name": "wpackagist-plugin/wp-maintenance-mode",
+            "version": "2.0.3",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wp-maintenance-mode/",
+                "reference": "tags/2.0.3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-maintenance-mode.2.0.3.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-maintenance-mode/"
         }
     ],
     "packages-dev": [],
