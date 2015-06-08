@@ -389,6 +389,9 @@ section.row{
 }
 
 .abonnemang {
+  background-color: #f6f5f5;
+  z-index: inherit;
+
   .abonnemang-wrapper {
     @media(min-width: $screen-md-min) {
       padding: 0 100px;

@@ -1,11 +1,11 @@
 <section class="infoheader row">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-5 col-md-offset-6">
+            <div class="col-md-6 col-lg-6 col-md-offset-6">
                 <h1>Träna hemma</h1>
-                <h4><p>Välj bland 100-tals träningsfilmer, allt samlat i en liten app.</p>
+                <h4><p>Välj bland 100-tals träningsfilmer,<br> allt samlat i en liten app.</p>
 
-                    <p>99 kr i månaden, en prova på månad gratis. Inga bindningstider.</p></h4>
+                    <p>99 kr i månaden, en gratis prova-på-månad. Inga bindningstider.</p></h4>
                 <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
             </div>
         </div>
@@ -245,28 +245,28 @@ if($posts):
         </div>
     </div>
 </section>
-<section class="row kent">
-    <div class="container">
-        <div class="col-md-4">
-            <img src="<?= get_template_directory_uri(); ?>/dist/images/kent.png" class="img-responsive" />
-        </div>
-        <div class="col-md-8 kent-wrapper">
-            <blockquote>
-                <p>
-                    MoveApp är utvecklat för dig som skulle vilja träna men inte hinner, för dig som föredrar att träna för dig själv och för dig som vill kunna träna vad du vill,
-                vart du vill, när du vill.</p>
-                <p>
-                    Jag ser definitivt MoveApp som framtiden inom träning.
-                </p>
-                <p class="small">
-                    <strong>Kent Orrgren</strong><br>
-                    Entreprenör inom retail, träning och hälsa, Fd VD på Sats
-                </p>
-
-            </blockquote>
-        </div>
-    </div>
-</section>
+<!--<section class="row kent">-->
+<!--    <div class="container">-->
+<!--        <div class="col-md-4">-->
+<!--            <img src="--><?//= get_template_directory_uri(); ?><!--/dist/images/kent.png" class="img-responsive" />-->
+<!--        </div>-->
+<!--        <div class="col-md-8 kent-wrapper">-->
+<!--            <blockquote>-->
+<!--                <p>-->
+<!--                    MoveApp är utvecklat för dig som skulle vilja träna men inte hinner, för dig som föredrar att träna för dig själv och för dig som vill kunna träna vad du vill,-->
+<!--                vart du vill, när du vill.</p>-->
+<!--                <p>-->
+<!--                    Jag ser definitivt MoveApp som framtiden inom träning.-->
+<!--                </p>-->
+<!--                <p class="small">-->
+<!--                    <strong>Kent Orrgren</strong><br>-->
+<!--                    Entreprenör inom retail, träning och hälsa, Fd VD på Sats-->
+<!--                </p>-->
+<!---->
+<!--            </blockquote>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</section>-->
 <section class="row abonnemang">
     <div class="container">
         <h2 class="text-center">Abonnemang</h2>
