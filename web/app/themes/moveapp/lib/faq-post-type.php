@@ -20,7 +20,7 @@ function custom_post_faq() {
             'not_found_in_trash' => __( 'Nothing found in Trash', 'sage' ), /* This displays if there is nothing in the trash */
             'parent_item_colon' => ''
         ), /* end of arrays */
-            'description' => __( 'This is the example custom post type', 'sage' ), /* Custom Type Description */
+            'description' => __( 'Frequently Asked Questions', 'sage' ), /* Custom Type Description */
             'public' => true,
             'publicly_queryable' => true,
             'exclude_from_search' => false,
@@ -29,7 +29,7 @@ function custom_post_faq() {
             'menu_position' => 8, /* this is what order you want it to appear in on the left hand side menu */
             'menu_icon' => 'dashicons-welcome-learn-more', /* the icon for the custom post type menu */
             'rewrite'	=> array( 'slug' => 'custom_type', 'with_front' => false ), /* you can specify its url slug */
-            'has_archive' => 'custom_type', /* you can rename the slug here */
+            'has_archive' => 'faq', /* you can rename the slug here */
             'capability_type' => 'post',
             'hierarchical' => false,
             /* the next one is important, it tells what's enabled in the post editor */
@@ -38,7 +38,7 @@ function custom_post_faq() {
     ); /* end of register post type */
 
     /* this adds your post categories to your custom post type */
-    register_taxonomy_for_object_type( 'category', 'faq' );
+    //register_taxonomy_for_object_type( 'category', 'faq' );
     /* this adds your post tags to your custom post type */
 //    register_taxonomy_for_object_type( 'post_tag', 'faq' );
 
@@ -53,25 +53,25 @@ http://codex.wordpress.org/Function_Reference/register_taxonomy
 */
 
 // now let's add custom categories (these act like categories)
-register_taxonomy( 'custom_cat',
-    array('custom_type'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+register_taxonomy( 'custom_cat_faq',
+    array('faq'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
     array('hierarchical' => true,     /* if this is true, it acts like categories */
         'labels' => array(
-            'name' => __( 'Custom Categories', 'sage' ), /* name of the custom taxonomy */
-            'singular_name' => __( 'Custom Category', 'sage' ), /* single taxonomy name */
-            'search_items' =>  __( 'Search Custom Categories', 'sage' ), /* search title for taxomony */
-            'all_items' => __( 'All Custom Categories', 'sage' ), /* all title for taxonomies */
-            'parent_item' => __( 'Parent Custom Category', 'sage' ), /* parent title for taxonomy */
-            'parent_item_colon' => __( 'Parent Custom Category:', 'sage' ), /* parent taxonomy title */
-            'edit_item' => __( 'Edit Custom Category', 'sage' ), /* edit custom taxonomy title */
-            'update_item' => __( 'Update Custom Category', 'sage' ), /* update title for taxonomy */
-            'add_new_item' => __( 'Add New Custom Category', 'sage' ), /* add new title for taxonomy */
-            'new_item_name' => __( 'New Custom Category Name', 'sage' ) /* name title for taxonomy */
+            'name' => __( 'FAQ Categories', 'sage' ), /* name of the custom taxonomy */
+            'singular_name' => __( 'FAQ Category', 'sage' ), /* single taxonomy name */
+            'search_items' =>  __( 'Search FAQ Categories', 'sage' ), /* search title for taxomony */
+            'all_items' => __( 'All FAQ Categories', 'sage' ), /* all title for taxonomies */
+            'parent_item' => __( 'Parent FAQ Category', 'sage' ), /* parent title for taxonomy */
+            'parent_item_colon' => __( 'Parent FAQ Category:', 'sage' ), /* parent taxonomy title */
+            'edit_item' => __( 'Edit FAQ Category', 'sage' ), /* edit custom taxonomy title */
+            'update_item' => __( 'Update FAQ Category', 'sage' ), /* update title for taxonomy */
+            'add_new_item' => __( 'Add New FAQ Category', 'sage' ), /* add new title for taxonomy */
+            'new_item_name' => __( 'New FAQ Category Name', 'sage' ) /* name title for taxonomy */
         ),
         'show_admin_column' => true,
         'show_ui' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'custom-slug' ),
+        'rewrite' => array( 'slug' => 'faq-slug' ),
     )
 );
 
