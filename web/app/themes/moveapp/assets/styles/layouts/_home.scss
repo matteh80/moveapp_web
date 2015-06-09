@@ -6,13 +6,14 @@ body.home {
     font-size: 18px;
     padding: 10px 20px;
     color: #fff;
-    transition: background-color 200ms, padding 500ms, border-radius 500ms;
+    transition: background-color 200ms, padding 500ms, border-radius 500ms, box-shadow 500ms;
 
     &:hover, :focus {
       color: #fff;
       background-color: darken($blue, 15%);
       padding: 10px 50px;
       //border-radius: 1px;
+      box-shadow: 0 2px 5px $gray;
     }
   }
 }
@@ -112,7 +113,8 @@ section.row{
         margin-left: 0;
 
         h2 {
-          background-color: #fff;
+          background-color: #000;
+          color: #fff;
           font-size: 20px;
           @media(min-width: $screen-sm-min) {
             font-size: 24px;
@@ -128,8 +130,8 @@ section.row{
         }
 
         .date {
-          color: #fff;
-          background-color: #000;
+          color: #000;
+          background-color: #fff;
           display: inline-block;
           padding: 5px 15px;
           font-family: "Futura LT";
@@ -141,7 +143,7 @@ section.row{
 
         .read-more {
           color: $brand-primary;
-          background-color: #000;
+          background-color: $gray;
           display: inline-block;
           padding: 5px 15px;
           font-family: "Futura LT";

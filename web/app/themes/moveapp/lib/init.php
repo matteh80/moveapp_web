@@ -40,7 +40,6 @@ function setup() {
   add_editor_style(Assets\asset_path('styles/editor-style.css'));
 
   add_image_size( 'homepage-thumb', 800, 500, true ); // (cropped)
-  add_image_size( 'homepage-thumb', 800, 500, true ); // (cropped)
 
 }
 add_action('after_setup_theme', __NAMESPACE__ . '\\setup');

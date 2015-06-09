@@ -8,3 +8,12 @@
     }
   }
 }
+
+.faq, .page-template-template-faq {
+  h3 {
+    text-transform: uppercase;
+  }
+  article {
+    margin-top: 0 !important;
+  }
+}
