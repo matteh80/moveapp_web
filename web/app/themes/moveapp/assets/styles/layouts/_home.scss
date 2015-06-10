@@ -16,6 +16,9 @@ body.home {
       box-shadow: 0 2px 5px $gray;
     }
   }
+  .main {
+    margin-bottom: 0 !important;
+  }
 }
 section.row{
   padding: 50px 0;
@@ -393,6 +396,10 @@ section.row{
 .abonnemang {
   background-color: #f6f5f5;
   z-index: inherit;
+
+  &:after {
+    background: none !important;
+  }
 
   .abonnemang-wrapper {
     @media(min-width: $screen-md-min) {

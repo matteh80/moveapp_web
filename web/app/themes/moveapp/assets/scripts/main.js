@@ -21,30 +21,6 @@
                 // JavaScript to be fired on all pages
             },
             finalize: function () {
-                // JavaScript to be fired on all pages, after page specific JS is fired
-            }
-        },
-        // Home page
-        'home': {
-            init: function () {
-                // JavaScript to be fired on the home page
-            },
-            finalize: function () {
-                $("video").click(function (e) {
-                    $("video").not(this).each(function (ele) {
-                        video = this;
-                        this.pause();
-                        $(this).siblings(".play-btn").css("display", "block");
-                        $(this).siblings(".genericon-fullscreen").css("display", "none");
-                        $(this).removeAttr("controls");
-                    });
-
-                    // toggles play / pause
-                    this.paused ? this.play() : this.pause();
-                    this.paused ? $(this).siblings(".play-btn").css("display", "block") : $(this).siblings(".play-btn").css("display", "none");
-                    this.paused ? $(this).removeAttr("controls", "") : $(this).attr("controls", "");
-                });
-
                 //FACEBOOK
                 debug_js = '//connect.facebook.net/en_US/sdk/debug.js';
                 js = '//connect.facebook.net/sv_SE/sdk.js';
@@ -77,7 +53,28 @@
                         $('#fb-text').append(response.data[0].description);
                     });
                 });
+            }
+        },
+        // Home page
+        'home': {
+            init: function () {
+                // JavaScript to be fired on the home page
+            },
+            finalize: function () {
+                $("video").click(function (e) {
+                    $("video").not(this).each(function (ele) {
+                        video = this;
+                        this.pause();
+                        $(this).siblings(".play-btn").css("display", "block");
+                        $(this).siblings(".genericon-fullscreen").css("display", "none");
+                        $(this).removeAttr("controls");
+                    });
 
+                    // toggles play / pause
+                    this.paused ? this.play() : this.pause();
+                    this.paused ? $(this).siblings(".play-btn").css("display", "block") : $(this).siblings(".play-btn").css("display", "none");
+                    this.paused ? $(this).removeAttr("controls", "") : $(this).attr("controls", "");
+                });
             }
         },
         // About us page, note the change from about-us to about_us.

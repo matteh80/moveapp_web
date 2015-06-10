@@ -1,8 +1,19 @@
 footer {
+  position: relative;
+  &:after {
+    z-index: 2;
+    content: '';
+    background: url("../../dist/images/sect_shadow.png") no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: -40px;
+  }
 
   .container {
     &.menu {
-      margin-bottom: 30px;
+      margin: 40px auto 30px;
     }
   }
 

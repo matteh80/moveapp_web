@@ -75,3 +75,18 @@ header {
     display: block;
   }
 }
+
+nav {
+  .container {
+    .social {
+      float: right;
+
+      i {
+        font-size: 26px;
+        line-height: 41px;
+        color: $gray-light;
+        margin-left: 10px;
+      }
+    }
+  }
+}
