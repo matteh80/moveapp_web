@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "543f980073b2825637b104dd5bf97e5d",
+    "hash": "d5950e2c40649afc39ca1bad1f12f6bd",
     "packages": [
         {
             "name": "composer/installers",
@@ -235,6 +235,27 @@
             "time": "2014-10-16 14:50:21"
         },
         {
+            "name": "wpackagist-plugin/wordpress-seo",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/",
+            "time": "2015-04-22 11:00:21"
+        },
+        {
             "name": "wpackagist-plugin/wp-maintenance-mode",
             "version": "2.0.3",
             "source": {
@@ -258,7 +279,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "wpackagist-plugin/wordpress-seo": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
