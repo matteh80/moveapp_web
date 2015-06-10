@@ -12,7 +12,7 @@
     </div>
     <div class="row social">
         <div class="container">
-            <div class="col-md-6 fb">
+            <a href="https://www.facebook.com/MoveAppSweden" class="col-md-6 fb" target="_blank">
                 <div class="col-xs-2 image-container">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/fb_icon.png" class="img-responsive" />
                 </div>
@@ -22,7 +22,7 @@
                 <div class="col-xs-2">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                 </div>
-            </div>
+            </a>
             <div class="col-md-6">
 
             </div>
