@@ -10,10 +10,28 @@
 }
 
 .faq, .page-template-template-faq {
+  .page-header {
+    margin-bottom: 0;
+  }
+
   h3 {
     text-transform: uppercase;
+    margin-top: 40px;
   }
   article {
     margin-top: 0 !important;
+
+    &:first-child {
+      margin-bottom: 200px;
+    }
+
+    .faq-answer {
+      display: none;
+
+      p {
+        font-size: 13px;
+        line-height: 14px;
+      }
+    }
   }
 }

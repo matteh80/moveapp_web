@@ -20,11 +20,11 @@ $args = array(
 $terms = get_terms('custom_cat_faq', $args);
 $i=1;?>
 <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-6">
         <?php
         foreach($terms as $term):
             if($i%2 != 0) :
-                echo '<h3>'.$term->name.'</h3>';
+                echo '<h3>'.$term->name.$i.'</h3>';
 
                 $args = array(
                     'post_type' => 'faq',
@@ -44,14 +44,15 @@ $i=1;?>
             endif;
             $i++;
         endforeach;
+        $i=1;
         ?>
     </div>
 
-    <div class="col-md-5 col-md-offset-2">
+    <div class="col-md-6">
         <?php
         foreach($terms as $term):
             if($i%2 == 0) :
-                echo '<h3>'.$term->name.'</h3>';
+                echo '<h3>'.$term->name.$i.'</h3>';
 
                 $args = array(
                     'post_type' => 'faq',

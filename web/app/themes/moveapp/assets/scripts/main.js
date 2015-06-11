@@ -25,7 +25,7 @@
                 debug_js = '//connect.facebook.net/en_US/sdk/debug.js';
                 js = '//connect.facebook.net/sv_SE/sdk.js';
 
-                $.getScript(debug_js, function () {
+                $.getScript(js, function () {
                     FB.init({
                         appId: '332897300242814',
                         appSecret: 'a912eb6e7d0a4136f0ae9d799258818b',
@@ -68,9 +68,25 @@
             }
         },
         // About us page, note the change from about-us to about_us.
-        'about_us': {
+        'nyheter': {
             init: function () {
                 // JavaScript to be fired on the about us page
+            }
+        },
+        // Faq page.
+        'vanliga_fragor': {
+            init: function () {
+                // JavaScript to be fired on the about us page
+            },
+            finalize: function () {
+                $(".faq-title").click(function (e) {
+                    e.preventDefault();
+                    $answer = $(this).siblings(".faq-answer");
+                    //$answer.css("display", "block");
+                    $answer.toggle( "fast", function() {
+                        // Animation complete.
+                    });
+                });
             }
         }
     };
