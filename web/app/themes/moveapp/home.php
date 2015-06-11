@@ -99,33 +99,34 @@ if($posts):
                 <div class="title-wrapper">
                     <h2>Fokus</h2>
                 </div>
-                <video id="video1" width="100%" height="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video1.png" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video1.mp4" type="video/mp4">
+                <?php $video_basepath = "https://dl.dropboxusercontent.com/u/143100643/moveapp_videos/"; ?>
+                <video id="video1" width="100%" height="100%" poster="<?= $video_basepath; ?>video1.png" preload="none">
+                    <source src="<?= $video_basepath; ?>video1.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 <!--            Video 2 - Gravidyoga-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Gravidyoga</h2>
                 </div>
-                <video width="100%" height="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video2.png" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video2.mp4" type="video/mp4">
+                <video width="100%" height="100%" poster="<?= $video_basepath; ?>video2.png" preload="none">
+                    <source src="<?= $video_basepath; ?>video2.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 <!--            Video 3 - Core-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Core</h2>
                 </div>
-                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video3.png" height="100%" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video3.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= $video_basepath; ?>video3.png" height="100%" preload="none">
+                    <source src="<?= $video_basepath; ?>video3.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 
 <!--            VIDEO 4 - Styrka-->
@@ -133,55 +134,55 @@ if($posts):
                 <div class="title-wrapper">
                     <h2>Styrka</h2>
                 </div>
-                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video4.png" height="100%" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video4.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= $video_basepath; ?>video4.png" height="100%" preload="none">
+                    <source src="<?= $video_basepath; ?>video4.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 <!--            VIDEO 5 - pilates-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Pilates</h2>
                 </div>
-                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video5.png" height="100%" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video5.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= $video_basepath; ?>video5.png" height="100%" preload="none">
+                    <source src="<?= $video_basepath; ?>video5.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 <!--            VIDEO 6 - Kampsportsfys-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Puls</h2>
                 </div>
-                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video6.png" height="100%" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video6.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= $video_basepath; ?>video6.png" height="100%" preload="none">
+                    <source src="<?= $video_basepath; ?>video6.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 <!--            Video 7 - Yoga-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Yoga</h2>
                 </div>
-                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video7.png" height="100%" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video7.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= $video_basepath; ?>video7.png" height="100%" preload="none">
+                    <source src="<?= $video_basepath; ?>video7.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
 <!--            Video 8 - Dans-->
             <div class="col-sm-6 col-md-3 thumb">
                 <div class="title-wrapper">
                     <h2>Dans</h2>
                 </div>
-                <video id="video1" width="100%" poster="<?= get_template_directory_uri(); ?>/dist/images/videos/video8.png" height="100%" preload="none">
-                    <source src="<?= get_template_directory_uri(); ?>/videos/video8.mp4" type="video/mp4">
+                <video id="video1" width="100%" poster="<?= $video_basepath; ?>video8.png" height="100%" preload="none">
+                    <source src="<?= $video_basepath; ?>video8.mp4" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/play.png" class="play-btn" />
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/play_2.png" class="play-btn" />
             </div>
         </div>
         <div class="container text-wrapper">
