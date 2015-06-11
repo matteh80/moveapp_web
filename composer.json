@@ -47,6 +47,9 @@
     "wpackagist-plugin/wp-maintenance-mode": ">=2.0.3",
     "wpackagist-plugin/wordpress-seo": "dev-trunk"
   },
+  "require-dev": {
+
+  },
   "extra": {
     "installer-paths": {
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],

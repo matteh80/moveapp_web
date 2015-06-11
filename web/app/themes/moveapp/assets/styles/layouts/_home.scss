@@ -409,7 +409,7 @@ section.row{
     }
     
     .panel {
-      @media(min-width: $screen-md-min) {
+      @media(min-width: $screen-xs-min) {
         padding: 50px;
       }
     }

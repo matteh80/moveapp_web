@@ -19,7 +19,13 @@ footer {
   }
 
   .logo {
-
+    a {
+      img {
+        @media(max-width: $screen-md-min) {
+          margin: 0 auto;
+        }
+      }
+    }
   }
 
   .footer-menu {
@@ -74,70 +80,104 @@ footer {
     margin-left: 0;
     margin-right: 0;
 
+    > .container {
+      height: 100%;
+    }
+
     a {
       color: white !important;
       text-decoration: none !important;
+      display: table;
+      height: 100px;
 
       &:hover {
         text-decoration: none !important;
       }
-    }
 
-    .fb, .social-right, .instagram {
-      display: table;
-      min-height: 106px;
-
-
-      a[class^="col-xs-"], div[class^="col-xs-"] {
+      .row {
+        background-repeat: no-repeat;
+        background-size: auto 40%;
+        @media(min-width: $screen-sm-min) {
+          background-size: auto 60%;
+        }
+        @media(min-width: $screen-md-min) {
+          background-size: auto 50%;
+        }
+        @media(min-width: $screen-lg-min) {
+          background-size: auto 60%;
+        }
+        background-position-y: 50%;
+        height: 100%;
         display: table-cell;
         vertical-align: middle;
-        float: none;
-      }
 
-      .image-container {
+        div[class^="col-"] {
 
-        img {
-//          max-height: 100%;
-          max-width: 60px;
         }
-      }
-
-      .content {
-        font-size: 12px;
 
         p {
-          margin-bottom: 0;
+          margin: 0;
+          font-size: 13px;
+          line-height: 14px;
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .fa {
+          vertical-align: middle;
+          font-size: 22px;
+          position: absolute;
+          top: 35%;
         }
       }
 
-      .glyphicon {
-        font-size: 30px;
-      }
-    }
-
-    .instagram {
-      .content {
-        background-size: cover;
-        background-position-y: 50%;
-      }
-    }
-
-    .social-right, .instagram {
-      border-top: 1px solid $gray-light;
-      @media(min-width: $screen-md-min) {
-        border-top: none;
-        border-left: 1px solid $gray-light;
-      }
-
-
-      .image-container {
-
-        img {
-          max-height: 60px;
-          width: auto;
-          display: inline-block;
+      &.fb .row {
+        background-image: url(../../dist/images/fb_ikon.png);
+        border-bottom: 1px solid $gray-light;
+        @media(min-width: $screen-md-min) {
+          border-right: 1px solid $gray-light;
+          border-bottom: none;
         }
       }
+      &.instagram .row {
+        background-image: url(../../dist/images/instagram_ikon.png);
+        @media(min-width: $screen-sm-min) {
+          border-right: 1px solid $gray-light;
+        }
+
+        .instagram-pic {
+          display: none;
+          @media(min-width: $screen-sm-min) {
+            display: inline;
+          }
+          background-size: cover;
+          background-position: 50%;
+          position: relative;
+          left: 10px;
+          height: 100px;
+        }
+
+        .fa {
+          display: none;
+          @media(min-width: $screen-sm-min) {
+            display: inline;
+          }
+          position: absolute;
+          top: 35%;
+          right: 6%;
+          @media(min-width: $screen-md-min) {
+            right: 1%;
+          }
+        }
+      }
+      &.linkedin .row {
+        background-image: url(../../dist/images/linkedin_ikon.png);
+      }
+      &.youtube .row {
+        background-image: url(../../dist/images/youtube_ikon.png);
+      }
     }
+
+
   }
 }

@@ -12,39 +12,40 @@
     </div>
     <div class="row social">
         <div class="container">
-            <a href="https://www.facebook.com/MoveAppSweden" class="col-md-5 fb" target="_blank">
-                <div class="col-xs-2 image-container">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/fb_ikon.png" class="img-responsive" />
-                </div>
-                <div class="col-xs-9 content">
-                    <p id="fb-text"></p>
-                </div>
-                <div class="col-xs-1">
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </div>
-            </a>
+            <div class="row">
 
-            <a href="https://instagram.com/moveapp_training/" class="col-md-4 container instagram" target="_blank">
+<!--                FACEBOOK-->
+                <a href="https://www.facebook.com/MoveAppSweden" class="col-xs-12 col-md-6 fb" target="_blank">
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2 content">
+                            <p id="fb-text"></p>
+                        </div>
+                        <i class="col-xs-2 fa fa-chevron-right"></i>
+                    </div>
+                </a>
+
+<!--                INSTAGRAM-->
                 <?php $image_url = get_latest_instagram(); ?>
-                <div class="col-xs-4 image-container">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/instagram_ikon.png" class="img-responsive" />
-                </div>
-                <div class="col-xs-6 content" style="background-image: url(<?= $image_url; ?>)">
-
-                </div>
-                <div class="col-xs-2">
-                    <i class="glyphicon glyphicon-chevron-right"></i>
-                </div>
-            </a>
-
-            <div class="col-md-3 social-right">
-                <a href="https://www.linkedin.com/company/9502238" class="col-xs-4 image-container text-right" target="_blank">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/linkedin_ikon.png" class="img-responsive" />
+                <a href="https://instagram.com/moveapp_training/" class="col-xs-4 col-sm-8 col-md-4 instagram" target="_blank">
+                    <div class="row">
+                        <div class="col-xs-8 col-xs-offset-2 col-md-8 col-md-offset-2 instagram-pic content" style="background-image: url(<?= $image_url; ?>)"></div>
+                        <i class="col-sm-1 col-md-2 fa fa-chevron-right"></i>
+                    </div>
                 </a>
-                <a href="https://www.youtube.com/channel/UCrVJutJBosnD7LGkR3r1Lpg" class="col-xs-4 image-container text-right" target="_blank">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/youtube_ikon.png" class="img-responsive" />
+
+<!--                LINKEDIN-->
+                <a href="https://www.linkedin.com/company/9502238" class="col-xs-4 col-sm-2 col-md-1 linkedin text-right" target="_blank">
+                    <div class="row"></div>
                 </a>
+
+<!--                YOUTUBE-->
+                <a href="https://www.youtube.com/channel/UCrVJutJBosnD7LGkR3r1Lpg" class="col-xs-4 col-sm-2 col-md-1 youtube text-right" target="_blank">
+                    <div class="row"></div>
+                </a>
+
             </div>
+
+
 
         </div>
     </div>
