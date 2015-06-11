@@ -71,6 +71,17 @@
         'nyheter': {
             init: function () {
                 // JavaScript to be fired on the about us page
+            },
+            finalize: function () {
+                alert('hej')
+            }
+        },
+        'single': {
+            init: function () {
+                // JavaScript to be fired on the about us page
+            },
+            finalize: function () {
+                $('.news').addClass('active');
             }
         },
         // Faq page.
