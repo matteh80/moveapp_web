@@ -12,21 +12,53 @@
     </div>
     <div class="row social">
         <div class="container">
-            <a href="https://www.facebook.com/MoveAppSweden" class="col-md-6 fb" target="_blank">
+            <a href="https://www.facebook.com/MoveAppSweden" class="col-md-5 fb" target="_blank">
                 <div class="col-xs-2 image-container">
-                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/fb_icon.png" class="img-responsive" />
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/fb_ikon.png" class="img-responsive" />
                 </div>
-                <div class="col-xs-8 content">
+                <div class="col-xs-9 content">
                     <p id="fb-text"></p>
+                </div>
+                <div class="col-xs-1">
+                    <i class="glyphicon glyphicon-chevron-right"></i>
+                </div>
+            </a>
+
+            <a class="col-md-4 container instagram">
+                <?php $image_url = get_latest_instagram(); ?>
+                <div class="col-xs-4 image-container">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/instagram_ikon.png" class="img-responsive" />
+                </div>
+                <div class="col-xs-6 content" style="background-image: url(<?= $image_url; ?>)">
+
                 </div>
                 <div class="col-xs-2">
                     <i class="glyphicon glyphicon-chevron-right"></i>
                 </div>
             </a>
-            <div class="col-md-6">
 
+            <div class="col-md-3 social-right">
+                <div class="col-xs-4 image-container text-right">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/linkedin_ikon.png" class="img-responsive" />
+                </div>
+                <div class="col-xs-4 image-container text-right">
+                    <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/youtube_ikon.png" class="img-responsive" />
+                </div>
             </div>
+
         </div>
     </div>
 </footer>
+
+<?php
+function get_latest_instagram() {
+    $localhost_token = "2082157067.8171fd1.2f4947db55324cd39875cf3b19c2c77c";
+    $url = "https://api.instagram.com/v1/users/2082157067/media/recent?access_token=2082157067.8171fd1.2f4947db55324cd39875cf3b19c2c77c&count=1";
+    $jsonData = json_decode((file_get_contents($url)));
+    foreach ($jsonData->data as $key=>$value) {
+        $url = $value->images->standard_resolution->url;
+    }
+    return $url;
+};
+?>
 

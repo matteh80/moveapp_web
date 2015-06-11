@@ -82,7 +82,7 @@ footer {
       }
     }
 
-    .fb {
+    .fb, .social-right, .instagram {
       display: table;
       min-height: 106px;
 
@@ -97,12 +97,12 @@ footer {
 
         img {
 //          max-height: 100%;
-          max-width: 100%;
+          max-width: 60px;
         }
       }
 
       .content {
-        font-size: 13px;
+        font-size: 12px;
 
         p {
           margin-bottom: 0;
@@ -111,6 +111,31 @@ footer {
 
       .glyphicon {
         font-size: 30px;
+      }
+    }
+
+    .instagram {
+      .content {
+        background-size: cover;
+        background-position-y: 50%;
+      }
+    }
+
+    .social-right, .instagram {
+      border-top: 1px solid $gray-light;
+      @media(min-width: $screen-md-min) {
+        border-top: none;
+        border-left: 1px solid $gray-light;
+      }
+
+
+      .image-container {
+
+        img {
+          max-height: 60px;
+          width: auto;
+          display: inline-block;
+        }
       }
     }
   }
