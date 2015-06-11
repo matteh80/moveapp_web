@@ -46,6 +46,8 @@ blockquote {
   max-width: 1920px;
 }
 
-.main {
+.wrap {
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
 }
