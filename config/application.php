@@ -74,3 +74,4 @@ if (!defined('ABSPATH')) {
 }
 
 define('WP_DEFAULT_THEME', 'moveapp');
+define('WPLANG', 'sv_SE');
