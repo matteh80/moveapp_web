@@ -24,7 +24,7 @@
                 </div>
             </a>
 
-            <a class="col-md-4 container instagram">
+            <a href="https://instagram.com/moveapp_training/" class="col-md-4 container instagram" target="_blank">
                 <?php $image_url = get_latest_instagram(); ?>
                 <div class="col-xs-4 image-container">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/instagram_ikon.png" class="img-responsive" />
@@ -38,12 +38,12 @@
             </a>
 
             <div class="col-md-3 social-right">
-                <div class="col-xs-4 image-container text-right">
+                <a href="https://www.linkedin.com/company/9502238" class="col-xs-4 image-container text-right" target="_blank">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/linkedin_ikon.png" class="img-responsive" />
-                </div>
-                <div class="col-xs-4 image-container text-right">
+                </a>
+                <a href="https://www.youtube.com/channel/UCrVJutJBosnD7LGkR3r1Lpg" class="col-xs-4 image-container text-right" target="_blank">
                     <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/youtube_ikon.png" class="img-responsive" />
-                </div>
+                </a>
             </div>
 
         </div>

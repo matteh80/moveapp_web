@@ -87,7 +87,7 @@ footer {
       min-height: 106px;
 
 
-      div[class^="col-xs-"] {
+      a[class^="col-xs-"], div[class^="col-xs-"] {
         display: table-cell;
         vertical-align: middle;
         float: none;
