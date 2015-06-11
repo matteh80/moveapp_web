@@ -24,7 +24,7 @@ $i=1;?>
         <?php
         foreach($terms as $term):
             if($i%2 != 0) :
-                echo '<h3>'.$term->name.$i.'</h3>';
+                echo '<h3>'.$term->name.'</h3>';
 
                 $args = array(
                     'post_type' => 'faq',
@@ -52,7 +52,7 @@ $i=1;?>
         <?php
         foreach($terms as $term):
             if($i%2 == 0) :
-                echo '<h3>'.$term->name.$i.'</h3>';
+                echo '<h3>'.$term->name.'</h3>';
 
                 $args = array(
                     'post_type' => 'faq',
