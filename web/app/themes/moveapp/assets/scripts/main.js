@@ -34,16 +34,6 @@
                         version: 'v2.3' // or v2.0, v2.1, v2.0
                     });
 
-
-                    //FB.api("/oauth/access_token",
-                    //    {   client_id: '332897300242814',
-                    //        client_secret: 'a912eb6e7d0a4136f0ae9d799258818b',
-                    //        grant_type: 'fb_exchange_token',
-                    //        fb_exchange_token: '332897300242814|qGg9igkAKsL88273AqbGmifBAtQ'
-                    //    }, function(response) {
-                    //        console.log(response)
-                    //    })
-
                     var accessToken = '332897300242814|qGg9igkAKsL88273AqbGmifBAtQ';
                     FB.api('1632026917030663/feed', {
                         access_token : accessToken,
