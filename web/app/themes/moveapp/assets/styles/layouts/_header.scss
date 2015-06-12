@@ -56,6 +56,7 @@ header {
           font-size: 0.8em;
         }
         &.login {
+          visibility: hidden;
           &:after {
             content: '\f078';
           }
