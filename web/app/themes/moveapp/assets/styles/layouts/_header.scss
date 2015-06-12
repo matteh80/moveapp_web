@@ -22,30 +22,47 @@ header {
     #button-wrapper {
       position: relative;
       text-align: right;
-      display: table-cell;
-      vertical-align: middle;
+
+      a button{
+        color: $gray;
+        &:hover {
+          color: darken($brand-primary, 20%);
+          background: black;
+        }
+      }
 
       button {
         display: none;
+        position: relative;
+        text-transform: uppercase;
+        background: transparent;
+        border: 0;
+        cursor: pointer;
+        outline:none;
+
         @media(min-width: $grid-float-breakpoint) {
           display: inline-block;
+          height: 70px;
+          padding: 10px 30px 10px 10px;
+          font-size: 1em;
+          line-height: 1em;
         }
-        font-size: 16px;
-        border-radius: 40px;
-        padding: 10px 30px;
-        color: whitesmoke;
-        transition: background-color 200ms, border-radius 200ms;
-
-        &:first-of-type {
-          background-color: $buttongray;
-          &:hover {
-            background-color: darken($buttongray, 15%);
+        &:after {
+          content: '';
+          position: absolute;
+          right: 10px;
+          top: 36%;
+          font-family: FontAwesome;
+          font-size: 0.8em;
+        }
+        &.login {
+          &:after {
+            content: '\f078';
           }
         }
-        &:last-of-type {
-          background-color: $blue;
-          &:hover {
-            background-color: darken($blue, 15%);
+        &.register {
+          &:after {
+            content: '\f054';
           }
         }
       }

@@ -1,11 +1,11 @@
 <header class="banner" role="banner">
   <div class="container">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>">
+    <a class="brand col-md-4" href="<?= esc_url(home_url('/')); ?>">
       <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive" />
     </a>
-    <div id="button-wrapper">
-      <button class="btn" disabled>Logga in</button>
-      <a href="http://app.moveapp.se/register"><button class="btn">Nytt konto</button></a>
+    <div id="button-wrapper" class="col-md-4 col-md-offset-4">
+        <button class="login"><?= __('Logga in', 'sage');?></button>
+        <a href="http://app.moveapp.se/register/"><button class="register"><?= __('Nytt konto', 'sage');?></button></a>
     </div>
   </div>
     <nav role="navbar navbar-default">

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "54731c6894c7834b7077e646a13ac12a",
+    "hash": "8f76b5c12ace9f94f6c7a77fe355bd64",
     "packages": [
         {
             "name": "composer/installers",
@@ -140,20 +140,20 @@
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
-            "version": "0.2.0",
+            "version": "0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
-                "reference": "a4c08e91be99e858c7778c2f52a4d73820147c2e"
+                "reference": "a04c2c383ef13aae077f36799ed2eafdebd618d2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/a4c08e91be99e858c7778c2f52a4d73820147c2e",
-                "reference": "a4c08e91be99e858c7778c2f52a4d73820147c2e",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/a04c2c383ef13aae077f36799ed2eafdebd618d2",
+                "reference": "a04c2c383ef13aae077f36799ed2eafdebd618d2",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "1.0.0"
+                "composer-plugin-api": "^1.0"
             },
             "conflict": {
                 "composer/installers": "<1.0.6"
@@ -181,7 +181,10 @@
                 }
             ],
             "description": "A custom installer to handle deploying WordPress with composer",
-            "time": "2013-09-09 15:04:54"
+            "keywords": [
+                "wordpress"
+            ],
+            "time": "2015-06-11 15:15:30"
         },
         {
             "name": "vlucas/phpdotenv",
@@ -236,15 +239,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "dev-trunk",
+            "version": "2.2.1",
             "source": {
                 "type": "svn",
                 "url": "http://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "trunk"
+                "reference": "tags/2.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.2.2.1.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -252,8 +255,7 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/wordpress-seo/",
-            "time": "2015-04-22 11:00:21"
+            "homepage": "https://wordpress.org/plugins/wordpress-seo/"
         },
         {
             "name": "wpackagist-plugin/wp-maintenance-mode",
@@ -279,9 +281,7 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "wpackagist-plugin/wordpress-seo": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
