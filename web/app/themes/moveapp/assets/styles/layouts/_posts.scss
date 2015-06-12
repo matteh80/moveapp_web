@@ -59,6 +59,12 @@
       
       .tags {
         color: darken($brand-primary, 25%);
+        font-size: 0.9em;
+      }
+    }
+    footer {
+      &:after {
+        display: none;
       }
     }
   }
