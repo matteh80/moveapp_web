@@ -3,17 +3,19 @@ body.home {
     border-radius: 40px;
     color: #fff;
     background-color: $blue;
+//    border: 4px solid $blue;
     font-size: 18px;
     padding: 10px 20px;
     color: #fff;
-    transition: background-color 200ms, padding 500ms, border-radius 500ms, box-shadow 500ms;
+    transition: background-color 500ms, padding 500ms, border-radius 500ms, box-shadow 500ms;
 
     &:hover, :focus {
-      color: #fff;
+      color: white;
+//      background-color: darken($blue, 15%);
       background-color: darken($blue, 15%);
-      padding: 10px 50px;
+//      padding: 10px 50px;
       //border-radius: 1px;
-      box-shadow: 0 2px 5px $gray;
+//      box-shadow: 0 2px 5px $gray;
     }
   }
   .main {
