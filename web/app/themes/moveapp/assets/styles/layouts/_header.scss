@@ -23,11 +23,24 @@ header {
       position: relative;
       text-align: right;
 
-      a button{
+      a button, button{
         color: $gray;
         &:hover {
-          color: darken($brand-primary, 20%);
-          background: black;
+          color: white;
+          background: $gray-light;
+        }
+      }
+
+      .login-wrap {
+        display: inline-block;
+        position: relative;
+
+        &.hover {
+          color: white;
+          background: $gray-light;
+          #login-wrapper {
+            display: block;
+          }
         }
       }
 
@@ -56,7 +69,6 @@ header {
           font-size: 0.8em;
         }
         &.login {
-          visibility: hidden;
           &:after {
             content: '\f078';
           }
@@ -80,11 +92,13 @@ header {
 #login-wrapper {
   display: none;
   position: absolute;
-  top: 130px;
+  width: 270px;
+  top: 70px;
+  right: 0;
   z-index: 99;
-  background: $gray-lighter;
+  background: $gray-light;
   color: #000;
-  padding: 10px;
+  padding: 50px 30px;
 
   .btn {
     background-color: $gray-light;
