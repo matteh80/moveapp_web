@@ -44,13 +44,16 @@
                     });
                 });
 
-                $('.login-wrap').on('mouseover', function() {
-                    $(this).addClass('hover');
-                }).on('mouseout', function(e) {
-                    if (!$(e.target).is('input')) {
-                        $(this).removeClass('hover');
-                    }
-                });
+                if(!$('.login').is(":visible")) {
+                    $('.login-wrap').on('mouseover', function() {
+                        $(this).addClass('hover');
+                        console.log("dfdsfdsfdsf")
+                    }).on('mouseout', function(e) {
+                        if (!$(e.target).is('input')) {
+                            $(this).removeClass('hover');
+                        }
+                    });
+                }
 
             }
         },

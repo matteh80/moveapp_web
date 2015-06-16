@@ -7,7 +7,7 @@
         <div id="button-wrapper" class="col-md-4 col-md-offset-4">
             <div class="login-wrap">
                 <button class="login"><?= __('Logga in', 'sage'); ?></button>
-                <a href="#" id="logged-in"></a>
+                <button id="logged-in"></button>
                 <div id="login-wrapper" class="col-md-2 col-md-offset-8">
                     <form id="login-form">
                         <div class="form-group">

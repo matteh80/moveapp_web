@@ -1,5 +1,5 @@
 jQuery( document ).ready(function($) {
-    if(sessionStorage.getItem('accessToken') != "" && sessionStorage.getItem('user') != "null") {
+    if(sessionStorage.getItem('accessToken') != null && sessionStorage.getItem('user') != null) {
         $('.login').hide();
         $('#logged-in').text(sessionStorage.getItem('user'));
     }
