@@ -36,24 +36,21 @@
 
                     var accessToken = '332897300242814|qGg9igkAKsL88273AqbGmifBAtQ';
                     FB.api('1632026917030663/feed', {
-                        access_token : accessToken,
+                        access_token: accessToken,
                         status_type: 'shared_story'
-                    }, function(response) {
+                    }, function (response) {
                         console.log(response)
                         $('#fb-text').append(response.data[0].description);
                     });
                 });
 
-                if(!$('.login').is(":visible")) {
-                    $('.login-wrap').on('mouseover', function() {
-                        $(this).addClass('hover');
-                        console.log("dfdsfdsfdsf")
-                    }).on('mouseout', function(e) {
-                        if (!$(e.target).is('input')) {
-                            $(this).removeClass('hover');
-                        }
-                    });
-                }
+                $('.login-wrap').on('mouseover', function () {
+                    $(this).addClass('hover');
+                }).on('mouseout', function (e) {
+                    if (!$(e.target).is('input')) {
+                        $(this).removeClass('hover');
+                    }
+                });
 
             }
         },
@@ -85,7 +82,7 @@
                 // JavaScript to be fired on the about us page
             },
             finalize: function () {
-                
+
             }
         },
         'single': {
@@ -106,10 +103,26 @@
                     e.preventDefault();
                     $answer = $(this).siblings(".faq-answer");
                     //$answer.css("display", "block");
-                    $answer.toggle( "fast", function() {
+                    $answer.toggle("fast", function () {
                         // Animation complete.
                     });
                 });
+            }
+        },
+        // User page.
+        'page_template_template_user': {
+            init: function () {
+                // JavaScript to be fired on the about us page
+            },
+            finalize: function () {
+                user = JSON.parse(sessionStorage.getItem('user'));
+                $('.name').text(user.first_name+" "+user.last_name);
+
+                var image = new Image();
+                image.src = 'data:image/png;base64,'+user.profile_picture;
+                $('.picture-wrapper').empty().append(image);
+                $('.picture-wrapper').children().addClass('img-circle profile-picture');
+                $('.picture-wrapper').children().css('visibility','visible').hide().fadeIn('slow');
             }
         }
     };

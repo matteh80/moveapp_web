@@ -7,7 +7,6 @@
         <div id="button-wrapper" class="col-md-4 col-md-offset-4">
             <div class="login-wrap">
                 <button class="login"><?= __('Logga in', 'sage'); ?></button>
-                <button id="logged-in"></button>
                 <div id="login-wrapper" class="col-md-2 col-md-offset-8">
                     <form id="login-form">
                         <div class="form-group">
@@ -20,6 +19,13 @@
                     </form>
                 </div>
             </div>
+            <?php
+            $id = Roots\Sage\Utils\get_page_id_by_slug('user');
+            $url = get_permalink($id);
+            ?>
+            <a href="<?php echo $url; ?>">
+                <button id="logged-in"></button>
+            </a>
             <a href="http://app.moveapp.se/register/">
                 <button class="register"><?= __('Nytt konto', 'sage'); ?></button>
             </a>

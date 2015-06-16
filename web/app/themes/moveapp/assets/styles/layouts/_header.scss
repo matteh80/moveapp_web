@@ -105,6 +105,21 @@ header {
             content: '\f054';
           }
         }
+        &#logged-in {
+          display: none;
+          padding: 10px 10px 10px 25px;
+
+          &:hover {
+            color: $brand-primary-dark;
+          }
+
+          &:after {
+            content: '\f007';
+            left: 10px;
+            right: initial;
+            font-size: 1em;
+          }
+        }
       }
     }
   }

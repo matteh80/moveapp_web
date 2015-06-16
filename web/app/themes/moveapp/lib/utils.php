@@ -17,3 +17,4 @@ function get_page_id_by_slug($slug){
   $id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."'AND post_type = 'page'");
   return $id;
 }
+
