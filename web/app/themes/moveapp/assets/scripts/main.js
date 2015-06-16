@@ -74,6 +74,9 @@
                     this.paused ? $(this).siblings(".play-btn").css("display", "block") : $(this).siblings(".play-btn").css("display", "none");
                     this.paused ? $(this).removeAttr("controls", "") : $(this).attr("controls", "");
                 });
+                $('.login-wrap').hover(function() {
+                    $(this).toggleClass('hover')
+                })
             }
         },
         // About us page, note the change from about-us to about_us.
