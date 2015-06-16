@@ -9,7 +9,7 @@
   "dependencies": {
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.4",
-    "components-font-awesome": ""
+    "components-font-awesome": "4.3.0"
   },
   "overrides": {
     "modernizr": {

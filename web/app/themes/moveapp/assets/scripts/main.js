@@ -43,6 +43,15 @@
                         $('#fb-text').append(response.data[0].description);
                     });
                 });
+
+                $('.login-wrap').on('mouseover', function() {
+                    $(this).addClass('hover');
+                }).on('mouseout', function(e) {
+                    if (!$(e.target).is('input')) {
+                        $(this).removeClass('hover');
+                    }
+                });
+
             }
         },
         // Home page
@@ -65,9 +74,6 @@
                     this.paused ? $(this).siblings(".play-btn").css("display", "block") : $(this).siblings(".play-btn").css("display", "none");
                     this.paused ? $(this).removeAttr("controls", "") : $(this).attr("controls", "");
                 });
-                $('.login-wrap').hover(function() {
-                    $(this).toggleClass('hover')
-                })
             }
         },
         // About us page, note the change from about-us to about_us.

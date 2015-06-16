@@ -26,19 +26,46 @@ header {
       a button, button{
         color: $gray;
         &:hover {
-          color: white;
-          background: $gray-light;
+          background: lighten($gray-lighter, 5%);
+          color: $gray;
         }
       }
 
       .login-wrap {
         display: inline-block;
         position: relative;
+        color: $gray;
+        background: white;
 
         &.hover {
-          color: white;
-          background: $gray-light;
+          color: $gray;
+          background: lighten($gray-lighter, 5%);
           #login-wrapper {
+            display: block;
+          }
+        }
+
+        #logged-in {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+
+        #login-wrapper {
+          display: none;
+          position: absolute;
+          width: 270px;
+          top: 70px;
+          right: 0;
+          z-index: 99;
+          padding: 50px 30px;
+          background: lighten($gray-lighter, 5%);
+          color: $gray;
+
+
+          .btn {
+            font-size: 16px;
+            margin: 0 auto;
             display: block;
           }
         }
@@ -86,25 +113,6 @@ header {
     @media(min-width: $grid-float-breakpoint) {
       background-color: $lightgray;
     }
-  }
-}
-
-#login-wrapper {
-  display: none;
-  position: absolute;
-  width: 270px;
-  top: 70px;
-  right: 0;
-  z-index: 99;
-  background: $gray-light;
-  color: #000;
-  padding: 50px 30px;
-
-  .btn {
-    background-color: $gray-light;
-    font-size: 16px;
-    margin: 0 auto;
-    display: block;
   }
 }
 

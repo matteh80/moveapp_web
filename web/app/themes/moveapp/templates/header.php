@@ -7,18 +7,14 @@
         <div id="button-wrapper" class="col-md-4 col-md-offset-4">
             <div class="login-wrap">
                 <button class="login"><?= __('Logga in', 'sage'); ?></button>
+                <div id="logged-in">sdsd</div>
                 <div id="login-wrapper" class="col-md-2 col-md-offset-8">
                     <form id="login-form">
                         <div class="form-group">
-                            <input type="email" class="form-control" id="username" placeholder="Enter email" required>
+                            <input type="email" class="form-control" id="username" placeholder="Enter email" autocomplete="off" required>
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control" id="password" placeholder="Password" required>
-                        </div>
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox"> Check me out
-                            </label>
                         </div>
                         <button type="submit" id="btn_login" class="btn btn-default text-center">Submit</button>
                     </form>
