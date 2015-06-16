@@ -7,7 +7,7 @@
         <div id="button-wrapper" class="col-md-4 col-md-offset-4">
             <div class="login-wrap">
                 <button class="login"><?= __('Logga in', 'sage'); ?></button>
-                <div id="logged-in">sdsd</div>
+                <a href="#" id="logged-in"></a>
                 <div id="login-wrapper" class="col-md-2 col-md-offset-8">
                     <form id="login-form">
                         <div class="form-group">
@@ -16,15 +16,10 @@
                         <div class="form-group">
                             <input type="password" class="form-control" id="password" placeholder="Password" required>
                         </div>
-                        <button type="submit" id="btn_login" class="btn btn-default text-center">Submit</button>
+                        <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN</button>
                     </form>
                 </div>
             </div>
-
-
-
-
-
             <a href="http://app.moveapp.se/register/">
                 <button class="register"><?= __('Nytt konto', 'sage'); ?></button>
             </a>

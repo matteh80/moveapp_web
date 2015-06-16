@@ -49,6 +49,8 @@ header {
           position: absolute;
           top: 0;
           left: 0;
+          height: 100%;
+          padding-top: 35%;
         }
 
         #login-wrapper {
@@ -63,15 +65,21 @@ header {
           color: $gray;
 
 
-          .btn {
+          #btn_login {
             font-size: 16px;
             margin: 0 auto;
             display: block;
+            background-color: $brand-primary-dark;
+            color: #fff;
+
+            &:hover {
+              background-color: darken($brand-primary-dark, 10%);
+            }
           }
         }
       }
 
-      button {
+      button.login, button.register {
         display: none;
         position: relative;
         text-transform: uppercase;

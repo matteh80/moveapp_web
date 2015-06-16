@@ -1,12 +1,11 @@
 jQuery( document ).ready(function($) {
-    if(sessionStorage.getItem('accessToken') != "" && sessionStorage.getItem('user') != "") {
-        //$('.login').hide();
+    if(sessionStorage.getItem('accessToken') != "" && sessionStorage.getItem('user') != "null") {
+        $('.login').hide();
         $('#logged-in').text(sessionStorage.getItem('user'));
     }
     $('#btn_login').click(function(e){
         e.preventDefault();
         data = {"username": $('#username').val(), "password": $('#password').val()};
-        //data = {"username": "test@test.net", "password": "testtest"};
         login(data);
     });
 });
@@ -25,7 +24,6 @@ function login(data){
         success:function(response){
             //console.log(response);
             token = response.token;
-
 
             sessionStorage.setItem('accessToken', token);
             parts = token.split(".");
@@ -58,6 +56,14 @@ function clean_up_json(json) {
     json = json.replace(/[\u0000-\u0019]+/g,"");
     return (JSON.parse(json));
 
+}
+
+function is_logged_in() {
+    if(sessionStorage.getItem('accessToken') != '') {
+        return true;
+    }else{
+        return false;
+    }
 }
 
 function get_user(user_id){
