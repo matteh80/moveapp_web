@@ -110,7 +110,7 @@
             }
         },
         // User page.
-        'page_template_template_user': {
+        'page_template_template_profil': {
             init: function () {
                 // JavaScript to be fired on the about us page
             },

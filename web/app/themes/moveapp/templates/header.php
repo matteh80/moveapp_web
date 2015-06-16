@@ -20,7 +20,7 @@
                 </div>
             </div>
             <?php
-            $id = Roots\Sage\Utils\get_page_id_by_slug('user');
+            $id = Roots\Sage\Utils\get_page_id_by_slug('profil');
             $url = get_permalink($id);
             ?>
             <a href="<?php echo $url; ?>">
