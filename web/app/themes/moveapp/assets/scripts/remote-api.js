@@ -35,7 +35,7 @@ function login(data){
             json = clean_up_json(json);
             console.log(json);
             get_user(json.user_id);
-
+            get_subscription();
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -81,9 +81,31 @@ function get_user(user_id){
             }
         },
         success:function(response){
-            console.log(response.first_name);
             sessionStorage.setItem('user', JSON.stringify(response));
             location.reload();
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
+}
+
+function get_subscription() {
+    $.ajax({
+        url: apiUrl+'register/status/',
+        contentType: "application/json",
+        method: "GET",
+        processData: false,
+        dataType: 'json',
+        beforeSend: function(xhr) {
+            if (sessionStorage.getItem('accessToken')) {
+                xhr.setRequestHeader('Authorization',
+                    'JWT ' + sessionStorage.getItem('accessToken'));
+            }
+        },
+        success:function(response){
+            console.log(response);
+            sessionStorage.setItem('subscription', JSON.stringify(response));
         },
         error: function(errorThrown){
             console.log(errorThrown);

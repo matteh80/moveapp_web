@@ -115,14 +115,33 @@
                 // JavaScript to be fired on the about us page
             },
             finalize: function () {
+                get_subscription();
+                //USER
                 user = JSON.parse(sessionStorage.getItem('user'));
                 $('.name').text(user.first_name+" "+user.last_name);
+                $('.loc').text(user.location);
 
+                //PROFILE PICTURE
                 var image = new Image();
                 image.src = 'data:image/png;base64,'+user.profile_picture;
                 $('.picture-wrapper').empty().append(image);
                 $('.picture-wrapper').children().addClass('img-circle profile-picture');
                 $('.picture-wrapper').children().css('visibility','visible').hide().fadeIn('slow');
+
+                //SUBSCRIPTION
+                var subscription = JSON.parse(sessionStorage.getItem('subscription'));
+                var cancelled = subscription.cancelled;
+                var end_date = subscription.end_date;
+                var datetime = new Date();
+                var today = datetime.getTime();
+                var dt = new Date(end_date*1000);
+                var newDt = dt.getFullYear()+("0"+(dt.getMonth()+1)).slice(-2)+("0"+dt.getDate()).slice(-2);
+                console.log("end: "+end_date+" today: "+today);
+                if(end_date*1000 >= today && cancelled == false) {
+                    $('.subscription h4').text("Tillsvidare abonnemang. Nuvarande period avslutas "+newDt+". (Ditt abonnemang förnyas automatiskt.)");
+                }else if(end_date*1000 >= today && cancelled == false) {
+                    $('.subscription h4').text("Abonnemang avslutat. Aktivt t.o.m "+newDt);
+                }
             }
         }
     };
