@@ -133,6 +133,7 @@ function cancel_subscription() {
         method: 'GET',
         processData: false,
         dataType: 'json',
+        headers: {"Authorization": 'JWT ' + sessionStorage.getItem('accessToken')},
         beforeSend: function(xhr) {
             if (sessionStorage.getItem('accessToken')) {
                 xhr.setRequestHeader('Authorization',
