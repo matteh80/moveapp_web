@@ -86,6 +86,7 @@ function get_user(user_id){
         method: "GET",
         processData: false,
         dataType: 'json',
+        headers: {"Authorization": 'JWT ' + sessionStorage.getItem('accessToken')},
         beforeSend: function(xhr) {
             if (sessionStorage.getItem('accessToken')) {
                 xhr.setRequestHeader('Authorization',
@@ -109,6 +110,7 @@ function get_subscription() {
         method: "GET",
         processData: false,
         dataType: 'json',
+        headers: {"Authorization": 'JWT ' + sessionStorage.getItem('accessToken')},
         beforeSend: function(xhr) {
             if (sessionStorage.getItem('accessToken')) {
                 xhr.setRequestHeader('Authorization',
