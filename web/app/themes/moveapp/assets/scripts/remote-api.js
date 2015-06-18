@@ -33,7 +33,7 @@ function login(data){
         contentType: "application/json",
         method: "POST",
         data: JSON.stringify(data),
-        crossDomain: true,
+        crossDomain: false,
         processData: false,
         dataType: 'json',
         success:function(response){
