@@ -1,6 +1,6 @@
 local:
-  vhost: "localhost"
-  wordpress_path: "/srv/www/stage.moveapp.se/current/web" # use an absolute path here
+  vhost: "vhost.local"
+  wordpress_path: "/srv/www/moveapp.se/current/web" # use an absolute path here
 
   database:
     name: "moveapp_dev"
@@ -40,7 +40,7 @@ staging:
 
   paths: # you can customize wordpress internal paths
     wp_content: "app"
-    uploads: "app/uploads"
+    uploads: "app/uploads/"
     plugins: "app/plugins"
     themes: "app/themes"
     languages: "app/languages"
