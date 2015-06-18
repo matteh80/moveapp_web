@@ -25,6 +25,7 @@ header {
 
       a button, button{
         color: $gray;
+        display: none;
         &:hover {
           background: lighten($gray-lighter, 5%);
           color: $gray;
@@ -52,7 +53,7 @@ header {
           top: 70px;
           right: 0;
           z-index: 99;
-          padding: 50px 30px;
+          padding: 20px 30px;
           background: lighten($gray-lighter, 5%);
           color: $gray;
 
@@ -63,6 +64,7 @@ header {
             display: block;
             background-color: $brand-primary-dark;
             color: #fff;
+            border: none;
 
             &:hover {
               background-color: darken($brand-primary-dark, 10%);

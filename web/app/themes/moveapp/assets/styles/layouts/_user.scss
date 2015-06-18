@@ -9,4 +9,12 @@
 
 .loc {
   color: $gray-light;
+  margin-top: 0;
+}
+
+button {
+
+  &.avsluta, &.aktivera {
+    display: none;
+  }
 }

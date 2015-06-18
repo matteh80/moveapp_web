@@ -24,11 +24,13 @@
 }
 @import url(http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,latin-ext);
 body {
-  font-family: "Helvetica Neue LT Std 55"
+  font-family: "Helvetica Neue LT Std 55";
+  outline: none;
 }
 
 a {
   color: darken($brand-primary, 35%);
+  outline: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -50,4 +52,8 @@ blockquote {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+}
+
+.btn {
+  font-family: "Futura LT", sans-serif;
 }

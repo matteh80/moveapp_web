@@ -1,34 +1,36 @@
 <header class="banner" role="banner">
     <div class="container">
-        <a class="brand col-md-4" href="<?= esc_url(home_url('/')); ?>">
-            <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive"/>
-        </a>
+        <div class="row">
+            <a class="brand col-md-4" href="<?= esc_url(home_url('/')); ?>">
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive"/>
+            </a>
 
-        <div id="button-wrapper" class="col-md-4 col-md-offset-4">
-            <div class="login-wrap">
-                <button class="login"><?= __('Logga in', 'sage'); ?></button>
-                <div id="login-wrapper" class="col-md-2 col-md-offset-8">
-                    <form id="login-form">
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="username" placeholder="Enter email" autocomplete="off" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="password" placeholder="Password" required>
-                        </div>
-                        <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN</button>
-                    </form>
+            <div id="button-wrapper" class="col-md-4 col-md-offset-4">
+                <div class="login-wrap">
+                    <button class="login"><?= __('Logga in', 'sage'); ?></button>
+                    <div id="login-wrapper" class="col-md-2 col-md-offset-8">
+                        <form id="login-form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" id="username" placeholder="Enter email" autocomplete="off" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" class="form-control" id="password" placeholder="Password" required>
+                            </div>
+                            <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN</button>
+                        </form>
+                    </div>
                 </div>
+                <?php
+                $id = Roots\Sage\Utils\get_page_id_by_slug('profil');
+                $url = get_permalink($id);
+                ?>
+                <a href="<?php echo $url; ?>">
+                    <button id="logged-in"></button>
+                </a>
+                <a href="http://app.moveapp.se/register/">
+                    <button class="register"><?= __('Nytt konto', 'sage'); ?></button>
+                </a>
             </div>
-            <?php
-            $id = Roots\Sage\Utils\get_page_id_by_slug('profil');
-            $url = get_permalink($id);
-            ?>
-            <a href="<?php echo $url; ?>">
-                <button id="logged-in"></button>
-            </a>
-            <a href="http://app.moveapp.se/register/">
-                <button class="register"><?= __('Nytt konto', 'sage'); ?></button>
-            </a>
         </div>
     </div>
 
