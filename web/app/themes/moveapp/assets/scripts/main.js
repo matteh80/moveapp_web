@@ -36,13 +36,22 @@
 
                     var accessToken = '332897300242814|qGg9igkAKsL88273AqbGmifBAtQ';
                     FB.api('1632026917030663/feed', {
-                        access_token : accessToken,
+                        access_token: accessToken,
                         status_type: 'shared_story'
-                    }, function(response) {
+                    }, function (response) {
                         console.log(response)
                         $('#fb-text').append(response.data[0].description);
                     });
                 });
+
+                $('.login-wrap').on('mouseover', function () {
+                    $(this).addClass('hover');
+                }).on('mouseout', function (e) {
+                    if (!$(e.target).is('input')) {
+                        $(this).removeClass('hover');
+                    }
+                });
+
             }
         },
         // Home page
@@ -73,7 +82,7 @@
                 // JavaScript to be fired on the about us page
             },
             finalize: function () {
-                
+
             }
         },
         'single': {
@@ -94,9 +103,51 @@
                     e.preventDefault();
                     $answer = $(this).siblings(".faq-answer");
                     //$answer.css("display", "block");
-                    $answer.toggle( "fast", function() {
+                    $answer.toggle("fast", function () {
                         // Animation complete.
                     });
+                });
+            }
+        },
+        // User page.
+        'page_template_template_profil': {
+            init: function () {
+                if(!is_logged_in()) {
+                    window.location = "http://moveapp.se";
+                }
+                get_subscription();
+            },
+            finalize: function () {
+
+                //USER
+                user = JSON.parse(sessionStorage.getItem('user'));
+                $('.name').text(user.first_name+" "+user.last_name);
+                $('.loc').text(user.location);
+
+                //PROFILE PICTURE
+                if(user.profile_picture != null) {
+                    var image = new Image();
+                    image.src = 'data:image/png;base64,'+user.profile_picture;
+                    $('.picture-wrapper').empty().append(image);
+                    $('.picture-wrapper').children().addClass('img-circle profile-picture');
+                }
+                $('.picture-wrapper').children().css('visibility','visible').hide().fadeIn('slow');
+
+                //SUBSCRIPTION
+                $('button.avsluta').click(function(e) {
+                    cancel_subscription();
+                });
+
+                //AKTIVERA ABONNEMANG
+                $('button.aktivera').click(function(e) {
+                    console.log("click")
+                    $(this).parent().attr("href", "http://app.moveapp.se/register/subscribe/"+user.user_id);
+                });
+
+                //LOGOUT
+                $('button.logout').click(function(e) {
+                    logout();
+                    location.reload();
                 });
             }
         }
@@ -134,5 +185,6 @@
 
     // Load Events
     $(document).ready(UTIL.loadEvents);
+
 
 })(jQuery); // Fully reference jQuery after this point.

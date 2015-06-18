@@ -1,0 +1,20 @@
+.profile-picture {
+  border: 10px solid $gray-lighter;
+  display: inline-block;
+  visibility: hidden;
+}
+.name {
+
+}
+
+.loc {
+  color: $gray-light;
+  margin-top: 0;
+}
+
+button {
+
+  &.avsluta, &.aktivera {
+    display: none;
+  }
+}
