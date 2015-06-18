@@ -30,10 +30,8 @@ var jsonUser;
 function login(data){
     $.ajax({
         url: apiUrl+'api-token-auth/',
-        contentType: "application/json",
         method: "POST",
         data: JSON.stringify(data),
-        crossDomain: true,
         processData: false,
         dataType: 'json',
         success:function(response){
