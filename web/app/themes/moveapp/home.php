@@ -16,11 +16,13 @@
                          class="img-responsive"/>
                 </a>
             </div>
-            <div class="col-sm-4 col-md-3">
-                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">
+            <div class="col-sm-4 col-md-3 text-center">
+<!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
+                <a href="#">
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
-                         class="img-responsive"/>
+                         class="img-responsive" style="opacity: 0.6;"/>
                 </a>
+                <small>Släpps i slutet av juni</small>
             </div>
         </div>
     </div>
