@@ -124,6 +124,12 @@
                 $('.name').text(user.first_name+" "+user.last_name);
                 $('.loc').text(user.location);
 
+                //PROFILE
+                profile = JSON.parse(sessionStorage.getItem('profile'));
+                console.log(profile);
+                $('.kcal_value').text(profile.total_kcal);
+                $('.time_value').text(parseInt(profile.total_time/60));
+
                 //PROFILE PICTURE
                 if(user.profile_picture != null) {
                     var image = new Image();

@@ -47,6 +47,7 @@ function login(data){
             json = clean_up_json(json);
             console.log(json);
             get_user(json.user_id);
+            get_profile(json.user_id);
             get_subscription();
         },
         error: function(errorThrown){
@@ -96,6 +97,29 @@ function get_user(user_id){
         success:function(response){
             sessionStorage.setItem('user', JSON.stringify(response));
             location.reload();
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
+}
+
+function get_profile(user_id) {
+    $.ajax({
+        url: apiUrl+'api/users/'+user_id+'/profile/',
+        contentType: "application/json",
+        method: "GET",
+        processData: false,
+        dataType: 'json',
+        headers: {"Authorization": 'JWT ' + sessionStorage.getItem('accessToken')},
+        beforeSend: function(xhr) {
+            if (sessionStorage.getItem('accessToken')) {
+                xhr.setRequestHeader('Authorization',
+                    'JWT ' + sessionStorage.getItem('accessToken'));
+            }
+        },
+        success:function(response){
+            sessionStorage.setItem('profile', JSON.stringify(response));
         },
         error: function(errorThrown){
             console.log(errorThrown);
