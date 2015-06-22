@@ -1,4 +1,26 @@
 jQuery( document ).ready(function($) {
+    var idleTime = 0;
+    //Increment the idle time counter every minute.
+    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
+
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
+
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+        console.log(idleTime);
+        if (idleTime < 15) { // 20 minutes
+            refreshToken();
+        }else{
+            logout(true);
+        }
+    }
+
     if(sessionStorage.getItem('accessToken') != null && sessionStorage.getItem('user') != null) {
         $('.login, .register').hide();
         $('#logged-in').show();
@@ -11,6 +33,7 @@ jQuery( document ).ready(function($) {
     }
     $('#btn_login').click(function(e){
         e.preventDefault();
+        sessionStorage.setItem('password', $('#password').val());
         data = {"username": $('#username').val(), "password": $('#password').val()};
         login(data);
     });
@@ -19,13 +42,12 @@ jQuery( document ).ready(function($) {
 $(document).ajaxComplete(function(event, xhr, settings){
     console.log(JSON.parse(xhr.responseText).detail);
     if(JSON.parse(xhr.responseText).detail == "Signature has expired.") {
-        logout();
-        alert("Du har blivit utloggad pga inaktivitet.")
+        logout(true);
     }
 });
 
 var apiUrl = "http://app.moveapp.se/";
-var jsonUser;
+var user;
 
 function login(data){
     $.ajax({
@@ -39,7 +61,6 @@ function login(data){
         success:function(response){
             //console.log(response);
             token = response.token;
-
             sessionStorage.setItem('accessToken', token);
             parts = token.split(".");
 
@@ -49,6 +70,7 @@ function login(data){
             get_user(json.user_id);
             get_profile(json.user_id);
             get_subscription();
+            location.reload();
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -96,7 +118,6 @@ function get_user(user_id){
         },
         success:function(response){
             sessionStorage.setItem('user', JSON.stringify(response));
-            location.reload();
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -177,6 +198,34 @@ function cancel_subscription() {
 }
 
 
+function refreshToken() {
+    data = {"username": user.email, "password": sessionStorage.getItem('password')};
+    $.ajax({
+        url: apiUrl+'api-token-auth/',
+        contentType: "application/json",
+        method: "POST",
+        crossDomain: false,
+        processData: false,
+        data: JSON.stringify(data),
+        dataType: 'json',
+        headers: {"Authorization": 'JWT ' + sessionStorage.getItem('accessToken')},
+        beforeSend: function(xhr) {
+            if (sessionStorage.getItem('accessToken')) {
+                xhr.setRequestHeader('Authorization',
+                    'JWT ' + sessionStorage.getItem('accessToken'));
+            }
+        },
+        success:function(response){
+            token = response.token;
+            sessionStorage.setItem('accessToken', token);
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
+}
+
+
 //UPDATES SUB IN VIEW
 function update_subscription() {
     var subscription = JSON.parse(sessionStorage.getItem('subscription'));
@@ -203,8 +252,11 @@ function update_subscription() {
     }
 }
 
-function logout() {
+function logout(inactive) {
     sessionStorage.clear();
+    if(inactive) {
+        alert("Du har blivit utloggad pga inaktivitet.");
+    }
     window.location = "http://moveapp.se";
 }
 
