@@ -147,7 +147,6 @@
                 //LOGOUT
                 $('button.logout').click(function(e) {
                     logout();
-                    location.reload();
                 });
             }
         }
