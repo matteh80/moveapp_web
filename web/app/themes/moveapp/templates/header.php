@@ -53,7 +53,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#"><img
+                <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><img
                         src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png"
                         class="img-responsive"/></a>
             </div>
