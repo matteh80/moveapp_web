@@ -1,5 +1,14 @@
 header {
 
+  .login-container {
+    border-bottom: 1px solid $gray-lighter;
+    background-color: $gray-lighter;
+    @media(min-width: $grid-float-breakpoint) {
+      border: none;
+      background-color: white;
+    }
+  }
+
   .container {
     @media(min-width: $grid-float-breakpoint) {
       display: table;
@@ -25,7 +34,6 @@ header {
 
       a button, button{
         color: $gray;
-        display: none;
         &:hover {
           background: lighten($gray-lighter, 5%);
           color: $gray;
@@ -50,7 +58,9 @@ header {
           display: none;
           position: absolute;
           width: 270px;
-          top: 70px;
+          @media(min-width: $grid-float-breakpoint) {
+            top: 70px;
+          }
           right: 0;
           z-index: 99;
           padding: 20px 30px;
@@ -74,13 +84,15 @@ header {
       }
 
       button.login, button.register, button#logged-in {
-        display: none;
+        display: inline-block;
+        padding: 10px 25px 10px 5px;
         position: relative;
         text-transform: uppercase;
         background: transparent;
         border: 0;
         cursor: pointer;
         outline:none;
+        background-color: $gray-lighter;
 
         @media(min-width: $grid-float-breakpoint) {
           display: inline-block;
@@ -88,12 +100,16 @@ header {
           padding: 10px 30px 10px 10px;
           font-size: 1em;
           line-height: 1em;
+          background-color: white;
         }
         &:after {
           content: '';
           position: absolute;
           right: 10px;
-          top: 36%;
+          top: 25%;
+          @media(min-width: $grid-float-breakpoint) {
+            top: 36%;
+          }
           font-family: FontAwesome;
           font-size: 0.8em;
         }

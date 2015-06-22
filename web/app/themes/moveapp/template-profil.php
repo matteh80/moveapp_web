@@ -6,9 +6,13 @@
 <?php get_template_part('templates/page', 'header'); ?>
 
 <div class="container">
-    <div class="col-md-3 kcal-time">
+    <div class="col-sm-6 col-sm-push-3 text-center picture-wrapper">
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/empty_picture.png"
+             class="img-responsive profile-picture img-circle"/>
+    </div>
+    <div class="col-xs-6 col-sm-3 col-sm-pull-6 kcal-time">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <img src="<?= get_template_directory_uri(); ?>/dist/images/profil_kcal.png" class="img-responsive" />
             </div>
         </div>
@@ -17,13 +21,10 @@
             <h4>kcal</h4>
         </div>
     </div>
-    <div class="col-md-6 text-center picture-wrapper">
-        <img src="<?= get_template_directory_uri(); ?>/dist/images/empty_picture.png"
-             class="img-responsive profile-picture img-circle"/>
-    </div>
-    <div class="col-md-3 kcal-time">
+
+    <div class="col-xs-6 col-sm-3 kcal-time">
         <div class="row">
-            <div class="col-md-6 col-md-offset-3">
+            <div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <img src="<?= get_template_directory_uri(); ?>/dist/images/profil_time.png" class="img-responsive" />
             </div>
         </div>
