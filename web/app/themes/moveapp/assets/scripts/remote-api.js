@@ -22,15 +22,15 @@ jQuery( document ).ready(function($) {
     }
 
     if(sessionStorage.getItem('accessToken') != null && sessionStorage.getItem('user') != null) {
+        user = JSON.parse(sessionStorage.getItem('user'));
         $('.login, .register').hide();
         $('#logged-in').show();
-        user = JSON.parse(sessionStorage.getItem('user'));
-        console.log(user);
         $('#logged-in').text(user.first_name+" "+user.last_name);
     }else{
         $('.login, .register').show();
         $('#logged-in').hide();
     }
+
     $('#btn_login').click(function(e){
         e.preventDefault();
         sessionStorage.setItem('password', $('#password').val());
@@ -70,7 +70,6 @@ function login(data){
             get_user(json.user_id);
             get_profile(json.user_id);
             get_subscription();
-            location.reload();
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -118,6 +117,10 @@ function get_user(user_id){
         },
         success:function(response){
             sessionStorage.setItem('user', JSON.stringify(response));
+            user = JSON.parse(sessionStorage.getItem('user'));
+            $('.login, .register').hide();
+            $('#logged-in').show();
+            $('#logged-in').text(user.first_name+" "+user.last_name);
         },
         error: function(errorThrown){
             console.log(errorThrown);
