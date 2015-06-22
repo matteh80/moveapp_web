@@ -31,7 +31,7 @@
                         appSecret: 'a912eb6e7d0a4136f0ae9d799258818b',
                         cookie: true,
                         xfbml: false,  // parse social plugins on this page
-                        version: 'v2.3' // or v2.0, v2.1, v2.0
+                        version: 'v2.2' // or v2.0, v2.1, v2.0
                     });
 
                     var accessToken = '332897300242814|qGg9igkAKsL88273AqbGmifBAtQ';
@@ -40,7 +40,12 @@
                         status_type: 'shared_story'
                     }, function (response) {
                         console.log(response)
-                        $('#fb-text').append(response.data[0].description);
+                        $.each(response.data, function(i, item) {
+                            //console.log(item.status_type);
+                            if(item.status_type == 'shared_story') {
+                                $('#fb-text').append(item.description);
+                            }
+                        });
                     });
                 });
 
@@ -154,6 +159,7 @@
                 $('button.logout').click(function(e) {
                     logout();
                 });
+
             }
         }
     };
