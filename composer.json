@@ -46,7 +46,8 @@
     "johnpbloch/wordpress": "4.2.2",
     "wpackagist-plugin/wp-maintenance-mode": ">=2.0.3",
     "wpackagist-plugin/wordpress-seo": ">=2.2",
-    "wpackagist-plugin/contact-form-7": ">=4.2"
+    "wpackagist-plugin/contact-form-7": ">=4.2",
+    "wpackagist-plugin/favicon-by-realfavicongenerator": ">=1.2.15"
   },
   "require-dev": {
 
