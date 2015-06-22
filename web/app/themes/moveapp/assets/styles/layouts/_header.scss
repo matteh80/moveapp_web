@@ -77,7 +77,7 @@ header {
             border: none;
 
             &:hover {
-              background-color: darken($brand-primary-dark, 10%);
+              background-color: darken($brand-primary-dark, 10%) !important;
             }
           }
         }
@@ -128,7 +128,7 @@ header {
           padding: 10px 10px 10px 25px;
 
           &:hover {
-            color: white;
+//            color: white;
             @media(min-width: $grid-float-breakpoint) {
 //              color: $brand-primary-dark;
             }
