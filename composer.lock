@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e567a16d531dc50d431ed9c4ab123781",
+    "hash": "8991277505d8afdea8266e910a6b2153",
     "packages": [
         {
             "name": "composer/installers",
@@ -256,6 +256,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
+        },
+        {
+            "name": "wpackagist-plugin/favicon-by-realfavicongenerator",
+            "version": "1.2.15",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/favicon-by-realfavicongenerator/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/favicon-by-realfavicongenerator.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/favicon-by-realfavicongenerator/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
