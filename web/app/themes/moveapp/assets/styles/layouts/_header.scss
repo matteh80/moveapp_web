@@ -35,7 +35,7 @@ header {
       a button, button{
         color: $gray;
         &:hover {
-          background: lighten($gray-lighter, 5%);
+          background: lighten($gray-lighter, 5%) !important;
           color: $gray;
         }
       }
@@ -48,7 +48,7 @@ header {
 
         &.hover {
           color: $gray;
-          background: lighten($gray-lighter, 5%);
+          background: lighten($gray-lighter, 5%) !important;
           #login-wrapper {
             display: block;
           }
@@ -128,7 +128,10 @@ header {
           padding: 10px 10px 10px 25px;
 
           &:hover {
-            color: $brand-primary-dark;
+            color: white;
+            @media(min-width: $grid-float-breakpoint) {
+              color: $brand-primary-dark;
+            }
           }
 
           &:after {
