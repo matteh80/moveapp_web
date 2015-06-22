@@ -18,7 +18,7 @@
         <div class="entry-content">
             <?php the_content(); ?>
             <div class="tags">
-                <?php the_tags('#', ' #', ''); ?>
+                <small><?php the_tags('#', ' #', ''); ?></small>
             </div>
         </div>
         <footer>
