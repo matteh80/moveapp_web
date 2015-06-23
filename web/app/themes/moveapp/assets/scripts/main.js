@@ -108,40 +108,79 @@
                 $( "form" ).on( "submit", function( event ) {
                     event.preventDefault();
                     var ajaxurl = document.location.protocol+'//'+document.location.host+'/wp-admin/admin-ajax.php';
-                    console.log( $( this ).serialize() );
-                    var formdata = $(this).serialize();
+                    var name = $("input#name").val();
+                    var email = $("input#email").val();
+                    var subject = $("input#subject").val();
+                    var message = $("textarea#message").val();
 
-                    jQuery.ajax({
-                        type: "POST",
-                        url:ajaxurl,
-                        data:formdata,
-                        action: "send_mail",
-                        success:function(data){
-                            alert(data)
-                            $('#mailsent').fadeIn(1000,function() {
-                                $(':input','#contact')
-                                    .not(':button, :submit, :reset, :hidden')
-                                    .val('')
-                                    .removeAttr('checked')
-                                    .removeAttr('selected');
+                    var response = grecaptcha.getResponse();
+
+
+                    if(response.length > 0) {
+                        var user_ip = 0;
+                        $.getJSON("http://jsonip.appspot.com?callback=?",
+                            function(data){
+                                user_ip = data.ip;
                             });
-                        },
-                        error: function(errorThrown){
-                            alert('error');
-                            console.log(errorThrown);
-                        }
+                        $.post(
+                            "https://www.google.com/recaptcha/api/siteverify",
+                            {
+                                secret: "6Le_fAgTAAAAAJ3ed9pbuuSL7c8tKidgo85X205W",
+                                response: grecaptcha.getResponse(),
+                                remoteip: user_ip
+                            }
+                        )
+                            .done(function(response) {
+                                if(response.success == true) {
+                                    send_mail();
+                                }else{
+                                    $('#mailsent').text("Är du säker på att du är en människa? Försök igen...").show();
+                                }
+                            })
+                    }
 
-                    });
-                    //jQuery.post(
-                    //    ajaxurl,
-                    //    {
-                    //        'action': 'add_foobar',
-                    //        'data':   'foobarid'
-                    //    },
-                    //    function(response){
-                    //        alert('The server responded: ' + response);
-                    //    }
-                    //);
+                    function send_mail() {
+                        $.ajax({
+                            type: "POST",
+                            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                            data: {
+                                'key': 'rRpN_d3D5C8615wC1qMDpA',
+                                'message': {
+                                    'from_email': "support@moveapp.se",
+                                    'from_name': name+" (SUPPORT)",
+                                    'to': [
+                                        {
+                                            'email': 'support@moveapp.se',
+                                            'name': 'Support',
+                                            'type': 'to'
+                                        }
+                                    ],
+                                    "headers": {
+                                        "Reply-To": email
+                                    },
+                                    'subject': subject,
+                                    'html': message,
+                                    "track_opens": true,
+                                    "track_clicks": true,
+                                }
+                            },
+                            success:function(data){
+                                console.log(data)
+                                $('#mailsent').fadeIn(1000,function() {
+                                    $(':input','#contact')
+                                        .not(':button, :submit, :reset, :hidden')
+                                        .val('')
+                                        .removeAttr('checked')
+                                        .removeAttr('selected');
+                                    grecaptcha.reset();
+                                });
+                            },
+                            error: function(errorThrown){
+                                alert('error');
+                                console.log(errorThrown);
+                            }
+                        });
+                    }
                 });
             }
         },

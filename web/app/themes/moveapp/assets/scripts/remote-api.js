@@ -14,6 +14,7 @@ jQuery( document ).ready(function($) {
     function timerIncrement() {
         idleTime = idleTime + 1;
         console.log(idleTime);
+        console.log(is_logged_in+" - "+sessionStorage.getItem('accessToken'));
         if(is_logged_in) {
             if (idleTime < 15) { // 20 minutes
                 refreshToken();
@@ -208,6 +209,7 @@ function cancel_subscription() {
 
 
 function refreshToken() {
+    console.log("refresh token");
     data = {"username": user.email, "password": sessionStorage.getItem('password')};
     $.ajax({
         url: apiUrl+'api-token-auth/',

@@ -4,4 +4,5 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
     <meta name="google-site-verification" content="3NYSjp7cioYXHYqsm_B8ZeI3sJBBgFxXzu5JB4oag8o"/>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
