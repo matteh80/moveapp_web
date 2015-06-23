@@ -58,6 +58,7 @@ function display_sidebar()
                 ['is_page_template', 'template-custom.php'],
                 ['is_page_template', 'template-faq.php'],
                 ['is_page_template', 'template-profil.php'],
+                ['is_page_template', 'template-contact.php'],
                 ['is_singular', 'faq']
             ]
         );
