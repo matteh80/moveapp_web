@@ -49,20 +49,38 @@ staging:
   ssh:
     host: "46.101.154.208"
     user: "root"
-  #   password: "password" # password is optional, will use public keys if available.
-  #   port: 22 # Port is optional
-  #   rsync_options: "--verbose" # Additional rsync options, optional
-  #   gateway: # Gateway is optional
-  #     host: "host"
-  #     user: "user"
-  #     password: "password" # password is optional, will use public keys if available.
 
-  # ftp:
-  #   user: "user"
-  #   password: "password"
-  #   host: "host"
-  #   passive: true
+production: # multiple environments can be specified
+  vhost: "localhost"
+  wordpress_path: "/srv/www/moveapp.se/current/web" # use an absolute path here
 
-# production: # multiple environments can be specified
-#   [...]
+  database:
+    name: "moveapp_prod"
+    user: "moveapp_dbuser"
+    password: "moveapp_dbpassword"
+    host: "127.0.0.1"
+    # port: "3308" # Use just in case you have exotic server config
+
+  exclude:
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "wp-config.php"
+    - "wp-content/*.sql"
+
+  paths: # you can customize wordpress internal paths
+    wp_content: "app"
+    uploads: "app/uploads"
+    plugins: "app/plugins"
+    themes: "app/themes"
+    languages: "app/languages"
+    themes: "app/themes"
+
+  ssh:
+    host: "46.101.154.208"
+    user: "root"
 
