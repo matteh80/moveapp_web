@@ -5,7 +5,7 @@
 ?>
 <?php get_template_part('templates/page', 'header'); ?>
 
-<div class="container">
+<div class="container narrow">
     <div class="col-sm-6 col-sm-push-3 text-center picture-wrapper">
         <img src="<?= get_template_directory_uri(); ?>/dist/images/empty_picture.png"
              class="img-responsive profile-picture img-circle"/>

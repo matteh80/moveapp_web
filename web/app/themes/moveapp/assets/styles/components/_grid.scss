@@ -9,9 +9,11 @@
 .sidebar {
   @include make-sm-column($sidebar-sm-columns);
 }
-.wrap {
-  @media(min-width: $screen-lg-min) {
-    width: 970px;
+.container {
+  &.narrow {
+    @media(min-width: $screen-md-min) {
+      width: 920px;
+    }
   }
 }
 
