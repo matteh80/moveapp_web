@@ -35,7 +35,7 @@ header {
       a button, button{
         color: $gray;
         &:hover {
-          background: lighten($gray-lighter, 5%) !important;
+          background: $gray-lighter;
           color: $gray;
         }
       }
@@ -48,9 +48,15 @@ header {
 
         &.hover {
           color: $gray;
-          background: lighten($gray-lighter, 5%) !important;
+          background: $gray-lighter !important;
           #login-wrapper {
             display: block;
+          }
+          .login {
+            @media(max-width: $grid-float-breakpoint) {
+              color: $brand-primary-dark;
+            }
+            background: $gray-lighter !important;
           }
         }
 
@@ -64,7 +70,7 @@ header {
           right: 0;
           z-index: 99;
           padding: 20px 30px;
-          background: lighten($gray-lighter, 5%);
+          background: $gray-lighter;
           color: $gray;
 
 
@@ -128,9 +134,9 @@ header {
           padding: 10px 10px 10px 25px;
 
           &:hover {
-//            color: white;
+//              color: white;
             @media(min-width: $grid-float-breakpoint) {
-//              color: $brand-primary-dark;
+              color: $brand-primary-dark;
             }
           }
 

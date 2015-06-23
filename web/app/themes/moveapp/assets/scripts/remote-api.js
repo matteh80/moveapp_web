@@ -118,9 +118,13 @@ function get_user(user_id){
         success:function(response){
             sessionStorage.setItem('user', JSON.stringify(response));
             user = JSON.parse(sessionStorage.getItem('user'));
-            $('.login, .register').hide();
-            $('#logged-in').show();
-            $('#logged-in').text(user.first_name+" "+user.last_name);
+            $('.login, .register').fadeOut( "slow", function() {
+                $('#logged-in').fadeIn("slow");
+                $('#logged-in').text(user.first_name+" "+user.last_name);
+                $('.login-wrap').removeClass("hover");
+            });
+
+
         },
         error: function(errorThrown){
             console.log(errorThrown);
