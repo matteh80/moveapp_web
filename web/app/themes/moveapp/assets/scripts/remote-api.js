@@ -14,10 +14,12 @@ jQuery( document ).ready(function($) {
     function timerIncrement() {
         idleTime = idleTime + 1;
         console.log(idleTime);
-        if (idleTime < 15) { // 20 minutes
-            refreshToken();
-        }else{
-            logout(true);
+        if(is_logged_in) {
+            if (idleTime < 15) { // 20 minutes
+                refreshToken();
+            }else{
+                logout(true);
+            }
         }
     }
 

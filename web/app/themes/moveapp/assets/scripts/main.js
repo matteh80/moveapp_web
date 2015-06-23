@@ -98,6 +98,53 @@
                 $('.news').addClass('active');
             }
         },
+        // Kontakt
+        'kontakt': {
+            init: function () {
+
+            },
+            finalize: function () {
+                //SEND MAIL AJAX
+                $( "form" ).on( "submit", function( event ) {
+                    event.preventDefault();
+                    var ajaxurl = document.location.protocol+'//'+document.location.host+'/wp-admin/admin-ajax.php';
+                    console.log( $( this ).serialize() );
+                    var formdata = $(this).serialize();
+
+                    jQuery.ajax({
+                        type: "POST",
+                        url:ajaxurl,
+                        data:formdata,
+                        action: "send_mail",
+                        success:function(data){
+                            alert(data)
+                            $('#mailsent').fadeIn(1000,function() {
+                                $(':input','#contact')
+                                    .not(':button, :submit, :reset, :hidden')
+                                    .val('')
+                                    .removeAttr('checked')
+                                    .removeAttr('selected');
+                            });
+                        },
+                        error: function(errorThrown){
+                            alert('error');
+                            console.log(errorThrown);
+                        }
+
+                    });
+                    //jQuery.post(
+                    //    ajaxurl,
+                    //    {
+                    //        'action': 'add_foobar',
+                    //        'data':   'foobarid'
+                    //    },
+                    //    function(response){
+                    //        alert('The server responded: ' + response);
+                    //    }
+                    //);
+                });
+            }
+        },
         // Faq page.
         'vanliga_fragor': {
             init: function () {

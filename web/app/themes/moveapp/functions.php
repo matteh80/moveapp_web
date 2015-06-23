@@ -10,23 +10,24 @@
  * @link https://github.com/roots/sage/pull/1042
  */
 $sage_includes = [
-  'lib/utils.php',                 // Utility functions
-  'lib/init.php',                  // Initial theme setup and constants
-  'lib/wrapper.php',               // Theme wrapper class
-  'lib/conditional-tag-check.php', // ConditionalTagCheck class
-  'lib/config.php',                // Configuration
-  'lib/assets.php',                // Scripts and stylesheets
-  'lib/titles.php',                // Page titles
-  'lib/extras.php',                // Custom functions
-  'lib/navwalker.php',             // WP Bootstrap Navwalker
-  'lib/faq-post-type.php',         // FAQ Custom Post Type
+    'lib/utils.php',                 // Utility functions
+    'lib/init.php',                  // Initial theme setup and constants
+    'lib/wrapper.php',               // Theme wrapper class
+    'lib/conditional-tag-check.php', // ConditionalTagCheck class
+    'lib/config.php',                // Configuration
+    'lib/assets.php',                // Scripts and stylesheets
+    'lib/titles.php',                // Page titles
+    'lib/extras.php',                // Custom functions
+    'lib/navwalker.php',             // WP Bootstrap Navwalker
+    'lib/faq-post-type.php',         // FAQ Custom Post Type
+    'lib/ajax-mail.php'             // Send mail
 ];
 
 foreach ($sage_includes as $file) {
-  if (!$filepath = locate_template($file)) {
-    trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
-  }
+    if (!$filepath = locate_template($file)) {
+        trigger_error(sprintf(__('Error locating %s for inclusion', 'sage'), $file), E_USER_ERROR);
+    }
 
-  require_once $filepath;
+    require_once $filepath;
 }
 unset($file, $filepath);

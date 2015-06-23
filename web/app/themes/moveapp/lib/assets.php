@@ -78,3 +78,5 @@ function assets() {
   wp_enqueue_script('remote-api_js', asset_path('scripts/remote-api.js'), ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', __NAMESPACE__ . '\\assets', 100);
+
+
