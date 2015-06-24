@@ -107,11 +107,12 @@
                 //SEND MAIL AJAX
                 $( "form" ).on( "submit", function( event ) {
                     event.preventDefault();
+                    $('.btn-submit').addClass('thinking btn-default').removeClass('btn-primary').attr("disabled", "disabled");
                     var ajaxurl = document.location.protocol+'//'+document.location.host+'/wp-admin/admin-ajax.php';
                     var name = $("input#name").val();
                     var email = $("input#email").val();
                     var subject = $("input#subject").val();
-                    var message = $("textarea#message").val();
+                    var message = $("textarea#message").val().replace(/\n/g,"<br>") + "<br><br><br>Skickat från moveapp.se";
 
                     var response = grecaptcha.getResponse();
 
@@ -146,8 +147,8 @@
                             data: {
                                 'key': 'rRpN_d3D5C8615wC1qMDpA',
                                 'message': {
-                                    'from_email': "support@moveapp.se",
-                                    'from_name': name+" (SUPPORT)",
+                                    'from_email': email,
+                                    'from_name': name,
                                     'to': [
                                         {
                                             'email': 'support@moveapp.se',
@@ -173,6 +174,7 @@
                                         .removeAttr('checked')
                                         .removeAttr('selected');
                                     grecaptcha.reset();
+                                    $('.btn-submit').removeClass('thinking btn-default').addClass('btn-primary').prop("disabled", false);
                                 });
                             },
                             error: function(errorThrown){

@@ -1,0 +1,15 @@
+.btn {
+  font-family: "Futura LT", sans-serif;
+
+  i {
+    margin-left: 5px;
+    transition: all 250ms ease-out;
+    font-size: 0;
+  }
+
+  &.thinking {
+    i {
+      font-size: inherit;
+    }
+  }
+}

@@ -39,7 +39,7 @@
                 <div class="g-recaptcha" data-sitekey="6Le_fAgTAAAAACHe4SSNW1aJTNUMH2MWfg5jrRVt"></div>
             </div>
             <div class="col-xs-12">
-                <button type="submit" class="btn btn-primary">Skicka ditt meddelande</button>
+                <button type="submit" class="btn btn-primary btn-submit">Skicka ditt meddelande<i class="fa fa-spinner fa-pulse"></i></button>
             </div>
 
         </form>
