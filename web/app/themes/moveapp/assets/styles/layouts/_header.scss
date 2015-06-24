@@ -132,6 +132,8 @@ header {
         &#logged-in {
           display: none;
           padding: 10px 10px 10px 25px;
+          transition: transform 500ms ease-in;
+          background-color: transparent;
 
           &:hover {
 //              color: white;

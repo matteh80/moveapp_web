@@ -15,7 +15,7 @@ jQuery( document ).ready(function($) {
         idleTime = idleTime + 1;
         console.log(idleTime);
         console.log(is_logged_in+" - "+sessionStorage.getItem('accessToken'));
-        if(is_logged_in) {
+        if(is_logged_in === true) {
             if (idleTime < 15) { // 20 minutes
                 refreshToken();
             }else{
@@ -122,7 +122,8 @@ function get_user(user_id){
             sessionStorage.setItem('user', JSON.stringify(response));
             user = JSON.parse(sessionStorage.getItem('user'));
             $('.login, .register').fadeOut( "slow", function() {
-                $('#logged-in').fadeIn("slow");
+                $('#logged-in').css("transform", "scale(2.0)").fadeIn("slow");
+                $('#logged-in').css("transform", "scale(1.0)");
                 $('#logged-in').text(user.first_name+" "+user.last_name);
                 $('.login-wrap').removeClass("hover");
             });
