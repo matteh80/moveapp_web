@@ -211,11 +211,13 @@
                 get_subscription();
             },
             finalize: function () {
-
+                //LiveEdit.init();
                 //USER
                 user = JSON.parse(sessionStorage.getItem('user'));
-                $('.name').text(user.first_name+" "+user.last_name);
-                $('.loc').text(user.location);
+                $('.name #first_name').text(user.first_name+" ");
+                $('.name #last_name').text(user.last_name);
+                //$('.loc').text(user.location);
+                $('.loc').prepend(user.location);
 
                 //PROFILE
                 profile = JSON.parse(sessionStorage.getItem('profile'));

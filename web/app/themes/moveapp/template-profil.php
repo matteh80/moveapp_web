@@ -35,8 +35,11 @@
     </div>
 </div>
 <div class="container text-center">
-    <h1 class="name"></h1>
-    <h2 class="loc"></h2>
+    <h1 class="name">
+        <span id="first_name"></span>
+        <span id="last_name"></span>
+    </h1>
+    <h2 class="loc editable" data-value="location"></h2>
 </div>
 
 <div class="container text-center">

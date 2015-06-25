@@ -1,34 +1,11 @@
 jQuery( document ).ready(function($) {
-    var idleTime = 0;
-    //Increment the idle time counter every minute.
-    var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
 
-    //Zero the idle timer on mouse movement.
-    $(this).mousemove(function (e) {
-        idleTime = 0;
-    });
-    $(this).keypress(function (e) {
-        idleTime = 0;
-    });
-
-    function timerIncrement() {
-        idleTime = idleTime + 1;
-        console.log(idleTime);
-        console.log(is_logged_in+" - "+sessionStorage.getItem('accessToken'));
-        if(is_logged_in === true) {
-            if (idleTime < 15) { // 20 minutes
-                refreshToken();
-            }else{
-                logout(true);
-            }
-        }
-    }
-
-    if(sessionStorage.getItem('accessToken') != null && sessionStorage.getItem('user') != null) {
+    if(is_logged_in()) {
         user = JSON.parse(sessionStorage.getItem('user'));
         $('.login, .register').hide();
         $('#logged-in').show();
         $('#logged-in').text(user.first_name+" "+user.last_name);
+        timer(true);
     }else{
         $('.login, .register').show();
         $('#logged-in').hide();
@@ -36,6 +13,7 @@ jQuery( document ).ready(function($) {
 
     $('#btn_login').click(function(e){
         e.preventDefault();
+        $(this).addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
         sessionStorage.setItem('password', $('#password').val());
         data = {"username": $('#username').val(), "password": $('#password').val()};
         login(data);
@@ -48,6 +26,36 @@ $(document).ajaxComplete(function(event, xhr, settings){
         logout(true);
     }
 });
+
+function timer(start) {
+    var idleTime = 0;
+    if(start) {
+        var idleInterval = setInterval(timerIncrement, 6000); // 1 minute
+    }else{
+        clearInterval(idleInterval);
+    }
+
+
+    //Zero the idle timer on mouse movement.
+    $(this).mousemove(function (e) {
+        idleTime = 0;
+    });
+    $(this).keypress(function (e) {
+        idleTime = 0;
+    });
+
+    function timerIncrement() {
+        idleTime = idleTime + 1;
+        //console.log(idleTime);
+        if(is_logged_in()) {
+            if (idleTime < 15) { // 20 minutes
+                refreshToken();
+            }else{
+                logout(true);
+            }
+        }
+    }
+}
 
 var apiUrl = "http://app.moveapp.se/";
 var user;
@@ -69,10 +77,11 @@ function login(data){
 
             var json = Base64.decode(parts[1]);
             json = clean_up_json(json);
-            console.log(json);
+
             get_user(json.user_id);
             get_profile(json.user_id);
             get_subscription();
+            timer(true);
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -97,7 +106,7 @@ function clean_up_json(json) {
 }
 
 function is_logged_in() {
-    if(sessionStorage.getItem('accessToken') != null) {
+    if(sessionStorage.getItem('accessToken')) {
         return true;
     }else{
         return false;
@@ -174,7 +183,7 @@ function get_subscription() {
             }
         },
         success:function(response){
-            console.log(response);
+            //console.log(response);
             sessionStorage.setItem('subscription', JSON.stringify(response));
             update_subscription();
         },
@@ -199,7 +208,7 @@ function cancel_subscription() {
             }
         },
         success:function(response){
-            console.log(response);
+            //console.log(response);
             get_subscription();
         },
         error: function(errorThrown){
@@ -210,7 +219,7 @@ function cancel_subscription() {
 
 
 function refreshToken() {
-    console.log("refresh token");
+    //console.log(sessionStorage.getItem('accessToken'));
     data = {"username": user.email, "password": sessionStorage.getItem('password')};
     $.ajax({
         url: apiUrl+'api-token-auth/',
@@ -247,7 +256,7 @@ function update_subscription() {
     var today = datetime.getTime();
     var dt = new Date(end_date*1000);
     var newDt = dt.getFullYear()+("0"+(dt.getMonth()+1)).slice(-2)+("0"+dt.getDate()).slice(-2);
-    console.log("end: "+end_date+" today: "+today);
+    //console.log("end: "+end_date+" today: "+today);
 
     if(end_date*1000 >= today) {
         if(cancelled == false) {
@@ -270,12 +279,7 @@ function logout(inactive) {
         alert("Du har blivit utloggad pga inaktivitet.");
     }
     window.location = "http://moveapp.se";
+    timer(false);
 }
 
 var Base64={_keyStr:"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",encode:function(e){var t="";var n,r,i,s,o,u,a;var f=0;e=Base64._utf8_encode(e);while(f<e.length){n=e.charCodeAt(f++);r=e.charCodeAt(f++);i=e.charCodeAt(f++);s=n>>2;o=(n&3)<<4|r>>4;u=(r&15)<<2|i>>6;a=i&63;if(isNaN(r)){u=a=64}else if(isNaN(i)){a=64}t=t+this._keyStr.charAt(s)+this._keyStr.charAt(o)+this._keyStr.charAt(u)+this._keyStr.charAt(a)}return t},decode:function(e){var t="";var n,r,i;var s,o,u,a;var f=0;e=e.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(f<e.length){s=this._keyStr.indexOf(e.charAt(f++));o=this._keyStr.indexOf(e.charAt(f++));u=this._keyStr.indexOf(e.charAt(f++));a=this._keyStr.indexOf(e.charAt(f++));n=s<<2|o>>4;r=(o&15)<<4|u>>2;i=(u&3)<<6|a;t=t+String.fromCharCode(n);if(u!=64){t=t+String.fromCharCode(r)}if(a!=64){t=t+String.fromCharCode(i)}}t=Base64._utf8_decode(t);return t},_utf8_encode:function(e){e=e.replace(/\r\n/g,"\n");var t="";for(var n=0;n<e.length;n++){var r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r)}else if(r>127&&r<2048){t+=String.fromCharCode(r>>6|192);t+=String.fromCharCode(r&63|128)}else{t+=String.fromCharCode(r>>12|224);t+=String.fromCharCode(r>>6&63|128);t+=String.fromCharCode(r&63|128)}}return t},_utf8_decode:function(e){var t="";var n=0;var r=c1=c2=0;while(n<e.length){r=e.charCodeAt(n);if(r<128){t+=String.fromCharCode(r);n++}else if(r>191&&r<224){c2=e.charCodeAt(n+1);t+=String.fromCharCode((r&31)<<6|c2&63);n+=2}else{c2=e.charCodeAt(n+1);c3=e.charCodeAt(n+2);t+=String.fromCharCode((r&15)<<12|(c2&63)<<6|c3&63);n+=3}}return t}}
-
-var customNamespace = {
-    myFunction: function() {
-        //alert('custom namespace');
-    }
-};

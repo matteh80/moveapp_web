@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <input type="password" class="form-control" id="password" placeholder="Password" required>
                             </div>
-                            <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN</button>
+                            <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN<i class="fa fa-spinner fa-pulse"></i></button>
                         </form>
                     </div>
                 </div>

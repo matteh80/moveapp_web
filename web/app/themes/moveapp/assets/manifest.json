@@ -9,6 +9,9 @@
     "remote-api.js": {
       "vendor": ["assets/scripts/remote-api.js"]
     },
+    "live-edit.js": {
+      "vendor": ["assets/scripts/live-edit.js"]
+    },
     "main.css": {
       "files": [
         "styles/main.scss"

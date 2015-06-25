@@ -28,3 +28,21 @@ button.btn {
     margin-bottom: 0;
   }
 }
+
+.editable {
+  position: relative;
+  padding: 0 50px;
+  display: inline;
+
+  > i {
+    position: absolute;
+    right: 0;
+    display: none;
+  }
+
+  &:hover {
+    > i {
+      display: inline-block;
+    }
+  }
+}
