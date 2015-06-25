@@ -17,11 +17,17 @@
         </header>
         <div class="entry-content">
             <?php the_content(); ?>
+            <hr>
             <div class="tags">
                 <small><?php the_tags('#', ' #', ''); ?></small>
             </div>
+            <hr>
+            <div class="addthis_sharing_toolbox"></div>
         </div>
+
         <footer>
+            <!-- Go to www.addthis.com/dashboard to customize your tools -->
+
             <?php wp_link_pages(['before' => '<nav class="page-nav"><p>' . __('Pages:', 'sage'), 'after' => '</p></nav>']); ?>
         </footer>
         <?php //comments_template('/templates/comments.php'); ?>
