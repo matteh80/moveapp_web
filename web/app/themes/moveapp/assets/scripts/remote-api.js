@@ -30,7 +30,7 @@ $(document).ajaxComplete(function(event, xhr, settings){
 function timer(start) {
     var idleTime = 0;
     if(start) {
-        var idleInterval = setInterval(timerIncrement, 6000); // 1 minute
+        var idleInterval = setInterval(timerIncrement, 60000); // 1 minute
     }else{
         clearInterval(idleInterval);
     }
