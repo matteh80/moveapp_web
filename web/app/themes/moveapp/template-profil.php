@@ -36,8 +36,8 @@
 </div>
 <div class="container narrow text-center">
     <h1 class="name">
-        <span id="first_name"></span>
-        <span id="last_name"></span>
+        <span id="first_name" class="editable"><input type="text"></span>
+        <span id="last_name" class="editable"><input type="text"></span>
     </h1>
     <h2 class="loc editable" data-value="location"><input type="text"></h2>
 </div>

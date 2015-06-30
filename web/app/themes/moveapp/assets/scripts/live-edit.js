@@ -78,6 +78,8 @@ var LiveEdit = {
     save: function() {
         $('.save-changes').addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
         data = {
+            "first_name": $('#first_name input').val(),
+            "last_name": $('#last_name input').val(),
             "location": $('.loc input').val(),
             "weight": $('.weight input').val(),
             "height": $('.height input').val(),

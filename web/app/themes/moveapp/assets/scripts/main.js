@@ -213,8 +213,8 @@
             finalize: function () {
                 //USER
                 user = JSON.parse(sessionStorage.getItem('user'));
-                $('.name #first_name').text(user.first_name+" ");
-                $('.name #last_name').text(user.last_name);
+                $('#first_name input').val(user.first_name || "Förnamn");
+                $('#last_name input').val(user.last_name || "Efternamn");
                 $('.loc input').val(user.location || "Okänd plats");
                 $('.weight input').val(user.weight || "55");
                 $('.height input').val(user.height || "165");
