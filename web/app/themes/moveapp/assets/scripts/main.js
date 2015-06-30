@@ -255,6 +255,52 @@
                 $('button.logout').click(function(e) {
                     logout();
                 });
+
+                //CHANGE PASSWORD
+                $('#change-pass-form input').change(function() {
+                    if($(this).hasClass("oldpass")) {
+                        if($(this).val() != sessionStorage.getItem('password')) {
+                            displayError($(this));
+                        }else{
+                            displaySuccess($(this));
+                        }
+                    }
+                    if($(this).hasClass("newpass1")) {
+                        if($(this).val().length < 8) {
+                            displayError($(this));
+                        }else{
+                            displaySuccess($(this));
+                        }
+                    }
+                    if($(this).hasClass("newpass2")) {
+                        if($(this).val() != $('.newpass1').val()) {
+                            displayError($(this));
+                        }else{
+                            displaySuccess($(this));
+                        }
+                    }
+                    console.log($('.has-success').length)
+                    if($('.has-success').length < 3) {
+                        $('.change-pass-button').prop("disabled", true);
+                    }else{
+                        $('.change-pass-button').prop("disabled", false);
+                    }
+                });
+
+                $('#change-pass-button').click(function() {
+
+                });
+
+                function displayError($e) {
+                    $e.parent().removeClass("has-success").addClass("has-error");
+                    $e.siblings('span').removeClass("glyphicon-ok").addClass("glyphicon-remove");
+                }
+                function displaySuccess($e) {
+                    $e.parent().removeClass("has-error").addClass("has-success");
+                    $e.siblings('span').removeClass("glyphicon-remove").addClass("glyphicon-ok");
+                }
+
+                //LIVEDIT
                 LiveEdit.init();
             }
         }
