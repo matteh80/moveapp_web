@@ -87,6 +87,13 @@ function login(data){
         },
         error: function(errorThrown){
             console.log(errorThrown);
+            responseText = JSON.parse(errorThrown.responseText);
+            console.log(responseText.non_field_errors.toString());
+            if(responseText.non_field_errors == "Unable to login with provided credentials.") {
+                console.log(errorThrown.responseText);
+                $('.errors').html('Ditt användarnamn eller lösenord stämmer inte.<br><br><a href="http://app.moveapp.se/password/reset/" target="_blank">Glömt ditt lösenord?</a>').show("slow");
+                $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
+            }
         }
     });
 }

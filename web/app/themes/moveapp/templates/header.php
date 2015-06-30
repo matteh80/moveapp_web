@@ -28,6 +28,7 @@
                                 <input type="password" class="form-control" id="password" placeholder="Password" required>
                             </div>
                             <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN<i class="fa fa-spinner fa-pulse"></i></button>
+                            <h5 class="errors text-left" style="display: none;"></h5>
                         </form>
                     </div>
                 </div>
