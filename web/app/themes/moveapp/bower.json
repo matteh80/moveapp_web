@@ -10,7 +10,8 @@
     "modernizr": "2.8.2",
     "bootstrap-sass-official": "3.3.4",
     "components-font-awesome": "4.3.0",
-    "datejs": "~1.0.0-rc3"
+    "datejs": "~1.0.0-rc3",
+    "jquery-ui": "~1.11.4"
   },
   "overrides": {
     "modernizr": {

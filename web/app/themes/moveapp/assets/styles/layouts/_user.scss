@@ -29,20 +29,61 @@ button.btn {
   }
 }
 
+.settings {
+  h2 {
+    margin-top: 0;
+  }
+  h4 {
+    color: $gray-light;
+  }
+}
+
 .editable {
   position: relative;
-  padding: 0 50px;
+//  padding: 0 50px;
   display: inline;
 
-  > i {
-    position: absolute;
-    right: 0;
-    display: none;
+  > input {
+    border: none;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: inherit;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
   }
 
-  &:hover {
-    > i {
-      display: inline-block;
-    }
-  }
+//  > i {
+//    position: absolute;
+//    right: 0;
+//    display: none;
+//  }
+//
+//  &:hover {
+//    > i {
+//      display: inline-block;
+//    }
+//  }
+}
+
+.gender .fa {
+  font-size: 1.3em;
+}
+.height input {
+  width: 70px;
+}
+.weight input {
+  width: 55px;
+}
+
+.save-changes {
+  margin: 30px 0;
+  display: none;
 }

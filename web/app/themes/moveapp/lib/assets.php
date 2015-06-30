@@ -74,6 +74,7 @@ function assets()
 {
     wp_enqueue_style('sage_css', asset_path('styles/main.css'), false, null);
     wp_enqueue_style('genericons', asset_path('fonts/genericons.css'), false, null);
+    wp_enqueue_style('jquery-ui-smoothness', '//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css', false, null);
 
     if (is_single() && comments_open() && get_option('thread_comments')) {
         wp_enqueue_script('comment-reply');
