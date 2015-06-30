@@ -13,6 +13,7 @@ jQuery( document ).ready(function($) {
 
     $('#btn_login').click(function(e){
         e.preventDefault();
+        $('.login-wrap').addClass("logging-in");
         $(this).addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
         sessionStorage.setItem('password', $('#password').val());
         data = {"username": $('#username').val(), "password": $('#password').val()};
@@ -82,6 +83,7 @@ function login(data){
             get_profile(json.user_id);
             get_subscription();
             timer(true);
+            $('.login-wrap').removeClass("logging-in");
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -113,6 +115,32 @@ function is_logged_in() {
     }
 }
 
+function update_user(user_id, data) {
+    $.ajax({
+        url: apiUrl+'api/users/'+user_id+'/',
+        contentType: "application/json",
+        method: "PATCH",
+        data: JSON.stringify(data),
+        processData: false,
+        dataType: 'json',
+        headers: {"Authorization": 'JWT ' + sessionStorage.getItem('accessToken')},
+        beforeSend: function(xhr) {
+            if (sessionStorage.getItem('accessToken')) {
+                xhr.setRequestHeader('Authorization',
+                    'JWT ' + sessionStorage.getItem('accessToken'));
+            }
+        },
+        success:function(response){
+            console.log(response);
+            sessionStorage.setItem('user', JSON.stringify(response));
+            $('.save-changes').removeClass('thinking').addClass('btn-primary').prop("disabled", false).hide("slow");
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
+}
+
 function get_user(user_id){
     $.ajax({
         url: apiUrl+'api/users/'+user_id+'/',
@@ -128,6 +156,7 @@ function get_user(user_id){
             }
         },
         success:function(response){
+            console.log(response);
             sessionStorage.setItem('user', JSON.stringify(response));
             user = JSON.parse(sessionStorage.getItem('user'));
             $('.login, .register').fadeOut( "slow", function() {
@@ -160,6 +189,8 @@ function get_profile(user_id) {
             }
         },
         success:function(response){
+            console.log("Profile");
+            console.log(response)
             sessionStorage.setItem('profile', JSON.stringify(response));
         },
         error: function(errorThrown){

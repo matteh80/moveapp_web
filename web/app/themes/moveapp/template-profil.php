@@ -34,13 +34,39 @@
         </div>
     </div>
 </div>
-<div class="container text-center">
+<div class="container narrow text-center">
     <h1 class="name">
         <span id="first_name"></span>
         <span id="last_name"></span>
     </h1>
-    <h2 class="loc editable" data-value="location"></h2>
+    <h2 class="loc editable" data-value="location"><input type="text"></h2>
 </div>
+<hr>
+<div class="container narrow settings">
+    <form class="form settingsform" role="form">
+        <div class="col-md-3 text-center">
+            <h4>Vikt</h4>
+            <h2 class="weight editable"><input type="number" class="form-control" value="">kg</h2>
+        </div>
+        <div class="col-md-3 text-center">
+            <h4>Längd</h4>
+            <h2 class="height editable"><input type="number" class="form-control" value="">cm</h2>
+        </div>
+        <div class="col-md-3 text-center">
+            <h4>Kön</h4>
+            <h2 class="gender editable"><input type="hidden" class="form-control" value="F"><i class="fa fa-female gender-icon"></i></h2>
+        </div>
+        <div class="col-md-3 text-center">
+            <h4>Födelsedatum</h4>
+            <h2 class="birth editable"><input type="date" class="form-control" value="" id=""></h2>
+        </div>
+        <div class="col-md-12 text-center">
+            <button class="btn btn-primary save-changes">Spara ändringar<i class="fa fa-spinner fa-pulse"></i></button>
+        </div>
+    </form>
+
+</div>
+
 
 <div class="container text-center">
     <hr>

@@ -11,7 +11,7 @@
  * ======================================================================== */
 
 (function ($) {
-
+    var user;
     // Use this variable to set up the common and page specific functions. If you
     // rename this variable, you will also need to rename the namespace below.
     var Sage = {
@@ -52,7 +52,7 @@
                 $('.login-wrap').on('mouseover', function () {
                     $(this).addClass('hover');
                 }).on('mouseout', function (e) {
-                    if (!$(e.target).is('input')) {
+                    if (!$(e.target).is('input') && $(!this).hasClass("logging-in")) {
                         $(this).removeClass('hover');
                     }
                 });
@@ -211,13 +211,19 @@
                 get_subscription();
             },
             finalize: function () {
-                //LiveEdit.init();
                 //USER
                 user = JSON.parse(sessionStorage.getItem('user'));
                 $('.name #first_name').text(user.first_name+" ");
                 $('.name #last_name').text(user.last_name);
-                //$('.loc').text(user.location);
-                $('.loc').prepend(user.location);
+                $('.loc input').val(user.location || "Okänd plats");
+                $('.weight input').val(user.weight || "55");
+                $('.height input').val(user.height || "165");
+                if(user.gender == "M") {
+                    $('.gender input').val(user.gender);
+                    $('.gender .gender-icon').removeClass("fa-female").addClass("fa-male");
+                }
+                //$('.birth input').attr('data-birth', user.birth);
+                $('.birth input').val(user.birth || "1970-01-01");
 
                 //PROFILE
                 profile = JSON.parse(sessionStorage.getItem('profile'));
@@ -249,7 +255,7 @@
                 $('button.logout').click(function(e) {
                     logout();
                 });
-
+                LiveEdit.init();
             }
         }
     };
