@@ -129,7 +129,7 @@ function is_logged_in() {
     }
 }
 
-function update_user(user_id, data) {
+function update_user(user_id, data, pwdchange) {
     $.ajax({
         url: apiUrl+'api/users/'+user_id+'/',
         contentType: "application/json",
@@ -147,7 +147,19 @@ function update_user(user_id, data) {
         success:function(response){
             console.log(response);
             sessionStorage.setItem('user', JSON.stringify(response));
-            $('.save-changes').removeClass('thinking').addClass('btn-primary').prop("disabled", false).hide("slow");
+            if(pwdchange) {
+                console.log(data);
+                sessionStorage.setItem('password', data.password);
+                $('.modal .well').show("slow", function() {
+                    setTimeout(function() {
+                        $('.change-pass-modal').modal('hide');
+                    }, 1000);
+                });
+
+            }else{
+                $('.save-changes').removeClass('thinking').addClass('btn-primary').prop("disabled", false).hide("slow");
+            }
+
         },
         error: function(errorThrown){
             console.log(errorThrown);

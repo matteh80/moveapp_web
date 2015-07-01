@@ -257,7 +257,7 @@
                 });
 
                 //CHANGE PASSWORD
-                $('#change-pass-form input').change(function() {
+                $('#change-pass-form input').on("change keyup", function() {
                     if($(this).hasClass("oldpass")) {
                         if($(this).val() != sessionStorage.getItem('password')) {
                             displayError($(this));
@@ -279,7 +279,6 @@
                             displaySuccess($(this));
                         }
                     }
-                    console.log($('.has-success').length)
                     if($('.has-success').length < 3) {
                         $('.change-pass-button').prop("disabled", true);
                     }else{
@@ -287,8 +286,11 @@
                     }
                 });
 
-                $('#change-pass-button').click(function() {
-
+                $('.change-pass-button').click(function() {
+                    data = {
+                        "password": $('.newpass1').val()
+                    };
+                    update_user(user.user_id, data, true);
                 });
 
                 function displayError($e) {

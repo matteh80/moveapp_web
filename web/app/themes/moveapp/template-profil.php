@@ -111,6 +111,7 @@
                     <input type="password" class="form-control newpass2" id="newpass2" placeholder="Nytt lösenord igen">
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
+                <div class="well well-sm" style="display: none;">Ditt lösenord har ändrats</div>
                 <button type="button" class="btn btn-primary change-pass-button" disabled>Ändra lösenord</button>
             </form>
         </div>
