@@ -52,11 +52,13 @@
                 $('.login-wrap').on('mouseover', function () {
                     $(this).addClass('hover');
                 }).on('mouseout', function (e) {
-                    if (!$(e.target).is('input') && $(!this).hasClass("logging-in")) {
+                    if (!$(e.target).is('input') && !$(this).hasClass("logging-in")) {
                         $(this).removeClass('hover');
                     }
                 });
-
+                $('.main').on("click", function() {
+                   $('.login-wrap').removeClass("logging-in hover");
+                });
             }
         },
         // Home page

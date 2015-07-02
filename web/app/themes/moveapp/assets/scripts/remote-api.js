@@ -100,7 +100,7 @@ function login(data){
     });
 
     function showLoginError() {
-        $('.errors').html('Ditt användarnamn eller lösenord stämmer inte.<br><br><a href="http://app.moveapp.se/password/reset/" target="_blank">Glömt ditt lösenord?</a>').show("slow");
+        $('.errors').html('Något gick fel. Kontrollera ditt användarnamn och lösenord och försök igen.<br><br><a href="http://app.moveapp.se/password/reset/" target="_blank">Glömt ditt lösenord?</a>').show("slow");
         $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
     }
 }
