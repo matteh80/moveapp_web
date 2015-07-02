@@ -150,7 +150,7 @@ function update_user(user_id, data, pwdchange) {
             if(pwdchange) {
                 console.log(data);
                 sessionStorage.setItem('password', data.password);
-                $('.modal .well').show("slow", function() {
+                $('.modal .alert').show("slow", function() {
                     setTimeout(function() {
                         $('.change-pass-modal').modal('hide');
                     }, 1000);
