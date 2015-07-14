@@ -22,7 +22,10 @@
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                          class="img-responsive" style="opacity: 0.6;"/>
                 </a>
-                <small>Släpps i slutet av juni</small>
+                <small>iOS-appen släpps inom kort. Den inväntar godkännande från Apple.
+                    Anmäl dig
+                    <a href="http://eepurl.com/btbtHb" target="_blank">här</a> för att få ett
+                    email när du kan ladda ner appen till din iPhone.</small>
             </div>
         </div>
     </div>
@@ -298,7 +301,10 @@ if($posts):
                             <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                                  class="img-responsive" style="opacity: 0.6;"/>
                         </a>
-                        <small>Släpps i slutet av juni</small>
+                        <small>iOS-appen släpps inom kort. Den inväntar godkännande från Apple.
+                        Anmäl dig
+                            <a href="http://eepurl.com/btbtHb" target="_blank">här</a> för att få ett
+                            email när du kan ladda ner appen till din iPhone.</small>
                     </div>
                 </div>
             </div>
