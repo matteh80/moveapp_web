@@ -18,14 +18,10 @@
             </div>
             <div class="col-sm-4 col-md-3 text-center">
 <!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
-                <a href="#">
+                <a href="https://itunes.apple.com/us/app/moveapp/id998189654">
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                          class="img-responsive" style="opacity: 0.6;"/>
                 </a>
-                <small>iOS-appen släpps inom kort. Den inväntar godkännande från Apple.
-                    Anmäl dig
-                    <a href="http://eepurl.com/btbtHb" target="_blank">här</a> för att få ett
-                    email när du kan ladda ner appen till din iPhone.</small>
             </div>
         </div>
     </div>
@@ -297,14 +293,10 @@ if($posts):
                     </div>
                     <div class="col-sm-6 col-md-5">
 <!--                        <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
-                        <a href="#">
+                        <a href="https://itunes.apple.com/us/app/moveapp/id998189654">
                             <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                                  class="img-responsive" style="opacity: 0.6;"/>
                         </a>
-                        <small>iOS-appen släpps inom kort. Den inväntar godkännande från Apple.
-                        Anmäl dig
-                            <a href="http://eepurl.com/btbtHb" target="_blank">här</a> för att få ett
-                            email när du kan ladda ner appen till din iPhone.</small>
                     </div>
                 </div>
             </div>
