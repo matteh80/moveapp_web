@@ -40,10 +40,12 @@
                         status_type: 'shared_story'
                     }, function (response) {
                         console.log(response)
+                        var done = false;
                         $.each(response.data, function(i, item) {
                             //console.log(item.status_type);
-                            if(item.status_type == 'shared_story') {
+                            if(item.status_type == 'shared_story' && !done) {
                                 $('#fb-text').append(item.description);
+                                done = true;
                             }
                         });
                     });
