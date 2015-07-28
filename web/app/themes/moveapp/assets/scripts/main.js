@@ -41,10 +41,12 @@
                         console.log(response)
                         var done = false;
                         $.each(response.data, function(i, item) {
-                            //console.log(item.status_type);
-                            if(item.status_type == 'shared_story' || item.status_type == 'mobile_status_update' && done == false) {
-                                $('#fb-text').append(item.description);
-                                done = true;
+                            if(item.status_type == 'shared_story' || item.status_type == 'mobile_status_update') {
+                                console.log("typ: "+item.status_type);
+                                if(done == false) {
+                                    $('#fb-text').append(item.message);
+                                    done = true;
+                                }
                             }
                         });
                     });
