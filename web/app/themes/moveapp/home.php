@@ -52,17 +52,17 @@ if($posts):
 
                 if($x==0) {
                     echo '<article class="col-md-6 large">';
-                    echo '<img src="' . $thumb['0'] . '" class="img-responsive" />';
+                    echo '<a href="'.get_permalink($post->ID).'"><img src="' . $thumb['0'] . '" class="img-responsive" /></a>';
                 }else{
                     echo '<article class="col-md-3 col-sm-6">';
-                    echo '<img src="' . $thumb['0'] . '" class="img-responsive" />';
+                    echo '<a href="'.get_permalink($post->ID).'"><img src="' . $thumb['0'] . '" class="img-responsive" /></a>';
                 }?>
                     <div class="title-wrapper">
                         <div class="date"><?php echo $categories[0]->cat_name;?></div>
                         <h2>
                             <?php the_title();?>
                         </h2>
-                        <a href="<?php echo get_permalink($post->ID); ?>"><div class="read-more">Läs mer &raquo;</div></a>
+<!--                        <a href="--><?php //echo get_permalink($post->ID); ?><!--"><div class="read-more">Läs mer &raquo;</div></a>-->
                     </div>
 
                     

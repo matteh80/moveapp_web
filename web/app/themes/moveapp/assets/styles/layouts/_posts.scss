@@ -15,7 +15,8 @@
           bottom: 10px;
 
           h1 {
-            background-color: #000;
+            background-color: rgba(0,0,0,0.85);
+            max-width: 95%;
             color: #fff;
             &.inverted {
               background-color: #000;
@@ -37,6 +38,7 @@
           time {
             font-family: "Futura LT";
             position: absolute;
+            color: black;
 
             left: 5%;
             padding: 5px;

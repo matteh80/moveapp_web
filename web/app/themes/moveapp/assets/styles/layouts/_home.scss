@@ -112,13 +112,15 @@ section.row{
       overflow: hidden;
 
       .title-wrapper {
+        pointer-events: none;
+        max-width: 95%;
         bottom: 0;
         left: 0;
         position: absolute;
         margin-left: 0;
 
         h2 {
-          background-color: #000;
+          background-color: rgba(0,0,0,0.85);
           color: #fff;
           font-size: 20px;
           @media(min-width: $screen-sm-min) {
