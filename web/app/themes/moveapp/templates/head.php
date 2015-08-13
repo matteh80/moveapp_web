@@ -23,4 +23,7 @@
     <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1632732436965177&amp;ev=PixelInitialized" /></noscript>
     <!-- Go to www.addthis.com/dashboard to customize your tools -->
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-558c00fa7497fddc" async="async"></script>
+    <script type="text/javascript">
+        var templateUrl = '<?= get_bloginfo("template_url"); ?>';
+    </script>
 </head>

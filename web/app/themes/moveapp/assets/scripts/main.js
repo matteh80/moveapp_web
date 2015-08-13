@@ -106,9 +106,7 @@
         // Kontakt
         'kontakt': {
             init: function () {
-
-            },
-            finalize: function () {
+                console.log(templateUrl+"/verify.php");
                 //SEND MAIL AJAX
                 $( "form" ).on( "submit", function( event ) {
                     event.preventDefault();
@@ -119,30 +117,26 @@
                     var subject = $("input#subject").val();
                     var message = $("textarea#message").val().replace(/\n/g,"<br>") + "<br><br><br>Skickat från moveapp.se";
 
-                    var response = grecaptcha.getResponse();
 
+                    /* Check if the captcha is complete */
+                    if ($("#g-recaptcha-response").val()) {
+                        $.ajax({
+                            type: 'POST',
+                            url: templateUrl+"/verify.php", // The file we're making the request to
+                            dataType: 'html',
+                            async: true,
+                            data: {
+                                captchaResponse: $("#g-recaptcha-response").val() // The generated response from the widget sent as a POST parameter
+                            },
+                            success: function (data) {
+                                send_mail();
+                            },
+                            error: function (XMLHttpRequest, textStatus, errorThrown) {
 
-                    if(response.length > 0) {
-                        var user_ip = 0;
-                        $.getJSON("http://jsonip.appspot.com?callback=?",
-                            function(data){
-                                user_ip = data.ip;
-                            });
-                        $.post(
-                            "https://www.google.com/recaptcha/api/siteverify",
-                            {
-                                secret: "6Le_fAgTAAAAAJ3ed9pbuuSL7c8tKidgo85X205W",
-                                response: grecaptcha.getResponse(),
-                                remoteip: user_ip
                             }
-                        )
-                            .done(function(response) {
-                                if(response.success == true) {
-                                    send_mail();
-                                }else{
-                                    $('#mailsent').text("Är du säker på att du är en människa? Försök igen...").show();
-                                }
-                            })
+                        });
+                    } else {
+                        alert("Please fill the captcha!");
                     }
 
                     function send_mail() {
@@ -189,6 +183,9 @@
                         });
                     }
                 });
+            },
+            finalize: function () {
+
             }
         },
         // Faq page.

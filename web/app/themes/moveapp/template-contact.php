@@ -35,7 +35,7 @@
                 <label for="message">Meddelande</label>
                 <textarea class="form-control" id="message" name="message" placeholder="Ditt meddelande" rows="7"></textarea>
             </div>
-            <div class="col-xs-12">
+            <div class="col-xs-12" id="recaptcha">
                 <div class="g-recaptcha" data-sitekey="6Le_fAgTAAAAACHe4SSNW1aJTNUMH2MWfg5jrRVt"></div>
             </div>
             <div class="col-xs-12">
