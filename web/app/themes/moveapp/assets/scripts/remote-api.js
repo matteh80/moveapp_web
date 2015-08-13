@@ -4,7 +4,12 @@ jQuery( document ).ready(function($) {
         user = JSON.parse(sessionStorage.getItem('user'));
         $('.login, .register').hide();
         $('#logged-in').show();
-        $('#logged-in').text(user.first_name+" "+user.last_name);
+        if((user.first_name).length != 0) {
+            $('#logged-in').text(user.first_name+" "+user.last_name);
+        }else{
+            $('#logged-in').text("Skapa profil");
+        }
+
         timer(true);
     }else{
         $('.login, .register').show();
