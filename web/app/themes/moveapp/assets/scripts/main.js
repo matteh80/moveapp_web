@@ -30,7 +30,7 @@
                         appId: '332897300242814',
                         appSecret: 'a912eb6e7d0a4136f0ae9d799258818b',
                         cookie: true,
-                        xfbml: false,  // parse social plugins on this page
+                        xfbml: true,  // parse social plugins on this page
                         version: 'v2.2' // or v2.0, v2.1, v2.0
                     });
 

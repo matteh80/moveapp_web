@@ -144,34 +144,6 @@
       }
       &.instagram .row {
         background-image: url(../../dist/images/instagram_ikon.png);
-        @media(min-width: $screen-sm-min) {
-          border-right: 1px solid $gray-light;
-        }
-
-        .instagram-pic {
-          display: none;
-          @media(min-width: $screen-sm-min) {
-            display: inline;
-          }
-          background-size: cover;
-          background-position: 50%;
-          position: relative;
-          left: 10px;
-          height: 100px;
-        }
-
-        .fa {
-          display: none;
-          @media(min-width: $screen-sm-min) {
-            display: inline;
-          }
-          position: absolute;
-          top: 35%;
-          right: 6%;
-          @media(min-width: $screen-md-min) {
-            right: 1%;
-          }
-        }
       }
       &.linkedin .row {
         background-image: url(../../dist/images/linkedin_ikon.png);
@@ -182,5 +154,23 @@
     }
 
 
+  }
+}
+
+.right-social {
+
+  > a[class^="col-"] {
+    >img {
+      @media(min-width: $screen-xs-min) {
+        padding: 20px;
+      }
+      @media(min-width: $screen-lg-min) {
+        padding: 10px;
+      }
+      margin-top: 30px;
+      max-height: 140px;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
