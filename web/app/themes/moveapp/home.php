@@ -1,23 +1,24 @@
 <section class="infoheader row">
     <div class="container">
         <div class="row">
-            <div class="col-md-6 col-lg-6 col-md-offset-6">
-                <h1>Träna hemma</h1>
-                <h4><p>Välj bland 100-tals träningsfilmer,<br> allt samlat i en liten app.</p>
-
-                    <p>99 kr i månaden, en gratis prova-på-månad. Inga bindningstider.</p></h4>
+            <div class="col-xs-12">
+                <h1>Workout made easy!</h1>
+                <h4 class="col-md-6"><p>100-tals träningspass - hur, var och när du vill - i mobilen, paddan eller på TV:n</p>
+                <p>99 kr i månaden, en gratis prova-på-månad. Inga bindningstider</p></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
                 <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
             </div>
         </div>
-        <div class="appstore-wrapper row">
-            <div class="col-sm-4 col-md-3 col-md-offset-6">
+        <div class="row">
+            <div class="appstore-wrapper col-xs-12">
                 <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png"
                          class="img-responsive"/>
                 </a>
-            </div>
-            <div class="col-sm-4 col-md-3 text-center">
-<!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
+                <!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
                 <a href="https://itunes.apple.com/us/app/moveapp/id998189654">
                     <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
                          class="img-responsive"/>
