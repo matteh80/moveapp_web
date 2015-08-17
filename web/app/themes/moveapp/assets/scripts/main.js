@@ -115,8 +115,12 @@
                     var name = $("input#name").val();
                     var email = $("input#email").val();
                     var subject = $("input#subject").val();
-                    var message = $("textarea#message").val().replace(/\n/g,"<br>") + "<br><br><br>Skickat från moveapp.se";
 
+                    var phonemodel = "<br><hr><br>Telefonmodell: "+$('#phonemodel').val();
+                    var os = "<br>OS: "+$('#os').val();
+                    var errormsg = "<br>Felmeddelande: "+$('#errormsg').val();
+
+                    var message = $("textarea#message").val().replace(/\n/g,"<br>") + phonemodel + os + errormsg + "<br><br><br>Skickat från moveapp.se";
 
                     /* Check if the captcha is complete */
                     if ($("#g-recaptcha-response").val()) {
