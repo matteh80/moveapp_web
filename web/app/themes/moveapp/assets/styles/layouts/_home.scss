@@ -131,7 +131,7 @@ section.row{
 
       &:hover {
         .title-wrapper {
-          bottom: 55%;
+          bottom: 45%;
         }
         .entry-summary {
           bottom: 0%;
@@ -205,7 +205,7 @@ section.row{
       .entry-summary {
         position: absolute;
         bottom: -50%;
-        transition: 300ms;
+        transition: 500ms;
         background-color: rgba(255,255,255,0.85);
         padding: 10px;
         max-width: 95%;
@@ -228,7 +228,6 @@ section.row{
 
         .title-wrapper{
           margin-right: 20px;
-          transition: 500ms;
 
           h2 {
             font-size: 20px;
