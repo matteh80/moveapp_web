@@ -16,6 +16,20 @@
     }
   }
 
+  .tagcloud {
+    a {
+      color: $gray-darker;
+      text-decoration: none;
+      transition: color 300ms;
+
+      &:hover {
+        text-decoration: none;
+        color: $brand-primary;
+      }
+    }
+
+  }
+
   ul {
     list-style: none;
     padding-left: 10px;
@@ -23,6 +37,12 @@
       a {
         transition: color 300ms;
         color: $gray-darker;
+        text-decoration: none;
+
+        &:hover {
+          color: $brand-primary;
+          text-decoration: none;
+        }
       }
     }
   }

@@ -1,6 +1,39 @@
+.blog .main {
+  article {
+    margin-top: 50px;
+    position: relative;
+    overflow: hidden;
+
+    &.post {
+      transition: 500ms;
+      &:hover {
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+        .text {
+          bottom: 20%;
+        }
+        .entry-summary {
+          bottom: 0%;
+        }
+      }
+    }
+    .entry-summary {
+      position: absolute;
+      bottom: -20%;
+      transition: 500ms;
+      background-color: rgba(255,255,255,0.85);
+      padding: 10px;
+      max-width: 95%;
+      color: #000;
+    }
+  }
+}
+
 .main {
   article {
     margin-top: 50px;
+    position: relative;
+    overflow: hidden;
 
     header {
       .thumb {
@@ -12,9 +45,11 @@
 
         .text {
           position: absolute;
-          bottom: 10px;
+          bottom: 5%;
+          transition: 500ms;
 
           h1 {
+            position: relative;
             background-color: rgba(0,0,0,0.85);
             max-width: 95%;
             color: #fff;
@@ -58,6 +93,7 @@
     }
     .entry-content {
       margin-top: 20px;
+      position: relative;
       
       .tags {
         color: darken($brand-primary, 25%);
