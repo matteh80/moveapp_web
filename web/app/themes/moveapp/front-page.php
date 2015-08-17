@@ -47,34 +47,35 @@ if($posts):
     <div class="row news-wrapper">
         <?php
         $x = 0;
-        foreach ($posts as $post) {
+        foreach ($posts as $post) :
             setup_postdata($post);
             $categories = get_the_category();
-            if (has_post_thumbnail()) {
-                $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'homepage-thumb');
+            if (has_post_thumbnail()) :
+                $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
 
                 if($x==0) {
-                    echo '<article class="col-md-6 large">';
-                    echo '<a href="'.get_permalink($post->ID).'"><img src="' . $thumb['0'] . '" class="img-responsive" /></a>';
+                    echo '<article class="col-md-6 large" style="background-image: url('.$thumb[0].')"><a href="'.get_permalink($post->ID).'">';
+                    echo '<a href="'.get_permalink($post->ID).'"><div class="clicker"></div></a>';
                 }else{
-                    echo '<article class="col-md-3 col-sm-6">';
-                    echo '<a href="'.get_permalink($post->ID).'"><img src="' . $thumb['0'] . '" class="img-responsive" /></a>';
+                    echo '<article class="col-md-3 col-sm-6" style="background-image: url('.$thumb[0].')"><a href="'.get_permalink($post->ID).'">';
+                    echo '<a href="'.get_permalink($post->ID).'"><div class="clicker"></div></a>';
                 }?>
                     <div class="title-wrapper">
                         <div class="date"><?php echo $categories[0]->cat_name;?></div>
                         <h2>
                             <?php the_title();?>
                         </h2>
-<!--                        <a href="--><?php //echo get_permalink($post->ID); ?><!--"><div class="read-more">Läs mer &raquo;</div></a>-->
                     </div>
-
+                    <div class="entry-summary">
+                        <?php the_excerpt(); ?>
+                    </div>
                     
                 </article>
 
         <?php
                 $x++;
-            }
-        }
+            endif;
+        endforeach;
         ?>
 
     </div>

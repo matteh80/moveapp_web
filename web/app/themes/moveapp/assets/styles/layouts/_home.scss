@@ -116,16 +116,38 @@ section.row{
     margin-left: 0;
     margin-right: 0;
 
+    > a {
+      color: $gray-darker;
+    }
+
     article {
       margin: 0;
       padding: 0px;
       position: relative;
       overflow: hidden;
+      background-position: center;
+      background-size: cover;
+      height: 300px;
+
+      &:hover {
+        .title-wrapper {
+          bottom: 55%;
+        }
+        .entry-summary {
+          bottom: 0%;
+        }
+      }
+
+      .clicker {
+        height: 100%;
+        width: 100%;
+      }
 
       .title-wrapper {
+        transition: 500ms;
         pointer-events: none;
         max-width: 95%;
-        bottom: 0;
+        bottom: 5%;
         left: 0;
         position: absolute;
         margin-left: 0;
@@ -180,10 +202,33 @@ section.row{
         }
       }
 
+      .entry-summary {
+        position: absolute;
+        bottom: -50%;
+        transition: 300ms;
+        background-color: rgba(255,255,255,0.85);
+        padding: 10px;
+        max-width: 95%;
+        color: #000 !important;
+      }
+
       &.large {
+        height: 600px;
+        background-position: center;
+        background-size: cover;
+
+        &:hover {
+          .title-wrapper {
+            bottom: 25%;
+          }
+          .entry-summary {
+            bottom: 0%;
+          }
+        }
 
         .title-wrapper{
           margin-right: 20px;
+          transition: 500ms;
 
           h2 {
             font-size: 20px;
