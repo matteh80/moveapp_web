@@ -10,7 +10,16 @@
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 
         .text {
-          bottom: 20%;
+          bottom: 100%;
+          @media(min-width: $screen-xs-min) {
+            bottom: 40%;
+          }
+          @media(min-width: $screen-sm-min) {
+            bottom: 50%;
+          }
+          @media(min-width: $screen-md-min) {
+            bottom: 30%;
+          }
         }
         .entry-summary {
           bottom: 0%;
@@ -19,7 +28,10 @@
     }
     .entry-summary {
       position: absolute;
-      bottom: -40%;
+      bottom: -95%;
+      @media(min-width: $screen-md-min) {
+        bottom: -40%;
+      }
       transition: 500ms;
       background-color: rgba(255,255,255,0.85);
       padding: 10px;
