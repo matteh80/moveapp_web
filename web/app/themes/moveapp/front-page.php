@@ -4,8 +4,8 @@
             <div class="col-xs-12">
                 <div class="row">
                     <h1 class="col-xs-12">Workout made easy!</h1>
-                    <h4 class="col-md-5"><p>100-tals träningspass - hur, var och när du vill - i mobilen, paddan eller på TV:n</p>
-                        <p>99 kr i månaden, en gratis prova-på-månad. Inga bindningstider</p></h4>
+                    <h4 class="col-md-5"><p>100-tals träningspass - hur, var och när du vill - i mobilen, surfplattan eller på TV:n.</p>
+                        <p>99 kr i månaden, en gratis prova-på-månad. Inga bindningstider.</p></h4>
                 </div>
             </div>
         </div>

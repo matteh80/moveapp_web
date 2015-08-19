@@ -46,7 +46,7 @@
 
                 <div class="text-center col-md-4 right-social">
                     <!--                INSTAGRAM-->
-                    <a href="https://instagram.com/moveapp_training/" class="col-xs-4 instagram text-center"
+                    <a href="https://instagram.com/moveapptraining/" class="col-xs-4 instagram text-center"
                        target="_blank">
                         <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/instagram_ikon.png"
                              class="img-responsive">
