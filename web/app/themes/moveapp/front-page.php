@@ -107,7 +107,7 @@ if($posts):
 <section class="row films">
     <div class="container">
         <h2 class="text-center">Filmerna</h2>
-        <img src="<?= get_template_directory_uri(); ?>/dist/images/cc_appletv.png" class="cc_appletv" />
+<!--        <img src="--><?//= get_template_directory_uri(); ?><!--/dist/images/cc_appletv.png" class="cc_appletv" />-->
     </div>
     <div class="container-fluid filmer-wrapper">
         <div class="row thumbs-wrapper">
