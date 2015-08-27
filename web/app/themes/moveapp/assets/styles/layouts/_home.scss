@@ -27,17 +27,6 @@ section.row{
   position: relative;
   z-index: 1;
 
-  &:after {
-    z-index: 2;
-    content: '';
-    background: url("../../dist/images/sect_shadow.png") no-repeat;
-    background-size: contain;
-    width: 100%;
-    height: 20px;
-    position: absolute;
-    bottom: -20px;
-  }
-
   h2 {
     font-family: "Futura LT";
     font-size: 48px;
@@ -509,5 +498,31 @@ section.row{
         margin: 0 auto;
       }
     }
+  }
+}
+
+.cast {
+  background: url("../../dist/images/airplay_cc_bg.jpg");
+  background-position: 50% 25%;
+  background-size: cover;
+  margin-top: -20px;
+  min-height: 500px;
+
+  h2, h3 {
+    color: #FFFFFF !important;
+  }
+  h2 {
+    margin-bottom: 10px !important;
+    font-family: "Futura LT Condensed" !important;
+  }
+  h3 {
+    font-size: 30px;
+    font-family: "Helvetica Neue Lt Std 55", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-bottom: 45px;
+  }
+  img {
+    display: inline-block;
+    max-height: 50px;
+    margin-right: 20px;
   }
 }

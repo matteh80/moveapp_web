@@ -92,6 +92,18 @@ if($posts):
     </div>
 </section>
 <?php endif; ?>
+<section class="row cast">
+    <div class="container">
+        <h2>För en större upplevelse</h2>
+        <h3>Träna framför TV'n med din Apple TV eller Chromecast</h3>
+        <div class="col-xs-12">
+            <div class="row">
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/airplay.png" class="img-responsive"/>
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/chromecast.png" class="img-responsive"/>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="row films">
     <div class="container">
         <h2 class="text-center">Filmerna</h2>
