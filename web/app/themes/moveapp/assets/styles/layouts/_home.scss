@@ -41,20 +41,22 @@ section.row{
 .infoheader {
   position: relative;
   padding: 100px 0;
-  background: url("../../dist/images/workout_easy.jpg");
+  background: url("../../dist/images/header_bg_wood.jpg");
   background-size: cover;
-  background-position: 50% 100%;
+  background-position: 100% 50%;
   @media(min-width: $screen-md-min) {
-    background-position: 50% 100%;
+    background-position: 50% 50%;
   }
   
-
+  h1, h4 {
+    color: white;
+  }
 
   h1 {
     font-family: "Futura LT Heavy";
     font-size: 48px;
     margin-bottom: 20px;
-    color: $gray-darker;
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
 //    background-color: rgba(255, 255, 255, 0.65);
     @media(min-width: $screen-md-min) {
       font-size: 70px;
@@ -64,8 +66,9 @@ section.row{
 
   h4 {
     font-size: 18px;
-    color: $gray-darker;
 //    background-color: rgba(255, 255, 255, 0.65);
+    font-family: "Helvetica Neue LT Std 55";
+    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
     @media(min-width: $screen-md-min) {
       font-size: 26px;
     }
