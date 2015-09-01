@@ -33,7 +33,7 @@
 </section>
 <section class="mobileheader row hidden-md hidden-lg">
     <div class="bg"></div>
-    <div class="col-xs-12">
+    <div class="col-xs-12 row">
         <div class="row text-center">
             <h1 class="col-xs-12">Workout made easy!</h1>
             <h4 class="col-xs-12"><p>100-tals träningspass - hur, var och när du vill <br>- i mobilen, surfplattan eller på TV:n.</p>
