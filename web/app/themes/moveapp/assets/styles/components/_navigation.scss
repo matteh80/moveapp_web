@@ -1,6 +1,11 @@
 nav {
+  position: relative;
+  z-index: 2;
+
+
   .container {
     padding: 0;
+
     .navbar-collapse {
 
       @media(min-width: $grid-float-breakpoint) {
@@ -39,7 +44,8 @@ nav {
   margin: 0;
   @media(max-width: $grid-float-breakpoint) {
 //    box-shadow: 0px 0px 5px $gray-light inset;
-    background-color: lighten($gray-lighter, 5%);
+//    background-color: lighten($gray-lighter, 5%);
+    background-color: rgba(246,245,245,0.7) !important;
   }
 
   li {

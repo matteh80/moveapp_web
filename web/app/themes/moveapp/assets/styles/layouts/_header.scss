@@ -2,7 +2,8 @@ header {
 
   .login-container {
     border-bottom: 1px solid $gray-lighter;
-    background-color: $gray-lighter;
+    background-color: transparent;
+
     @media(min-width: $grid-float-breakpoint) {
       border: none;
       background-color: white;
@@ -18,6 +19,9 @@ header {
     .brand {
       height: 70px;
       display: none;
+      position: relative;
+      z-index: 2;
+
       @media(min-width: $grid-float-breakpoint) {
         display: block;
       }
@@ -30,124 +34,49 @@ header {
 
     #button-wrapper {
       position: relative;
+      z-index: 2;
       text-align: right;
 
       a button, button{
         color: $gray;
         &:hover {
-          background: $gray-lighter;
           color: $gray;
         }
       }
 
-      .login-wrap {
-        display: inline-block;
-        position: relative;
-        color: $gray;
-        background: white;
+      .register {
+        background-color: #bdbcbc;
+        border: none;
 
-        &.hover {
-          color: $gray;
-          background: $gray-lighter !important;
-          #login-wrapper {
-            display: block;
-          }
-          .login {
-            @media(max-width: $grid-float-breakpoint) {
-              color: $brand-primary-dark;
-            }
-            background: $gray-lighter !important;
-          }
-        }
-
-        #login-wrapper {
-          display: none;
-          position: absolute;
-          width: 270px;
-          @media(min-width: $grid-float-breakpoint) {
-            top: 70px;
-          }
-          right: 0;
-          z-index: 99;
-          padding: 20px 30px;
-          background: $gray-lighter;
-          color: $gray;
-
-
-          #btn_login {
-            font-size: 16px;
-            margin: 0 auto;
-            display: block;
-            background-color: $brand-primary-dark;
-            color: #fff;
-            border: none;
-
-            &:hover {
-              background-color: darken($brand-primary-dark, 10%) !important;
-            }
-          }
+        &:hover {
+          background-color: darken(#bdbcbc, 10%);
+          color: white !important;
         }
       }
 
       button.login, button.register, button#logged-in {
-        display: inline-block;
-        padding: 10px 25px 10px 5px;
-        position: relative;
-        text-transform: uppercase;
-        background: transparent;
-        border: 0;
-        cursor: pointer;
-        outline:none;
-        background-color: $gray-lighter;
+        color: white;
+        border: none;
+        margin-top: 15px;
+//        display: inline-block;
+//        padding: 10px 25px 10px 5px;
+//        position: relative;
+//        text-transform: uppercase;
+//        background: transparent;
+//        border: 0;
+//        cursor: pointer;
+//        outline:none;
+//        background-color: $gray-lighter;
 
         @media(min-width: $grid-float-breakpoint) {
-          display: inline-block;
-          height: 70px;
-          padding: 10px 30px 10px 10px;
-          font-size: 1em;
-          line-height: 1em;
-          background-color: white;
-        }
-        &:after {
-          content: '';
-          position: absolute;
-          right: 10px;
-          top: 25%;
-          @media(min-width: $grid-float-breakpoint) {
-            top: 36%;
-          }
-          font-family: FontAwesome;
-          font-size: 0.8em;
-        }
-        &.login {
-          &:after {
-            content: '\f078';
-          }
-        }
-        &.register {
-          &:after {
-            content: '\f054';
-          }
-        }
-        &#logged-in {
-          display: none;
-          padding: 10px 10px 10px 25px;
-          transition: transform 500ms ease-in;
-          background-color: transparent;
-
-          &:hover {
-//              color: white;
-            @media(min-width: $grid-float-breakpoint) {
-              color: $brand-primary-dark;
-            }
-          }
-
-          &:after {
-            content: '\f007';
-            left: 10px;
-            right: initial;
-            font-size: 1em;
-          }
+          padding-top: 7px;
+          padding-bottom: 7px;
+//          display: inline-block;
+//          height: 70px;
+//          padding: 10px 30px 10px 10px;
+//          font-size: 1em;
+//          line-height: 1em;
+//          background-color: white;
         }
       }
     }
@@ -155,7 +84,7 @@ header {
 
   nav {
     @media(min-width: $grid-float-breakpoint) {
-      background-color: $lightgray;
+      background-color: rgba(246,245,245,0.7);
     }
   }
 }

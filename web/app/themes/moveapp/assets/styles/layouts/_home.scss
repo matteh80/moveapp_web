@@ -44,7 +44,7 @@ section.row{
     @media(min-width: $screen-sm-min) {
       height: 400px;
     }
-    background: url("../../dist/images/header_bg_wood.jpg");
+    background: url("../../dist/images/bg_bild_NY.jpg");
     background-size: cover;
   }
   h1 {
@@ -83,8 +83,9 @@ section.row{
 }
 .infoheader {
   position: relative;
-  padding: 100px 0;
-  background: url("../../dist/images/header_bg_wood.jpg");
+  margin-top: -111px;
+  padding: 210px 0 210px !important;
+  background: url("../../dist/images/bg_bild_NY.jpg");
   background-size: cover;
   background-position: 100% 50%;
   @media(min-width: $screen-md-min) {
@@ -124,17 +125,35 @@ section.row{
     }
   }
 
+}
+
+.blackfooter {
+  background-color: black;
+  padding: 15px 0 !important;
+  @media(min-width: $screen-md-min) {
+    max-height: 100px;
+  }
   .appstore-wrapper {
-    margin-top: 80px;
-    margin-bottom: 100px;
-
-    img {
-      display: inline-block;
-
-      &:nth-of-type(1) {
-        margin-right: 20px;
-        margin-bottom: 20px;
+    @media(min-width: $screen-sm-min) {
+      height: 80px;
+    }
+    a {
+      max-height: 100%;
+      img {
+        display: inline-block;
+        max-height: 70px;
+        float: left;
+        &:first-of-type {
+          margin-right: 10px;
+        }
       }
+    }
+  }
+  .devices {
+    margin-top: 15px;
+    float: left;
+    @media(min-width: $screen-sm-min) {
+      float: right;
     }
   }
 }
@@ -548,11 +567,20 @@ section.row{
 }
 
 .cast {
-  background: url("../../dist/images/airplay_cc_bg.jpg");
-  background-position: 50% 25%;
-  background-size: cover;
-  margin-top: -20px;
-  min-height: 500px;
+//  background: url("../../dist/images/airplay_cc_bg.jpg");
+//  background-position: 50% 25%;
+//  background-size: cover;
+  background-color: #ff5b6a;
+  padding: 0 !important;
+  height: auto;
+  @media(min-width: $screen-sm-min) {
+    height: 180px;
+  }
+
+  div{
+    height: 100%;
+  }
+
 
   h2, h3 {
     color: #FFFFFF !important;
@@ -566,9 +594,24 @@ section.row{
     font-family: "Helvetica Neue Lt Std 55", "Helvetica Neue", Helvetica, Arial, sans-serif;
     margin-bottom: 45px;
   }
+  .casticons {
+    display: table;
+    height: 100%;
+
+    > .row {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
   img {
     display: inline-block;
     max-height: 50px;
-    margin-right: 20px;
+    margin-bottom: 30px;
+    &:last-of-type {
+      margin-right: 20px;
+    }
+    @media(min-width: $screen-sm-min) {
+      margin-bottom: 0;
+    }
   }
 }

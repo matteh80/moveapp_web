@@ -12,26 +12,12 @@
                 $url = get_permalink($id);
                 ?>
                 <a href="<?php echo $url; ?>">
-                    <button id="logged-in"></button>
+                    <button id="logged-in btn btn-primary"></button>
                 </a>
                 <a href="http://app.moveapp.se/register/">
-                    <button class="register"><?= __('Nytt konto', 'sage'); ?></button>
+                    <button class="register btn btn-primary"><?= __('Nytt konto', 'sage'); ?></button>
                 </a>
-                <div class="login-wrap">
-                    <button class="login"><?= __('Logga in', 'sage'); ?></button>
-                    <div id="login-wrapper" class="col-md-2 col-md-offset-8">
-                        <form id="login-form">
-                            <div class="form-group">
-                                <input type="email" class="form-control" id="username" placeholder="Enter email" autocomplete="off" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="password" class="form-control" id="password" placeholder="Password" required>
-                            </div>
-                            <button type="submit" id="btn_login" class="btn btn-default text-center">LOGGA IN<i class="fa fa-spinner fa-pulse"></i></button>
-                            <h5 class="errors text-left" style="display: none;"></h5>
-                        </form>
-                    </div>
-                </div>
+                <button class="login btn btn-primary"><?= __('Logga in', 'sage'); ?></button>
             </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 <section class="infoheader row  hidden-xs hidden-sm">
     <div class="container">
-        <div class="col-md-8 col-md-offset-4">
+        <div class="col-md-8">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="row">
@@ -15,22 +15,11 @@
                     <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
                 </div>
             </div>
-            <div class="row">
-                <div class="appstore-wrapper">
-                    <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png"
-                             class="img-responsive"/>
-                    </a>
-                    <!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
-                    <a href="https://itunes.apple.com/us/app/moveapp/id998189654">
-                        <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
-                             class="img-responsive"/>
-                    </a>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>
+
 <section class="mobileheader row hidden-md hidden-lg">
     <div class="bg"></div>
     <div class="col-xs-12 row">
@@ -44,96 +33,102 @@
                 <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
             </div>
         </div>
-        <div class="row">
-            <div class="appstore-wrapper">
-                <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp" class="col-sm-6 text-center">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png"
-                         class="img-responsive"/>
-                </a>
-                <!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
-                <a href="https://itunes.apple.com/us/app/moveapp/id998189654" class="col-sm-6 text-center">
-                    <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
-                         class="img-responsive"/>
-                </a>
-            </div>
+<!--        <div class="row">-->
+<!--            <div class="appstore-wrapper">-->
+<!--                <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp" class="col-sm-6 text-center">-->
+<!--                    <img src="--><?//= get_template_directory_uri(); ?><!--/dist/images/playstore.png"-->
+<!--                         class="img-responsive"/>-->
+<!--                </a>-->
+<!--                <!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
+<!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654" class="col-sm-6 text-center">-->
+<!--                    <img src="--><?//= get_template_directory_uri(); ?><!--/dist/images/appstore.png"-->
+<!--                         class="img-responsive"/>-->
+<!--                </a>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+</section>
+
+<section class="blackfooter row">
+    <div class="container">
+        <div class="appstore-wrapper col-xs-12 col-sm-9 col-md-8">
+            <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png" class="img-responsive"/>
+            </a>
+            <!--                <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
+            <a href="https://itunes.apple.com/us/app/moveapp/id998189654">
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png" class="img-responsive"/>
+            </a>
+        </div>
+        <div class="col-xs-12 col-sm-3 col-md-4">
+            <img class="devices" src="<?= get_template_directory_uri(); ?>/dist/images/devices.png" class="img-responsive"/>
         </div>
     </div>
 </section>
 <?php
-$args = array(
-    'post_type' => 'post',
-    'posts_per_page' => 5,
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'post_status' => 'publish'
-);
-$posts = get_posts($args);
-if($posts):
-?>
-<section class="row news">
-    <div class="container">
-        <h2 class="text-center">Nyheter</h2>
-    </div>
-    <div class="row news-wrapper">
-        <?php
-        $x = 0;
-        foreach ($posts as $post) :
-            setup_postdata($post);
-            $categories = get_the_category();
-            if (has_post_thumbnail()) :
-                $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+//$args = array(
+//    'post_type' => 'post',
+//    'posts_per_page' => 5,
+//    'orderby' => 'date',
+//    'order' => 'DESC',
+//    'post_status' => 'publish'
+//);
+//$posts = get_posts($args);
+//if($posts):
+//?>
+<!--<section class="row news">-->
+<!--    <div class="container">-->
+<!--        <h2 class="text-center">Nyheter</h2>-->
+<!--    </div>-->
+<!--    <div class="row news-wrapper">-->
+<!--        --><?php
+//        $x = 0;
+//        foreach ($posts as $post) :
+//            setup_postdata($post);
+//            $categories = get_the_category();
+//            if (has_post_thumbnail()) :
+//                $thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+//
+//                if($x==0) {
+//                    echo '<article class="col-md-6 large" style="background-image: url('.$thumb[0].')"><a href="'.get_permalink($post->ID).'">';
+//                    echo '<a href="'.get_permalink($post->ID).'"><div class="clicker"></div></a>';
+//                }else{
+//                    echo '<article class="col-md-3 col-sm-6" style="background-image: url('.$thumb[0].')"><a href="'.get_permalink($post->ID).'">';
+//                    echo '<a href="'.get_permalink($post->ID).'"><div class="clicker"></div></a>';
+//                }?>
+<!--                    <div class="title-wrapper">-->
+<!--                        <div class="date">--><?php //echo $categories[0]->cat_name;?><!--</div>-->
+<!--                        <h2>-->
+<!--                            --><?php //the_title();?>
+<!--                        </h2>-->
+<!--                    </div>-->
+<!--                    <div class="entry-summary">-->
+<!--                        --><?php //the_excerpt(); ?>
+<!--                    </div>-->
+<!--                    -->
+<!--                </article>-->
+<!---->
+<!--        --><?php
+//                $x++;
+//            endif;
+//        endforeach;
+//        ?>
+<!---->
+<!--    </div>-->
+<!--    <div class="container text-center button-wrapper">-->
+<!--        --><?php
+//        function get_page_id_by_slug($slug){
+//            global $wpdb;
+//            $id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."'AND post_type = 'page'");
+//            return $id;
+//        }
+//        $nyheterurl = get_permalink(get_page_id_by_slug('nyheter'));
+//        ?>
+<!--        <a href="--><?//= $nyheterurl;?><!--"><button class="btn text-center">Visa alla nyheter</button></a>-->
+<!--    </div>-->
+<!--</section>-->
+<?php //endif; ?>
 
-                if($x==0) {
-                    echo '<article class="col-md-6 large" style="background-image: url('.$thumb[0].')"><a href="'.get_permalink($post->ID).'">';
-                    echo '<a href="'.get_permalink($post->ID).'"><div class="clicker"></div></a>';
-                }else{
-                    echo '<article class="col-md-3 col-sm-6" style="background-image: url('.$thumb[0].')"><a href="'.get_permalink($post->ID).'">';
-                    echo '<a href="'.get_permalink($post->ID).'"><div class="clicker"></div></a>';
-                }?>
-                    <div class="title-wrapper">
-                        <div class="date"><?php echo $categories[0]->cat_name;?></div>
-                        <h2>
-                            <?php the_title();?>
-                        </h2>
-                    </div>
-                    <div class="entry-summary">
-                        <?php the_excerpt(); ?>
-                    </div>
-                    
-                </article>
-
-        <?php
-                $x++;
-            endif;
-        endforeach;
-        ?>
-
-    </div>
-    <div class="container text-center button-wrapper">
-        <?php
-        function get_page_id_by_slug($slug){
-            global $wpdb;
-            $id = $wpdb->get_var("SELECT ID FROM $wpdb->posts WHERE post_name = '".$slug."'AND post_type = 'page'");
-            return $id;
-        }
-        $nyheterurl = get_permalink(get_page_id_by_slug('nyheter'));
-        ?>
-        <a href="<?= $nyheterurl;?>"><button class="btn text-center">Visa alla nyheter</button></a>
-    </div>
-</section>
-<?php endif; ?>
-<section class="row cast">
-    <div class="container">
-        <h2>För en större upplevelse</h2>
-        <h3>Träna framför TV'n med din Apple TV eller Chromecast</h3>
-        <div class="col-xs-12">
-            <div class="row">
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/airplay.png" class="img-responsive"/>
-                <img src="<?= get_template_directory_uri(); ?>/dist/images/chromecast.png" class="img-responsive"/>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="row films">
     <div class="container">
         <h2 class="text-center">Filmerna</h2>
@@ -247,6 +242,22 @@ if($posts):
         </div>
 
     </div>
+</section>
+<section class="cast row">
+        <div class="container">
+            <div class="col-sm-8 pull-left">
+                <div class="row">
+                    <h2>För en större upplevelse</h2>
+                    <h3>Träna framför TV'n med din Apple TV eller Chromecast</h3>
+                </div>
+            </div>
+            <div class="col-sm-4 casticons">
+                <div class="row">
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/airplay.png" class="img-responsive pull-right"/>
+                    <img src="<?= get_template_directory_uri(); ?>/dist/images/chromecast.png" class="img-responsive pull-right"/>
+                </div>
+            </div>
+        </div>
 </section>
 <section class="row appen">
     <div class="header">
