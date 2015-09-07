@@ -326,6 +326,18 @@
 <!--        </div>-->
 <!--    </div>-->
 <!--</section>-->
+<section class="row komigang">
+    <div class="container">
+        <div class="text-wrapper col-md-8 col-md-offset-2">
+            <h2>Kom igång - tre enkla steg!</h2>
+            <p class="steps">
+                1. Registrera dig och skapa ditt konto <a href="http://app.moveapp.se/register">här</a><br>
+                2. Ladda ner appen från <a href="https://itunes.apple.com/us/app/moveapp/id998189654">App Store</a> / <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">Google Play</a><br>
+                3. Logga in och börja träna!
+            </p>
+        </div>
+    </div>
+</section>
 <section class="row abonnemang">
     <div class="container">
         <h2 class="text-center">Abonnemang</h2>

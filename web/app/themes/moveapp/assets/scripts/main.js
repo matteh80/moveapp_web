@@ -84,6 +84,19 @@
                     this.paused ? $(this).siblings(".play-btn").css("display", "block") : $(this).siblings(".play-btn").css("display", "none");
                     this.paused ? $(this).removeAttr("controls", "") : $(this).attr("controls", "");
                 });
+
+                // Parallax if not mobile
+                if(!$('html').hasClass('touch')) {
+                    var eTop = $('.komigang').offset().top; //get the offset top of the element
+                    console.log(eTop - $(window).scrollTop()); //position of the ele w.r.t window
+
+                    $(window).scroll(function() { //when window is scrolled
+                        //console.log($(window).height());
+                        //offset = eTop - $(window).scrollTop();
+                        //$('.komigang').css("background-position", "50% "+offset+"%");
+                    });
+
+                }
             }
         },
         // About us page, note the change from about-us to about_us.

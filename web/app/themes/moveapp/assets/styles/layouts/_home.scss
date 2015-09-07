@@ -37,6 +37,7 @@ section.row{
     }
   }
 }
+$headerbg : url("../../dist/images/bakgrundsbild1.jpg");
 .mobileheader {
   padding-top: 0 !important;
   .bg {
@@ -44,7 +45,7 @@ section.row{
     @media(min-width: $screen-sm-min) {
       height: 400px;
     }
-    background: url("../../dist/images/bg_bild_NY.jpg");
+    background: $headerbg;
     background-size: cover;
   }
   h1 {
@@ -85,7 +86,7 @@ section.row{
   position: relative;
   margin-top: -111px;
   padding: 210px 0 210px !important;
-  background: url("../../dist/images/bg_bild_NY.jpg");
+  background: $headerbg;
   background-size: cover;
   background-position: 100% 50%;
   @media(min-width: $screen-md-min) {
@@ -614,4 +615,45 @@ section.row{
       margin-bottom: 0;
     }
   }
+}
+.komigang {
+  background: url("../../dist/images/kom_igang.jpg");
+  background-attachment : fixed;
+  background-position   : top center;
+  background-size       : cover;
+
+  .text-wrapper {
+    border: 4px solid white;
+    padding: 45px;
+
+    h2 {
+      color: white !important;
+      font-family: "Futura LT Condensed" !important;
+      font-size: 36px;
+      @media(min-width: $screen-sm-min) {
+        font-size: 45px;
+      }
+      @media(min-width: $screen-md-min) {
+        font-size: 55px;
+      }
+      margin-top: 0;
+    }
+
+    .steps {
+      font-size: 18px;
+      @media(min-width: $screen-sm-min) {
+        font-size: 21px;
+      }
+      @media(min-width: $screen-md-min) {
+        font-size: 24px;
+      }
+      color: white;
+    }
+    a {
+      text-decoration: underline;
+      color: white;
+    }
+  }
+
+
 }
