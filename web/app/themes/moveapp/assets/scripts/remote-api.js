@@ -5,7 +5,7 @@ jQuery( document ).ready(function($) {
         $('.login, .register').hide();
         $('#logged-in').show();
         if((user.first_name).length != 0) {
-            $('#logged-in').text(user.first_name+" "+user.last_name);
+            $('#logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
         }else{
             $('#logged-in').text("Skapa profil");
         }
@@ -193,7 +193,7 @@ function get_user(user_id){
             $('.login, .register').fadeOut( "slow", function() {
                 $('#logged-in').css("transform", "scale(2.0)").fadeIn("slow");
                 $('#logged-in').css("transform", "scale(1.0)");
-                $('#logged-in').text(user.first_name+" "+user.last_name);
+                $('#logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
                 $('.login-wrap').removeClass("hover");
             });
 
