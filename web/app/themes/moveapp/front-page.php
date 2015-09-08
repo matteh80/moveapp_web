@@ -372,3 +372,49 @@
         </div>
     </div>
 </section>
+
+
+
+<div class="modal fade" id="loginModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title text-center">Logga in i MoveApp</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" id="username" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="row submit">
+                        <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
+                            <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-5">
+                            <button type="submit" id="btn_login" class="btn btn-default pull-right">Logga in<i class="fa fa-spinner fa-pulse"></i></button>
+                        </div>
+                        <div class="text-center divider col-xs-12">
+                            <span class="or">ELLER</span>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();" scope="public_profile,email" onlogin="checkLoginState();">
+                                <i class="fa fa-facebook"></i> Logga in med Facebook
+                            </button>
+                        </div>
+                        <div class="errors"></div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p class="text-center">Inget konto? Registrera dig <a href="http://app.moveapp.se/register/">här!</a></p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

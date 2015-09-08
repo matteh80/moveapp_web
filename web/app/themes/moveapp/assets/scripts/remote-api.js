@@ -18,7 +18,6 @@ jQuery( document ).ready(function($) {
 
     $('#btn_login').click(function(e){
         e.preventDefault();
-        $('.login-wrap').addClass("logging-in");
         $(this).addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
         sessionStorage.setItem('password', $('#password').val());
         data = {"username": $('#username').val(), "password": $('#password').val()};
@@ -89,6 +88,7 @@ function login(data){
             get_subscription();
             timer(true);
             $('.login-wrap').removeClass("logging-in");
+            $('#loginModal').modal('hide');
         },
         error: function(errorThrown){
             console.log(errorThrown);
@@ -105,7 +105,7 @@ function login(data){
     });
 
     function showLoginError() {
-        $('.errors').html('Något gick fel. Kontrollera ditt användarnamn och lösenord och försök igen.<br><br><a href="http://app.moveapp.se/password/reset/" target="_blank">Glömt ditt lösenord?</a>').show("slow");
+        $('.errors').html('Något gick fel. Kontrollera ditt användarnamn och lösenord och försök igen.').show("slow");
         $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
     }
 }

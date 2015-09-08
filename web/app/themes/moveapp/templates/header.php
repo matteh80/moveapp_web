@@ -12,12 +12,12 @@
                 $url = get_permalink($id);
                 ?>
                 <a href="<?php echo $url; ?>">
-                    <button id="logged-in btn btn-primary"></button>
+                    <button id="logged-in" class="btn btn-primary"></button>
                 </a>
                 <a href="http://app.moveapp.se/register/">
                     <button class="register btn btn-primary"><?= __('Nytt konto', 'sage'); ?></button>
                 </a>
-                <button class="login btn btn-primary"><?= __('Logga in', 'sage'); ?></button>
+                <button class="login btn btn-primary" data-toggle="modal" data-target="#loginModal"><?= __('Logga in', 'sage'); ?></button>
             </div>
         </div>
     </div>

@@ -654,6 +654,105 @@ $headerbg : url("../../dist/images/bakgrundsbild1.jpg");
       color: white;
     }
   }
+}
 
+$modal-color: darken($blue, 15%);
+#loginModal {
+  .modal-dialog {
 
+    .modal-content {
+      padding: 0;
+
+      a {
+        color: $modal-color;
+      }
+      .modal-header {
+        border-bottom: none;
+        background-color: $modal-color;
+        h2 {
+          color: white !important;
+        }
+      }
+      .modal-body {
+        padding-left: 30px;
+        padding-right: 30px;
+        @media(min-width: $screen-sm-min) {
+          padding-left: 110px;
+          padding-right: 110px;
+        }
+
+        label {
+          text-transform: uppercase;
+          font-family: "Futura LT";
+        }
+        input.form-control {
+          padding: 20px 15px;
+          border-radius:0;
+          border: 1px solid black;
+        }
+
+        .submit {
+          margin-top: 30px;
+
+          .text {
+            line-height: 50px;
+          }
+        }
+
+        .divider {
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 2.5rem 0;
+          border-top: 1px solid #999;
+
+          .or {
+            display: block;
+            position: absolute;
+            height: 2.8rem;
+            width: 7rem;
+            left: 50%;
+            margin-left: -3.5rem;
+            top: -1.3rem;
+            line-height: 2.8rem;
+            font-size: 1.6rem;
+            background: #fff;
+            color: #999;
+          }
+        }
+
+      }
+      .btn {
+        border-radius: 0;
+        font-family: Arial, sans-serif;
+        border: none;
+        padding: 15px 30px;
+
+        &#btn_login {
+          background-color: darken($blue,15%);
+          &:hover {
+            background-color: $blue;
+          }
+        }
+        &.logged-in {
+          display: none;
+        }
+      }
+      .btn-facebook {
+        background-color: #3B5998;
+        margin-bottom: 50px;
+        font-weight: 300;
+        font-size: inherit !important;
+      }
+      .modal-footer {
+        border: none;
+        background-color: $gray-dark;
+        color: white;
+
+        p {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
 }
