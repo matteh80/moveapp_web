@@ -114,6 +114,9 @@ nav {
     @media(min-width: $screen-sm-min) {
       font-size: 30px;
     }
+    &.logged-in {
+//      display: none;
+  }
     .fa {
       margin-left: 10px;
     }

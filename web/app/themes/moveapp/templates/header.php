@@ -12,7 +12,7 @@
                 $url = get_permalink($id);
                 ?>
                 <a href="<?php echo $url; ?>">
-                    <button id="logged-in" class="btn btn-primary"></button>
+                    <button id="logged-in" class="btn btn-primary logged-in"></button>
                 </a>
                 <a href="http://app.moveapp.se/register/">
                     <button class="register btn btn-primary"><?= __('Nytt konto', 'sage'); ?></button>
@@ -63,7 +63,9 @@
         </div>
     </nav>
     <div class="mobile-buttons text-center">
-
+        <a href="<?php echo $url; ?>">
+            <button id="logged-in" class="logged-in"></button>
+        </a>
         <a href="http://app.moveapp.se/register/">
             <button class="register"><?= __('Nytt konto', 'sage'); ?><i class="fa fa-chevron-right"></i></button>
         </a>

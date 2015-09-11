@@ -4,17 +4,17 @@ jQuery( document ).ready(function($) {
     if(is_logged_in()) {
         user = JSON.parse(sessionStorage.getItem('user'));
         $('.login, .register').hide();
-        $('#logged-in').show();
+        $('.logged-in').show();
         if((user.first_name).length != 0) {
-            $('#logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
+            $('.logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
         }else{
-            $('#logged-in').text("Skapa profil");
+            $('.logged-in').text("Skapa profil");
         }
 
         timer(true);
     }else{
         $('.login, .register').show();
-        $('#logged-in').hide();
+        $('.logged-in').hide();
     }
 
     $('#btn_login').click(function(e){
@@ -235,9 +235,9 @@ function get_user(user_id){
             sessionStorage.setItem('user', JSON.stringify(response));
             user = JSON.parse(sessionStorage.getItem('user'));
             $('.login, .register').fadeOut( "slow", function() {
-                $('#logged-in').css("transform", "scale(2.0)").fadeIn("slow");
-                $('#logged-in').css("transform", "scale(1.0)");
-                $('#logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
+                $('.logged-in').css("transform", "scale(2.0)").fadeIn("slow");
+                $('.logged-in').css("transform", "scale(1.0)");
+                $('.logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
                 $('.login-wrap').removeClass("hover");
             });
 
