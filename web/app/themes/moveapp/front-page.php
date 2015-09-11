@@ -403,7 +403,7 @@
                             <span class="or">ELLER</span>
                         </div>
                         <div class="text-center">
-                            <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();" scope="public_profile,email">
+                            <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();">
                                 <i class="fa fa-facebook"></i> Logga in med Facebook
                             </div>
                         </div>

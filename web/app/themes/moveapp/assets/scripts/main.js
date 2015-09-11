@@ -34,7 +34,7 @@
                         version: 'v2.4' // or v2.0, v2.1, v2.0
                     });
 
-                    var accessToken = '1489179891398592|b9dff9ba00867e947fef3d2b932dcbb4';
+                    var accessToken = '1489179891398592|th__VEusi8kIpEGflbQjNWU88Iw';
                     FB.api('1632026917030663/feed', {
                         access_token: accessToken
                     }, function (response) {

@@ -1,4 +1,5 @@
 jQuery( document ).ready(function($) {
+    //logout();
 
     if(is_logged_in()) {
         user = JSON.parse(sessionStorage.getItem('user'));
@@ -62,14 +63,15 @@ function timer(start) {
     }
 }
 
-//var apiUrl = "http://app.moveapp.se/";
-var apiUrl = "http://stage2.moveapp.se/";
+var apiUrl = "http://app.moveapp.se/";
+//var apiUrl = "http://stage2.moveapp.se/";
 var user;
 
 function fb_login(){
     FB.login(function(response) {
         if (response.authResponse) {
             access_token = response.authResponse.accessToken; //get access token
+            console.log(access_token);
             data = {"access_token": access_token};
             $.ajax({
                 url: apiUrl+'api/fb_login/',
@@ -80,8 +82,8 @@ function fb_login(){
                 processData: false,
                 dataType: 'json',
                 success:function(response){
-                    console.log(response);
                     data = {"username": response.username, "password": response.password};
+                    login(data);
                 },
                 error: function(errorThrown){
                     console.log(errorThrown);
@@ -103,7 +105,7 @@ function fb_login(){
 
         }
     }, {
-        scope: 'public_profile,email'
+        scope: 'public_profile,email,user_birthday,user_location'
     });
 }
 
