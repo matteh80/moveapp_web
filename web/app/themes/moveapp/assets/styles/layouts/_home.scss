@@ -144,6 +144,10 @@ $headerbg : url("../../dist/images/bakgrundsbild2.jpg");
         display: inline-block;
         max-height: 70px;
         float: left;
+        margin-bottom: 5px;
+        @media(min-width: $screen-sm-min) {
+          margin-bottom: 0;
+        }
         &:first-of-type {
           margin-right: 10px;
         }
@@ -695,7 +699,11 @@ $modal-color: darken($blue, 15%);
           margin-top: 30px;
 
           .text {
-            line-height: 50px;
+            line-height: auto;
+            margin-top: 10px;
+            @media(min-width: $screen-sm-min) {
+              line-height: 50px;
+            }
           }
         }
 

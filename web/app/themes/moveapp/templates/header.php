@@ -5,7 +5,7 @@
                 <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive"/>
             </a>
 
-            <div id="button-wrapper" class="col-sm-6 pull-right">
+            <div id="button-wrapper" class="col-sm-6 pull-right hidden-xs">
 
                 <?php
                 $id = Roots\Sage\Utils\get_page_id_by_slug('profil');
@@ -62,5 +62,12 @@
             ?>
         </div>
     </nav>
+    <div class="mobile-buttons text-center">
+
+        <a href="http://app.moveapp.se/register/">
+            <button class="register"><?= __('Nytt konto', 'sage'); ?><i class="fa fa-chevron-right"></i></button>
+        </a>
+        <button class="login" data-toggle="modal" data-target="#loginModal"><?= __('Logga in', 'sage'); ?><i class="fa fa-chevron-right"></i></button>
+    </div>
 </header>
 

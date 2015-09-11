@@ -1,4 +1,5 @@
 header {
+  background-color: transparent !important;
   .fa-user {
     margin-right: 5px !important;
   }
@@ -9,7 +10,7 @@ header {
 
     @media(min-width: $grid-float-breakpoint) {
       border: none;
-      background-color: white;
+      background-color: transparent;
     }
   }
 
@@ -61,25 +62,11 @@ header {
         color: white;
         border: none;
         margin-top: 15px;
-//        display: inline-block;
-//        padding: 10px 25px 10px 5px;
-//        position: relative;
-//        text-transform: uppercase;
-//        background: transparent;
-//        border: 0;
-//        cursor: pointer;
-//        outline:none;
-//        background-color: $gray-lighter;
+
 
         @media(min-width: $grid-float-breakpoint) {
           padding-top: 7px;
           padding-bottom: 7px;
-//          display: inline-block;
-//          height: 70px;
-//          padding: 10px 30px 10px 10px;
-//          font-size: 1em;
-//          line-height: 1em;
-//          background-color: white;
         }
       }
     }
@@ -104,6 +91,31 @@ nav {
         color: $gray-light;
         margin-left: 10px;
       }
+    }
+  }
+}
+
+.mobile-buttons {
+  @media(min-width: $grid-float-breakpoint) {
+    display: none;
+  }
+  padding: 10px 0 5px;
+  background-color: #EEEEEE;
+  color: #505050;
+  a{
+    color: #505050;
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    @media(min-width: $screen-sm-min) {
+      font-size: 30px;
+    }
+    .fa {
+      margin-left: 10px;
     }
   }
 }
