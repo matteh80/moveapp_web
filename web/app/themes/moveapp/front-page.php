@@ -399,14 +399,17 @@
                         <div class="col-xs-6 col-sm-5">
                             <button type="submit" id="btn_login" class="btn btn-default pull-right">Logga in<i class="fa fa-spinner fa-pulse"></i></button>
                         </div>
-                        <div class="text-center divider col-xs-12">
-                            <span class="or">ELLER</span>
-                        </div>
-                        <div class="text-center">
-                            <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();">
-                                <i class="fa fa-facebook"></i> Logga in med Facebook
+                        <div class="hiiden-xs hidden-sm hidden-md hidden-lg">
+                            <div class="text-center divider col-xs-12">
+                                <span class="or">ELLER</span>
+                            </div>
+                            <div class="text-center">
+                                <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();">
+                                    <i class="fa fa-facebook"></i> Logga in med Facebook
+                                </div>
                             </div>
                         </div>
+
                         <div class="errors"></div>
                     </div>
 
