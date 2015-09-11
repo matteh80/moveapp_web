@@ -28,6 +28,6 @@
     }
   },
   "config": {
-    "devUrl": "http://moveapp.dev"
+    "devUrl": "http://local.moveapp.se"
   }
 }

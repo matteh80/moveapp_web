@@ -62,8 +62,50 @@ function timer(start) {
     }
 }
 
-var apiUrl = "http://app.moveapp.se/";
+//var apiUrl = "http://app.moveapp.se/";
+var apiUrl = "http://stage2.moveapp.se/";
 var user;
+
+function fb_login(){
+    FB.login(function(response) {
+        if (response.authResponse) {
+            access_token = response.authResponse.accessToken; //get access token
+            data = {"access_token": access_token};
+            $.ajax({
+                url: apiUrl+'api/fb_login/',
+                contentType: "application/json",
+                method: "POST",
+                data: JSON.stringify(data),
+                crossDomain: false,
+                processData: false,
+                dataType: 'json',
+                success:function(response){
+                    console.log(response);
+                    data = {"username": response.username, "password": response.password};
+                },
+                error: function(errorThrown){
+                    console.log(errorThrown);
+                    if(errorThrown.statusText == "error") {
+                        showLoginError();
+                    }
+                    responseText = JSON.parse(errorThrown.responseText);
+                    console.log(responseText.non_field_errors.toString());
+                    if(responseText.non_field_errors == "Unable to login with provided credentials.") {
+                        showLoginError();
+
+                    }
+                }
+            });
+
+        } else {
+            //user hit cancel button
+            console.log('User cancelled login or did not fully authorize.');
+
+        }
+    }, {
+        scope: 'public_profile,email'
+    });
+}
 
 function login(data){
     $.ajax({

@@ -403,9 +403,9 @@
                             <span class="or">ELLER</span>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();" scope="public_profile,email" onlogin="checkLoginState();">
+                            <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();" scope="public_profile,email">
                                 <i class="fa fa-facebook"></i> Logga in med Facebook
-                            </button>
+                            </div>
                         </div>
                         <div class="errors"></div>
                     </div>

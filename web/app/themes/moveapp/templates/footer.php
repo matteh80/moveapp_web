@@ -1,12 +1,3 @@
-<div id="fb-root"></div>
-<script>(function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s);
-        js.id = id;
-        js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.4&appId=332897300242814";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
 <footer class="content-info" role="contentinfo">
     <div class="container menu">
         <div class="col-md-3 logo">

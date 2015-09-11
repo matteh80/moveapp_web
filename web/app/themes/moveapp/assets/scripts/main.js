@@ -27,14 +27,14 @@
 
                 $.getScript(js, function () {
                     FB.init({
-                        appId: '332897300242814',
-                        appSecret: 'a912eb6e7d0a4136f0ae9d799258818b',
+                        appId: '1489179891398592',
+                        appSecret: 'b9dff9ba00867e947fef3d2b932dcbb4',
                         cookie: true,
                         xfbml: true,  // parse social plugins on this page
-                        version: 'v2.2' // or v2.0, v2.1, v2.0
+                        version: 'v2.4' // or v2.0, v2.1, v2.0
                     });
 
-                    var accessToken = '332897300242814|qGg9igkAKsL88273AqbGmifBAtQ';
+                    var accessToken = '1489179891398592|b9dff9ba00867e947fef3d2b932dcbb4';
                     FB.api('1632026917030663/feed', {
                         access_token: accessToken
                     }, function (response) {
@@ -50,17 +50,6 @@
                             }
                         });
                     });
-                });
-
-                $('.login-wrap').on('mouseover', function () {
-                    $(this).addClass('hover');
-                }).on('mouseout', function (e) {
-                    if (!$(e.target).is('input') && !$(this).hasClass("logging-in")) {
-                        $(this).removeClass('hover');
-                    }
-                });
-                $('.main').on("click", function() {
-                   $('.login-wrap').removeClass("logging-in hover");
                 });
             }
         },
