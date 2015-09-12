@@ -3,6 +3,9 @@ jQuery( document ).ready(function($) {
 
     if(is_logged_in()) {
         user = JSON.parse(sessionStorage.getItem('user'));
+        if(!user){
+            logout();
+        }
         $('.login, .register').hide();
         $('.logged-in').show();
         if((user.first_name).length != 0) {
@@ -10,8 +13,8 @@ jQuery( document ).ready(function($) {
         }else{
             $('.logged-in').text("Skapa profil");
         }
-
         timer(true);
+
     }else{
         $('.login, .register').show();
         $('.logged-in').hide();
@@ -24,6 +27,7 @@ jQuery( document ).ready(function($) {
         data = {"username": $('#username').val(), "password": $('#password').val()};
         login(data);
     });
+
 });
 
 $(document).ajaxComplete(function(event, xhr, settings){
@@ -63,8 +67,8 @@ function timer(start) {
     }
 }
 
-//var apiUrl = "http://app.moveapp.se/";
-var apiUrl = "http://stage2.moveapp.se/";
+var apiUrl = "http://app.moveapp.se/";
+//var apiUrl = "http://stage2.cmovie.se/";
 var user;
 
 function fb_login(){
@@ -83,6 +87,7 @@ function fb_login(){
                 dataType: 'json',
                 success:function(response){
                     data = {"username": response.username, "password": response.password};
+                    console.log(data);
                     login(data);
                 },
                 error: function(errorThrown){
@@ -384,7 +389,7 @@ function logout(inactive) {
     if(inactive) {
         alert("Du har blivit utloggad pga inaktivitet.");
     }
-    window.location = "http://moveapp.se";
+    window.location = window.location.protocol + "//" + window.location.host + "/";
     timer(false);
 }
 
