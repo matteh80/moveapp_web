@@ -399,7 +399,7 @@
                         <div class="col-xs-6 col-sm-5">
                             <button type="submit" id="btn_login" class="btn btn-default pull-right">Logga in<i class="fa fa-spinner fa-pulse"></i></button>
                         </div>
-                        <div class="hidden-xs hidden-sm hidden-md hidden-lg">
+                        <div class="col-xs-12">
                             <div class="text-center divider col-xs-12">
                                 <span class="or">ELLER</span>
                             </div>
