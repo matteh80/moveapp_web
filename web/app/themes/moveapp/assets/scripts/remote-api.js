@@ -63,8 +63,8 @@ function timer(start) {
     }
 }
 
-var apiUrl = "http://app.moveapp.se/";
-//var apiUrl = "http://stage2.moveapp.se/";
+//var apiUrl = "http://app.moveapp.se/";
+var apiUrl = "http://stage2.moveapp.se/";
 var user;
 
 function fb_login(){
