@@ -244,7 +244,15 @@ function get_user(user_id){
             $('.login, .register').fadeOut( "slow", function() {
                 $('.logged-in').css("transform", "scale(2.0)").fadeIn("slow");
                 $('.logged-in').css("transform", "scale(1.0)");
-                $('.logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
+                if(user.first_name != "null") {
+                    if((user.first_name).length != 0) {
+                        $('.logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
+                    }else{
+                        $('.logged-in').text("Skapa profil");
+                    }
+                }else{
+                    $('.logged-in').text("Skapa profil");
+                }
                 $('.login-wrap').removeClass("hover");
             });
 
