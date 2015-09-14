@@ -5,11 +5,18 @@ jQuery( document ).ready(function($) {
         user = JSON.parse(sessionStorage.getItem('user'));
         $('.login, .register').hide();
         $('.logged-in').show();
-        if((user.first_name).length != 0 || user.first_name != "null") {
-            $('.logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
+        console.log("User");
+        console.log(user);
+        if(user.first_name != "null") {
+            if((user.first_name).length != 0) {
+                $('.logged-in').html('<i class="fa fa-user"></i>'+user.first_name+" "+user.last_name);
+            }else{
+                $('.logged-in').text("Skapa profil");
+            }
         }else{
             $('.logged-in').text("Skapa profil");
         }
+
 
         timer(true);
     }else{
