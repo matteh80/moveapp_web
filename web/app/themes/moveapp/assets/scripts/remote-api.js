@@ -77,7 +77,7 @@ var apiUrl = "http://app.moveapp.se/";
 //var apiUrl = "http://stage2.cmovie.se/";
 var user;
 
-function fb_login(){
+function fb_login(register){
     FB.login(function(response) {
         if (response.authResponse) {
             access_token = response.authResponse.accessToken; //get access token
@@ -144,6 +144,8 @@ function login(data){
             timer(true);
             $('.login-wrap').removeClass("logging-in");
             $('#loginModal').modal('hide');
+            $('#registerModal').modal('hide');
+            $('body').scrollTop(0);
         },
         error: function(errorThrown){
             console.log(errorThrown);

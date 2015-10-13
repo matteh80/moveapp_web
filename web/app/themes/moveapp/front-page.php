@@ -454,7 +454,7 @@
             <div class="modal-body">
                 <div class="col-xs-12">
                     <div class="text-center">
-                        <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();">
+                        <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login(true);">
                             <i class="fa fa-facebook"></i> Skapa konto med Facebook
                         </div>
                     </div>
