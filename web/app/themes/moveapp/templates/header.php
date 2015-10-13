@@ -14,7 +14,7 @@
                 <a href="<?php echo $url; ?>">
                     <button id="logged-in" class="btn btn-primary logged-in"></button>
                 </a>
-                <a href="http://app.moveapp.se/register/">
+                <a href="http://app.moveapp.se/register/" class="hidden-xs hidden-sm hidden-md hidden-lg">
                     <button class="register btn btn-primary"><?= __('Nytt konto', 'sage'); ?></button>
                 </a>
                 <button class="login btn btn-primary" data-toggle="modal" data-target="#loginModal"><?= __('Logga in', 'sage'); ?></button>

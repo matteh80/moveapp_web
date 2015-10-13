@@ -5,14 +5,20 @@
                 <div class="col-xs-12">
                     <div class="row">
                         <h1 class="col-xs-12">Workout made easy!</h1>
-                        <h4 class="col-xs-12"><p>100-tals träningspass - hur, var och när du vill <br>- i mobilen, surfplattan eller på TV:n.</p>
-                            <p>99 kr i månaden, en gratis prova-på-månad. <br>Inga bindningstider.</p></h4>
+                        <h4 class="col-xs-10">
+                            <p>Träna - hur, var och när du vill - i mobilen, läsplattan eller på TV:n.</p>
+                            <p>Vi erbjuder 100-tals träningsfilmer på 10-60 min.<br>Träna core, zumba, fyspass, pilates, boxpass, olika typer av yoga mm.</p>
+                        </h4>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
+                    <a href="#" class="row"><button class="btn col-xs-6">Gratis - 0 kr / mån</button></a>
+                    <a href="http://app.moveapp.se/register/" class="row"><button class="btn btn-green col-xs-6">Premium - 99 kr / mån</button></a>
+                    <p class="col-xs-12 row campaign">
+                        Har du en kampanjkod? Registrera dig <a href="http://app.moveapp.se/register/">här</a>.
+                    </p>
                 </div>
             </div>
 
@@ -26,11 +32,12 @@
         <div class="row text-center">
             <h1 class="col-xs-12">Workout made easy!</h1>
             <h4 class="col-xs-12"><p>100-tals träningspass - hur, var och när du vill <br>- i mobilen, surfplattan eller på TV:n.</p>
-                <p>99 kr i månaden, en gratis prova-på-månad. <br>Inga bindningstider.</p></h4>
+                <p>Vi erbjuder 100-tals träningsfilmer på 10-60 min.<br>Träna core, zumba, fyspass, pilates, boxpass, olika typer av yoga mm.</h4>
         </div>
         <div class="row">
             <div class="col-xs-12 text-center">
-                <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
+                <a href="#"><button class="btn">Gratis - 0 kr / mån</button></a>
+                <a href="http://app.moveapp.se/register/"><button class="btn btn-green">Premium - 99 kr / mån</button></a>
             </div>
         </div>
 <!--        <div class="row">-->
@@ -238,6 +245,7 @@
                 <p>
                     Core, Cykel, Dans, Fokus, Pilates, Puls, Styrka, Yoga, Gravidyoga.
                 </p>
+                <img src="<?= get_template_directory_uri(); ?>/dist/images/partners.png" class="partners img-responsive" />
             </div>
         </div>
 
@@ -261,7 +269,7 @@
 </section>
 <section class="row appen">
     <div class="header">
-        <img src="<?= get_template_directory_uri(); ?>/dist/images/appen_header.png" class="img-responsive" />
+        <img src="<?= get_template_directory_uri(); ?>/dist/images/appen_header.jpg" class="img-responsive" />
     </div>
     <div class="container">
         <h2 class="text-center">Appen</h2>
@@ -343,28 +351,42 @@
         <h2 class="text-center">Abonnemang</h2>
     </div>
     <div class="container abonnemang-wrapper">
-        <div class="container-fluid panel panel-default ">
-            <h2 class="col-md-8 col-md-offset-2">100-tals träningsfilmer,<br> allt samlat i en liten app. </h2>
-            <div class="col-md-12 text-center">
-                <h4>
-                    <strong>99 kr </strong>/ mån
-                </h4>
-                <h5>
-                    Inga bindningstider
-                </h5>
-                <a href="http://app.moveapp.se/register/"><button class="btn">Påbörja min gratismånad!</button></a>
-                <div class="appstore-wrapper">
-                    <div class="col-sm-6 col-md-5 col-md-offset-1">
-                        <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp">
-                            <img src="<?= get_template_directory_uri(); ?>/dist/images/playstore.png"
-                                 class="img-responsive"/>
-                        </a>
+        <div class="col-md-6">
+            <div class="panel">
+                    <h2 class="rubrik">Gratis</h2>
+                <div class="content">
+                    <h4 class="price">0 kr / mån</h4>
+                    <hr>
+                    <ul class="features">
+                        <li>5 träningsfilmer</li>
+                        <li>100-tals enkilda övningar</li>
+                        <li>GPS-träning</li>
+                        <li>Kalender</li>
+                        <li>Statistik</li>
+                    </ul>
+                    <div class="row">
+                        <button class="btn col-xs-10 col-xs-offset-1" data-toggle="modal" data-target="#registerModal">Gratis</button>
                     </div>
-                    <div class="col-sm-6 col-md-5">
-<!--                        <a href="https://itunes.apple.com/us/app/moveapp/id998189654?l=sv&ls=1&mt=8">-->
-                        <a href="https://itunes.apple.com/us/app/moveapp/id998189654">
-                            <img src="<?= get_template_directory_uri(); ?>/dist/images/appstore.png"
-                                 class="img-responsive"/>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel green">
+                <h2 class="rubrik">Premium</h2>
+                <div class="content">
+                    <h4 class="price">99 kr / mån</h4>
+                    <hr>
+                    <ul class="features">
+                        <li>100-tals träningsfilmer</li>
+                        <li>100-tals enkilda övningar</li>
+                        <li>Veckoprogram</li>
+                        <li>GPS-träning</li>
+                        <li>Kalender</li>
+                        <li>Statistik</li>
+                    </ul>
+                    <div class="row">
+                        <a href="http://app.moveapp.se/register/">
+                            <button class="btn col-xs-10 col-xs-offset-1">Premium</button>
                         </a>
                     </div>
                 </div>
@@ -383,14 +405,24 @@
                 <h2 class="modal-title text-center">Logga in i MoveApp</h2>
             </div>
             <div class="modal-body">
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();">
+                            <i class="fa fa-facebook"></i> Logga in med Facebook
+                        </div>
+                    </div>
+                    <div class="text-center divider col-xs-12">
+                        <span class="or">eller</span>
+                    </div>
+                </div>
                 <form>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" id="username" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        <label for="username">E-postadress</label>
+                        <input type="email" id="username" class="form-control"  placeholder="E-post">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" id="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <label for="exampleInputPassword1">Lösenord</label>
+                        <input type="password" id="password" class="form-control" placeholder="Lösenord">
                     </div>
                     <div class="row submit">
                         <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
@@ -399,15 +431,60 @@
                         <div class="col-xs-6 col-sm-5">
                             <button type="submit" id="btn_login" class="btn btn-default pull-right">Logga in<i class="fa fa-spinner fa-pulse"></i></button>
                         </div>
-                        <div class="col-xs-12">
-                            <div class="text-center divider col-xs-12">
-                                <span class="or">ELLER</span>
-                            </div>
-                            <div class="text-center">
-                                <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_login();">
-                                    <i class="fa fa-facebook"></i> Logga in med Facebook
-                                </div>
-                            </div>
+
+                        <div class="errors"></div>
+                    </div>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <p class="text-center">Inget konto? Registrera dig <a href="http://app.moveapp.se/register/">här!</a></p>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="registerModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h2 class="modal-title text-center">Registrera konto</h2>
+            </div>
+            <div class="modal-body">
+                <div class="col-xs-12">
+                    <div class="text-center">
+                        <div class="btn btn-lg btn-primary btn-facebook" onclick="fb_register();">
+                            <i class="fa fa-facebook"></i> Skapa konto med Facebook
+                        </div>
+                    </div>
+                    <div class="text-center divider col-xs-12">
+                        <span class="or">eller</span>
+                    </div>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="firstname">Förnamn</label>
+                        <input type="text" class="form-control" id="reg_firstname" placeholder="Förnamn">
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname">Efternamn</label>
+                        <input type="text" class="form-control" id="reg_lastname" placeholder="Efternamn">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">E-postadress</label>
+                        <input type="email" id="reg_username" class="form-control"  placeholder="E-postadress">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Lösenord</label>
+                        <input type="password" id="reg_password" class="form-control" placeholder="Lösenord">
+                    </div>
+                    <div class="row submit">
+                        <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
+                            <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>
+                        </div>
+                        <div class="col-xs-6 col-sm-5">
+                            <button type="submit" id="btn_register" class="btn btn-default pull-right">Registrera<i class="fa fa-spinner fa-pulse"></i></button>
                         </div>
 
                         <div class="errors"></div>

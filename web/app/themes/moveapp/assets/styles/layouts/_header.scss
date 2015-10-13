@@ -1,5 +1,7 @@
 header {
-  background-color: transparent !important;
+  background-color: rgba(0,0,0,0.65) !important;
+  position: relative;
+  z-index: 2;
   .fa-user {
     margin-right: 5px !important;
   }
@@ -59,7 +61,8 @@ header {
       }
 
       button.login, button.register, button#logged-in {
-        color: white;
+        color: black;
+        background-color: white;
         border: none;
         margin-top: 15px;
 

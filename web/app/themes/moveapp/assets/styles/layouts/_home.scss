@@ -37,7 +37,7 @@ section.row{
     }
   }
 }
-$headerbg : url("../../dist/images/bakgrundsbild2.jpg");
+$headerbg : url("../../dist/images/bakgrundsbild3.jpg");
 .mobileheader {
   padding-top: 0 !important;
   .bg {
@@ -93,15 +93,24 @@ $headerbg : url("../../dist/images/bakgrundsbild2.jpg");
     background-position: 50% 50%;
   }
   
-  h1, h4 {
+  h1, h4, p {
     color: white;
+  }
+
+  p {
+    font-family: "Futura LT";
+
+    &.campaign {
+      font-size: 21px;
+      margin-top: 10px;
+    }
   }
 
   h1 {
     font-family: "Futura LT Heavy";
     font-size: 48px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    //text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
 //    background-color: rgba(255, 255, 255, 0.65);
     @media(min-width: $screen-md-min) {
       font-size: 70px;
@@ -112,24 +121,39 @@ $headerbg : url("../../dist/images/bakgrundsbild2.jpg");
   h4 {
     font-size: 18px;
 //    background-color: rgba(255, 255, 255, 0.65);
-    font-family: "Helvetica Neue LT Std 55";
-    text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    font-family: "Futura LT Condensed";
+    //text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
     @media(min-width: $screen-md-min) {
       font-size: 26px;
     }
   }
 
+  a > button:hover {
+    text-decoration: none;
+  }
+
   button {
-    margin-top: 50px;
+    color: black !important;
     @media(min-width: $screen-md-min) {
       font-size: 26px !important;
+    }
+    &:hover {
+      text-decoration: none !important;
+    }
+
+    &.btn-green {
+      background-color: $brand-primary;
+      &:hover {
+        background-color: darken($brand-primary,10%);
+        text-decoration: none !important;
+      }
     }
   }
 
 }
 
 .blackfooter {
-  background-color: black;
+  background-color: #1c1c1c;
   padding: 15px 0 !important;
   @media(min-width: $screen-md-min) {
     max-height: 100px;
@@ -437,6 +461,9 @@ $headerbg : url("../../dist/images/bakgrundsbild2.jpg");
       @media(min-width: $screen-md-min) {
         padding: 0 100px;
       }
+      .partners {
+        margin-top: 20px;
+      }
     }
   }
 }
@@ -517,57 +544,72 @@ $headerbg : url("../../dist/images/bakgrundsbild2.jpg");
   background-color: #f6f5f5;
   z-index: inherit;
 
-  &:after {
-    background: none !important;
-  }
-
-  .abonnemang-wrapper {
-    @media(min-width: $screen-md-min) {
-      padding: 0 100px;
-    }
-    
-    .panel {
-      @media(min-width: $screen-xs-min) {
-        padding: 50px;
-      }
-    }
-
-    h2 {
-      font-family: "Futura LT Heavy";
-      font-size: 36px;
+  .panel {
+    .content {
+      margin: 20px 25px;
       text-align: center;
       @media(min-width: $screen-md-min) {
+        margin: 20px 65px;
         text-align: left;
-        font-size: 50px;
       }
     }
-    h4 {
-      font-size: 32px;
-      @media(min-width: $screen-md-min) {
-        font-size: 46px;
-      }
-      font-family: "Helvetica Neue LT Std 55";
-      margin-bottom: 0;
+    .rubrik {
+      margin: 0 !important;
+      text-align: center;
+      font-size: 50px;
+      padding: 10px 0;
+      background-color: $blue;
     }
-    h5 {
-      font-size: 26px;
-      font-family: "Helvetica Neue LT Std 55";
-      margin-top: 0;
-      margin-bottom: 30px;
+    .price {
+      font-size: 35px;
+      color: $blue;
+      &:after {
+        content: 'Inga bindningstider';
+        font-size: medium;
+        display: block;
+        color: #9e9e9e;
+      }
+    }
+    .features {
+      list-style: none;
+      color: #626262;
+      font-size: 16px;
+      @media(min-width: $screen-sm-min) {
+        font-size: 22px;
+      }
+      padding-left: 0 !important;
+      min-height: 280px;
+
+      > li {
+        line-height: 40px;
+      }
     }
     .btn {
-      font-size: 16px;
-      @media(min-width: $screen-md-min) {
-        font-size: 24px;
-      }
-      margin-bottom: 30px;
+      color: #000 !important;
+      font-size: 24px;
     }
-    .appstore-wrapper{
-      margin-bottom: 30px;
-      img {
-        margin: 0 auto;
+
+    &.green {
+      .rubrik {
+        background-color: $brand-primary;
+      }
+      .price {
+        color: $brand-primary;
+      }
+      .btn {
+        background-color: $brand-primary;
+        &:hover {
+          background-color: darken($brand-primary, 15%);
+        }
       }
     }
+  }
+
+
+
+
+  &:after {
+    background: none !important;
   }
 }
 
@@ -661,7 +703,7 @@ $headerbg : url("../../dist/images/bakgrundsbild2.jpg");
 }
 
 $modal-color: darken($blue, 15%);
-#loginModal {
+#loginModal, #registerModal {
   .modal-dialog {
 
     .modal-content {
@@ -731,7 +773,7 @@ $modal-color: darken($blue, 15%);
 
       }
       .btn {
-        border-radius: 0;
+        border-radius: 5px;
         font-family: Arial, sans-serif;
         border: none;
         padding: 15px 30px;
@@ -748,7 +790,6 @@ $modal-color: darken($blue, 15%);
       }
       .btn-facebook {
         background-color: #3B5998;
-        margin-bottom: 50px;
         font-weight: 300;
         font-size: inherit !important;
       }
