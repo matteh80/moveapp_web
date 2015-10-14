@@ -34,6 +34,25 @@ jQuery( document ).ready(function($) {
         login(data);
     });
 
+    $('#btn_register').click(function(e){
+        e.preventDefault();
+        $(this).addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
+        if($('#username').val() != "" && $('#password').val() != "" && $('#reg_firstname').val() != "" && $('#reg_lastname').val() != "") {
+            data = {
+                "username": $('#username').val(),
+                "email": $('#username').val(),
+                "password": $('#password').val(),
+                "first_name": $('#reg_firstname').val(),
+                "last_name": $('#reg_lastname').val()
+            };
+            register(data);
+        }else{
+            showLoginError(true);
+        }
+
+
+    });
+
 });
 
 $(document).ajaxComplete(function(event, xhr, settings){
@@ -120,6 +139,17 @@ function fb_login(register){
     });
 }
 
+function showLoginError(register) {
+    if(register) {
+        $('.errors').html('Kontrollera att du har fyllt i alla fält.').show("slow");
+        $('#btn_register').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
+    }else{
+        $('.errors').html('Något gick fel. Kontrollera ditt användarnamn och lösenord och försök igen.').show("slow");
+        $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
+    }
+
+}
+
 function login(data){
     $.ajax({
         url: apiUrl+'api-token-auth/',
@@ -160,11 +190,48 @@ function login(data){
             }
         }
     });
+}
 
-    function showLoginError() {
-        $('.errors').html('Något gick fel. Kontrollera ditt användarnamn och lösenord och försök igen.').show("slow");
-        $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
-    }
+function register(data){
+    $.ajax({
+        url: apiUrl+'api/user/register/',
+        contentType: "application/json",
+        method: "POST",
+        data: JSON.stringify(data),
+        crossDomain: false,
+        processData: false,
+        dataType: 'json',
+        success:function(response){
+            //console.log(response);
+            token = response.token;
+            sessionStorage.setItem('accessToken', token);
+            parts = token.split(".");
+
+            var json = Base64.decode(parts[1]);
+            json = clean_up_json(json);
+
+            get_user(json.user_id);
+            get_profile(json.user_id);
+            get_subscription();
+            timer(true);
+            $('.login-wrap').removeClass("logging-in");
+            $('#loginModal').modal('hide');
+            $('#registerModal').modal('hide');
+            $('body').scrollTop(0);
+        },
+        error: function(errorThrown){
+            console.log(errorThrown);
+            if(errorThrown.statusText == "error") {
+                showLoginError();
+            }
+            responseText = JSON.parse(errorThrown.responseText);
+            console.log(responseText.non_field_errors.toString());
+            if(responseText.non_field_errors == "Unable to login with provided credentials.") {
+                showLoginError();
+
+            }
+        }
+    });
 }
 
 function clean_up_json(json) {

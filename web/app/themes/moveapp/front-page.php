@@ -14,8 +14,12 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <a href="#" class="row"><button class="btn col-xs-6">Gratis - 0 kr / mån</button></a>
-                    <a href="http://app.moveapp.se/register/" class="row"><button class="btn btn-green col-xs-6">Premium - 99 kr / mån</button></a>
+                    <div class="row">
+                        <a href="#" data-toggle="modal" data-target="#registerModal"><button class="btn col-xs-6">Gratis - 0 kr / mån</button></a>
+                    </div>
+                    <div class="row">
+                        <a href="http://app.moveapp.se/register/" class="row"><button class="btn btn-green col-xs-6">Premium - 99 kr / mån</button></a>
+                    </div>
                     <p class="col-xs-12 row campaign">
                         Har du en kampanjkod? Registrera dig <a href="http://app.moveapp.se/register/">här</a>.
                     </p>
@@ -415,24 +419,27 @@
                         <span class="or">eller</span>
                     </div>
                 </div>
-                <form>
+                <form id="loginForm">
                     <div class="form-group">
                         <label for="username">E-postadress</label>
-                        <input type="email" id="username" class="form-control"  placeholder="E-post">
+                        <input type="email" id="username" class="form-control"  placeholder="E-post" required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Lösenord</label>
-                        <input type="password" id="password" class="form-control" placeholder="Lösenord">
+                        <input type="password" id="password" class="form-control" placeholder="Lösenord" required>
                     </div>
-                    <div class="row submit">
-                        <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
-                            <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>
+                    <div class="form-group">
+                        <div class="row submit">
+                            <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
+                                <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>
+                            </div>
+                            <div class="col-xs-6 col-sm-5">
+                                <button type="submit" id="btn_login" class="btn btn-default pull-right">Logga in<i class="fa fa-spinner fa-pulse"></i></button>
+                            </div>
                         </div>
-                        <div class="col-xs-6 col-sm-5">
-                            <button type="submit" id="btn_login" class="btn btn-default pull-right">Logga in<i class="fa fa-spinner fa-pulse"></i></button>
+                        <div class="row">
+                            <div class="errors"></div>
                         </div>
-
-                        <div class="errors"></div>
                     </div>
 
                 </form>
@@ -462,7 +469,7 @@
                         <span class="or">eller</span>
                     </div>
                 </div>
-                <form>
+                <form id="registerForm">
                     <div class="form-group">
                         <label for="firstname">Förnamn</label>
                         <input type="text" class="form-control" id="reg_firstname" placeholder="Förnamn">
@@ -479,21 +486,22 @@
                         <label for="password">Lösenord</label>
                         <input type="password" id="reg_password" class="form-control" placeholder="Lösenord">
                     </div>
-                    <div class="row submit">
+                    <div class="row submit form-group">
                         <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
-                            <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>
+<!--                            <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>-->
                         </div>
                         <div class="col-xs-6 col-sm-5">
                             <button type="submit" id="btn_register" class="btn btn-default pull-right">Registrera<i class="fa fa-spinner fa-pulse"></i></button>
                         </div>
-
+                    </div>
+                    <div class="row">
                         <div class="errors"></div>
                     </div>
 
                 </form>
             </div>
             <div class="modal-footer">
-                <p class="text-center">Inget konto? Registrera dig <a href="http://app.moveapp.se/register/">här!</a></p>
+                <p class="text-center">Har du en kampanjkod? Registrera dig <a href="http://app.moveapp.se/register/">här!</a></p>
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
