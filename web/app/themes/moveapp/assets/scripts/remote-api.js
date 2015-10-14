@@ -200,6 +200,7 @@ function login(data){
 }
 
 function register(data){
+    console.log("register");
     $.ajax({
         url: apiUrl+'api/user/register/',
         contentType: "application/json",
