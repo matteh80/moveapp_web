@@ -92,8 +92,8 @@ function timer(start) {
     }
 }
 
-var apiUrl = "http://app.moveapp.se/";
-//var apiUrl = "http://stage2.cmovie.se/";
+//var apiUrl = "http://app.moveapp.se/";
+var apiUrl = "http://stage2.cmovie.se/";
 var user;
 
 function fb_login(register){
@@ -202,7 +202,7 @@ function register(data){
         processData: false,
         dataType: 'json',
         success:function(response){
-            //console.log(response);
+            console.log(response);
             token = response.token;
             sessionStorage.setItem('accessToken', token);
             parts = token.split(".");
@@ -228,7 +228,6 @@ function register(data){
             console.log(responseText.non_field_errors.toString());
             if(responseText.non_field_errors == "Unable to login with provided credentials.") {
                 showLoginError();
-
             }
         }
     });
