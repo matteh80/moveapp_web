@@ -78,10 +78,10 @@ nav {
       transition: all 250ms ease-in;
 
       &:hover, &:focus {
-        box-shadow: 15px 0px 0 $brand-primary inset;
+        box-shadow: 15px 0px 0 $blue inset;
         background: transparent;
         @media(min-width: $grid-float-breakpoint) {
-          box-shadow: 0 -10px 0 $brand-primary inset;
+          box-shadow: 0 -10px 0 $blue inset;
         }
       }
     }
@@ -122,10 +122,10 @@ nav {
   li.active {
 
     a {
-      box-shadow: 6px 0px 0 $brand-primary inset;
+      box-shadow: 6px 0px 0 $blue inset;
 //      background-color: $gray-lighter;
       @media(min-width: $grid-float-breakpoint) {
-        box-shadow: 0 -5px 0 $brand-primary inset;
+        box-shadow: 0 -5px 0 $blue inset;
       }
     }
 
