@@ -51,9 +51,7 @@ jQuery( document ).ready(function($) {
             data = {
                 "username": $('#username').val(),
                 "email": $('#username').val(),
-                "password": $('#password').val(),
-                "first_name": $('#reg_firstname').val(),
-                "last_name": $('#reg_lastname').val()
+                "password": $('#password').val()
             };
             register(data);
         }else{
