@@ -12,7 +12,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row buttons">
                 <div class="col-xs-12">
                     <div class="row">
                         <a href="#" data-toggle="modal" data-target="#registerModal"><button class="btn col-xs-6">Gratis - 0 kr / mån</button></a>
@@ -40,7 +40,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 text-center">
-                <a href="#"><button class="btn">Gratis - 0 kr / mån</button></a>
+                <a href="#" data-toggle="modal" data-target="#registerModal"><button class="btn">Gratis - 0 kr / mån</button></a>
                 <a href="http://app.moveapp.se/register/"><button class="btn btn-green">Premium - 99 kr / mån</button></a>
             </div>
         </div>

@@ -132,6 +132,10 @@ $headerbg : url("../../dist/images/bakgrundsbild3.jpg");
     text-decoration: none;
   }
 
+  .buttons {
+    margin-top: 50px;
+  }
+
   button {
     color: black !important;
     @media(min-width: $screen-md-min) {

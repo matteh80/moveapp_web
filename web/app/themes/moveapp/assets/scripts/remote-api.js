@@ -100,8 +100,8 @@ function timer(start) {
     }
 }
 
-//var apiUrl = "http://app.moveapp.se/";
-var apiUrl = "http://stage2.cmovie.se/";
+var apiUrl = "http://app.moveapp.se/";
+//var apiUrl = "http://stage2.cmovie.se/";
 var user;
 
 function fb_login(register){
