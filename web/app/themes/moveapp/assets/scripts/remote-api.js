@@ -201,6 +201,7 @@ function login(data){
 
 function register(data){
     console.log("register");
+    console.log(data);
     $.ajax({
         url: apiUrl+'api/user/register/',
         contentType: "application/json",
@@ -211,17 +212,6 @@ function register(data){
         dataType: 'json',
         success:function(response){
             console.log(response);
-            token = response.token;
-            sessionStorage.setItem('accessToken', token);
-            parts = token.split(".");
-
-            var json = Base64.decode(parts[1]);
-            json = clean_up_json(json);
-
-            get_user(json.user_id);
-            get_profile(json.user_id);
-            get_subscription();
-            timer(true);
             $('.login-wrap').removeClass("logging-in");
             $('#loginModal').modal('hide');
             $('#registerModal').modal('hide');
