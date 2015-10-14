@@ -36,8 +36,18 @@ jQuery( document ).ready(function($) {
 
     $('#btn_register').click(function(e){
         e.preventDefault();
+        $('.errors').html("");
         $(this).addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
-        if($('#username').val() != "" || $('#password').val() != "" || $('#reg_firstname').val() != "" || $('#reg_lastname').val() != "") {
+        error = false;
+        $('#registerForm input').each(function(index) {
+            if( $(this).val().length === 0 ) {
+                $(this).addClass("has-error");
+                error = true;
+            }else{
+                $(this).removeClass("has-error");
+            }
+        });
+        if(error != true) {
             data = {
                 "username": $('#username').val(),
                 "email": $('#username').val(),
@@ -49,8 +59,6 @@ jQuery( document ).ready(function($) {
         }else{
             showLoginError(true);
         }
-
-
     });
 
 });
@@ -142,12 +150,11 @@ function fb_login(register){
 function showLoginError(register) {
     if(register) {
         $('.errors').html('Kontrollera att du har fyllt i alla fält.').show("slow");
-        $('#btn_register').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
     }else{
         $('.errors').html('Något gick fel. Kontrollera ditt användarnamn och lösenord och försök igen.').show("slow");
-        $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
     }
-
+    $('#btn_login').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
+    $('#btn_register').removeClass('thinking btn-primary').addClass('btn-default').prop("disabled", false);
 }
 
 function login(data){

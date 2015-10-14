@@ -2,7 +2,7 @@
     <div class="container menu">
         <div class="col-md-3 logo">
             <a class="brand" href="<?= esc_url(home_url('/')); ?>">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png"
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo2.png"
                      class="img-responsive"/>
             </a>
         </div>

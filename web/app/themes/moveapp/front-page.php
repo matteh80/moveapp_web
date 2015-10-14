@@ -487,11 +487,8 @@
                         <input type="password" id="reg_password" class="form-control" placeholder="Lösenord">
                     </div>
                     <div class="row submit form-group">
-                        <div class="col-xs-6 col-sm-5 col-sm-offset-1 text">
-<!--                            <a href="http://app.moveapp.se/password/reset">Glömt ditt lösenord?</a>-->
-                        </div>
-                        <div class="col-xs-6 col-sm-5">
-                            <button type="submit" id="btn_register" class="btn btn-default pull-right">Registrera<i class="fa fa-spinner fa-pulse"></i></button>
+                        <div class="col-xs-12 text-center">
+                            <button type="submit" id="btn_register" class="btn btn-default">Registrera<i class="fa fa-spinner fa-pulse"></i></button>
                         </div>
                     </div>
                     <div class="row">

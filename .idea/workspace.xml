@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b403d2f-519b-4d0d-b9c7-9c8c1b0ecfe7" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/moveapp/assets/images/moveapplogo.png" afterPath="$PROJECT_DIR$/web/app/themes/moveapp/assets/images/moveapplogo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_home.scss" afterPath="$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_home.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/moveapp/templates/footer.php" afterPath="$PROJECT_DIR$/web/app/themes/moveapp/templates/footer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/moveapp/front-page.php" afterPath="$PROJECT_DIR$/web/app/themes/moveapp/front-page.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app/themes/moveapp/assets/scripts/remote-api.js" afterPath="$PROJECT_DIR$/web/app/themes/moveapp/assets/scripts/remote-api.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,18 +31,38 @@
       <file leaf-file-name="front-page.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/front-page.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="44.375">
-              <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+            <state vertical-scroll-proportion="-213.83333">
+              <caret line="489" column="57" selection-start-line="489" selection-start-column="57" selection-end-line="489" selection-end-column="57" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="remote-api.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="remote-api.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/assets/scripts/remote-api.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57156134">
-              <caret line="233" column="7" selection-start-line="233" selection-start-column="7" selection-end-line="233" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="156" column="107" selection-start-line="156" selection-start-column="107" selection-end-line="156" selection-end-column="107" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_footer.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_footer.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/templates/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.05703422">
+              <caret line="4" column="93" selection-start-line="4" selection-start-column="93" selection-end-line="4" selection-end-column="93" />
               <folding />
             </state>
           </provider>
@@ -50,8 +71,8 @@
       <file leaf-file-name="_home.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_home.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="775" column="26" selection-start-line="775" selection-start-column="26" selection-end-line="775" selection-end-column="26" />
+            <state vertical-scroll-proportion="-18.833334">
+              <caret line="739" column="35" selection-start-line="739" selection-start-column="35" selection-end-line="739" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -114,6 +135,7 @@
         <option value="$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_home.scss" />
         <option value="$PROJECT_DIR$/web/app/themes/moveapp/front-page.php" />
         <option value="$PROJECT_DIR$/web/app/themes/moveapp/assets/scripts/remote-api.js" />
+        <option value="$PROJECT_DIR$/web/app/themes/moveapp/templates/footer.php" />
       </list>
     </option>
   </component>
@@ -689,24 +711,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_home.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="775" column="26" selection-start-line="775" selection-start-column="26" selection-end-line="775" selection-end-column="26" />
+        <state vertical-scroll-proportion="-18.833334">
+          <caret line="739" column="35" selection-start-line="739" selection-start-column="35" selection-end-line="739" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/front-page.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="44.375">
-          <caret line="21" column="26" selection-start-line="21" selection-start-column="26" selection-end-line="21" selection-end-column="26" />
+        <state vertical-scroll-proportion="-213.83333">
+          <caret line="489" column="57" selection-start-line="489" selection-start-column="57" selection-end-line="489" selection-end-column="57" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/assets/scripts/remote-api.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57156134">
-          <caret line="233" column="7" selection-start-line="233" selection-start-column="7" selection-end-line="233" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="156" column="107" selection-start-line="156" selection-start-column="107" selection-end-line="156" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/assets/styles/layouts/_footer.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/app/themes/moveapp/templates/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05703422">
+          <caret line="4" column="93" selection-start-line="4" selection-start-column="93" selection-end-line="4" selection-end-column="93" />
           <folding />
         </state>
       </provider>
