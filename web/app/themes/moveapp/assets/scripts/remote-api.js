@@ -37,7 +37,7 @@ jQuery( document ).ready(function($) {
     $('#btn_register').click(function(e){
         e.preventDefault();
         $(this).addClass('thinking btn-primary').removeClass('btn-default').attr("disabled", "disabled");
-        if($('#username').val() != "" && $('#password').val() != "" && $('#reg_firstname').val() != "" && $('#reg_lastname').val() != "") {
+        if($('#username').val() != "" || $('#password').val() != "" || $('#reg_firstname').val() != "" || $('#reg_lastname').val() != "") {
             data = {
                 "username": $('#username').val(),
                 "email": $('#username').val(),
