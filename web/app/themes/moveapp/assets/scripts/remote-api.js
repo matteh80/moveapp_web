@@ -49,9 +49,11 @@ jQuery( document ).ready(function($) {
         });
         if(error != true) {
             data = {
-                "username": $('#username').val(),
-                "email": $('#username').val(),
-                "password": $('#password').val()
+                "username": $('#reg_username').val(),
+                "email": $('#reg_username').val(),
+                "password": $('#reg_password').val(),
+                "first_name": $('#reg_firstname').val(),
+                "last_name": $('#reg_lastname').val()
             };
             register(data);
         }else{
