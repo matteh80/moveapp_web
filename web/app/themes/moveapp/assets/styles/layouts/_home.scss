@@ -47,6 +47,7 @@ $headerbg : url("../../dist/images/bakgrundsbild4.jpg");
     }
     background: $headerbg;
     background-size: cover;
+    background-position-x: 100%;
   }
   h1 {
     font-size: 45px;
