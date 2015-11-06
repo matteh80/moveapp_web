@@ -7,6 +7,9 @@
     <script src='https://www.google.com/recaptcha/api.js'></script>
     </script>
 
+    <script src="https://use.typekit.net/eyz5adr.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
     <script>(function () {
             var _fbq = window._fbq || (window._fbq = []);
             if (!_fbq.loaded) {

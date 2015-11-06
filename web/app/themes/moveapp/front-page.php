@@ -6,7 +6,7 @@
                     <div class="row">
                         <h1 class="col-xs-12">Workout made easy!</h1>
                         <h4 class="col-xs-10">
-                            <p>Träna - hur, var och när du vill - i mobilen, läsplattan eller på TV:n.</p>
+                            <p style="font-size: 42px;">Träna - hur, var och när du vill - i mobilen, läsplattan eller på TV:n.</p>
                             <p>Vi erbjuder 100-tals träningsfilmer på 10-60 min.<br>Träna core, zumba, fyspass, pilates, boxpass, olika typer av yoga mm.</p>
                         </h4>
                     </div>
@@ -43,7 +43,11 @@
                 <a href="#" data-toggle="modal" data-target="#registerModal"><button class="btn">Gratis - 0 kr / mån</button></a>
                 <a href="http://app.moveapp.se/register/"><button class="btn btn-green">Premium - 99 kr / mån</button></a>
             </div>
+
         </div>
+        <p class="col-xs-12 row campaign" style="margin-top: 10px; text-align: center;">
+            Har du en kampanjkod? Registrera dig <a href="http://app.moveapp.se/register/">här</a>.
+        </p>
 <!--        <div class="row">-->
 <!--            <div class="appstore-wrapper">-->
 <!--                <a href="https://play.google.com/store/apps/details?id=com.timedev.moveapp" class="col-sm-6 text-center">-->

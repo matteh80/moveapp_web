@@ -98,7 +98,10 @@ $headerbg : url("../../dist/images/bakgrundsbild4.jpg");
   }
 
   p {
-    font-family: "Futura LT Condensed";
+    font-family: "futura-pt-condensed",sans-serif;
+    font-weight: 100;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
 
     &.campaign {
       font-size: 21px;
@@ -110,7 +113,7 @@ $headerbg : url("../../dist/images/bakgrundsbild4.jpg");
     font-family: "Futura LT Heavy";
     font-size: 48px;
     margin-bottom: 20px;
-    //text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
 //    background-color: rgba(255, 255, 255, 0.65);
     @media(min-width: $screen-md-min) {
       font-size: 70px;
@@ -121,10 +124,11 @@ $headerbg : url("../../dist/images/bakgrundsbild4.jpg");
   h4 {
     font-size: 21px;
 //    background-color: rgba(255, 255, 255, 0.65);
-    font-family: "Futura LT Condensed";
-    //text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
+    font-family: "futura-pt-condensed",sans-serif;
+    font-weight: 100;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.8);
     @media(min-width: $screen-md-min) {
-      font-size: 28px;
+      font-size: 32px;
     }
   }
 
@@ -133,7 +137,7 @@ $headerbg : url("../../dist/images/bakgrundsbild4.jpg");
   }
 
   .buttons {
-    margin-top: 50px;
+    margin-top: 10px;
   }
 
   button {
