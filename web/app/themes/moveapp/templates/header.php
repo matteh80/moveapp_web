@@ -2,7 +2,7 @@
     <div class="container login-container">
         <div class="row">
             <a class="brand col-sm-4" href="<?= esc_url(home_url('/')); ?>">
-                <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png" class="img-responsive"/>
+                <img src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/logga_symbol.png" class="img-responsive"/>
             </a>
 
             <div id="button-wrapper" class="col-sm-6 pull-right hidden-xs">
@@ -41,7 +41,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><img
-                        src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/moveapplogo.png"
+                        src="<?php bloginfo('stylesheet_directory'); ?>/dist/images/logga_symbol.png"
                         class="img-responsive"/></a>
             </div>
             <?php

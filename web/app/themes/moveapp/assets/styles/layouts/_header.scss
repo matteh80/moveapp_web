@@ -77,7 +77,7 @@ header {
 
   nav {
     @media(min-width: $grid-float-breakpoint) {
-      background-color: rgba(246,245,245,0.7);
+      background-color: rgba(0,0,0,0.15) !important;
     }
   }
 }

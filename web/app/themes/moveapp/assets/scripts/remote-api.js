@@ -132,7 +132,6 @@ function fb_login(register){
                     console.log(responseText.non_field_errors.toString());
                     if(responseText.non_field_errors == "Unable to login with provided credentials.") {
                         showLoginError();
-
                     }
                 }
             });
@@ -193,7 +192,6 @@ function login(data){
             console.log(responseText.non_field_errors.toString());
             if(responseText.non_field_errors == "Unable to login with provided credentials.") {
                 showLoginError();
-
             }
         }
     });
@@ -220,6 +218,7 @@ function register(data){
         error: function(errorThrown){
             console.log(errorThrown);
             if(errorThrown.statusText == "error") {
+                console.log("dfsfdsfdsfdsf");
                 showLoginError();
             }
             responseText = JSON.parse(errorThrown.responseText);

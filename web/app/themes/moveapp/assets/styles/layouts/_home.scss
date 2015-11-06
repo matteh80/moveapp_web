@@ -37,7 +37,7 @@ section.row{
     }
   }
 }
-$headerbg : url("../../dist/images/bakgrundsbild3.jpg");
+$headerbg : url("../../dist/images/bakgrundsbild4.jpg");
 .mobileheader {
   padding-top: 0 !important;
   .bg {
@@ -98,7 +98,7 @@ $headerbg : url("../../dist/images/bakgrundsbild3.jpg");
   }
 
   p {
-    font-family: "Futura LT";
+    font-family: "Futura LT Condensed";
 
     &.campaign {
       font-size: 21px;
@@ -119,12 +119,12 @@ $headerbg : url("../../dist/images/bakgrundsbild3.jpg");
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 21px;
 //    background-color: rgba(255, 255, 255, 0.65);
     font-family: "Futura LT Condensed";
     //text-shadow: 2px 2px 2px rgba(0,0,0,0.8);
     @media(min-width: $screen-md-min) {
-      font-size: 26px;
+      font-size: 28px;
     }
   }
 
