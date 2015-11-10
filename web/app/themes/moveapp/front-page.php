@@ -366,7 +366,7 @@
                     <h4 class="price">0 kr / mån</h4>
                     <hr>
                     <ul class="features">
-                        <li>6 träningsfilmer</li>
+                        <li>7 träningsfilmer</li>
                         <li>100-tals enkilda övningar</li>
                         <li>GPS-träning</li>
                         <li>Kalender</li>
