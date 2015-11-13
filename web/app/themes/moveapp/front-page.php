@@ -367,7 +367,7 @@
                     <hr>
                     <ul class="features">
                         <li>7 träningsfilmer</li>
-                        <li>100-tals enkilda övningar</li>
+                        <li>100-tals enskilda övningar</li>
                         <li>GPS-träning</li>
                         <li>Kalender</li>
                         <li>Statistik</li>
@@ -386,7 +386,7 @@
                     <hr>
                     <ul class="features">
                         <li>100-tals träningsfilmer</li>
-                        <li>100-tals enkilda övningar</li>
+                        <li>100-tals enskilda övningar</li>
                         <li>Veckoprogram</li>
                         <li>GPS-träning</li>
                         <li>Kalender</li>
