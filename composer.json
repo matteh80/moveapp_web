@@ -48,7 +48,8 @@
     "wpackagist-plugin/wordpress-seo": ">=2.2",
     "wpackagist-plugin/favicon-by-realfavicongenerator": ">=1.2.15",
     "wpackagist-plugin/wpmandrill": ">=1.33",
-    "wpackagist-plugin/wp-user-avatar": ">=2.0.3"
+    "wpackagist-plugin/wp-user-avatar": ">=2.0.3",
+    "wpackagist-plugin/facebook": ">=1.5.5"
   },
   "require-dev": {
 

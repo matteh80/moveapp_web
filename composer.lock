@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "3f513bd27878ad7343383f592d149e56",
-    "content-hash": "6ffa0535eafe3f08e58c14128e36d324",
+    "hash": "6aaa95a712e72933cb135aacfc81bdd2",
+    "content-hash": "ee0bd229ba1c07306e41530922fad63e",
     "packages": [
         {
             "name": "composer/installers",
@@ -240,6 +240,26 @@
                 "environment"
             ],
             "time": "2014-10-16 14:50:21"
+        },
+        {
+            "name": "wpackagist-plugin/facebook",
+            "version": "1.5.5",
+            "source": {
+                "type": "svn",
+                "url": "http://plugins.svn.wordpress.org/facebook/",
+                "reference": "tags/1.5.5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/facebook.1.5.5.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/facebook/"
         },
         {
             "name": "wpackagist-plugin/favicon-by-realfavicongenerator",
