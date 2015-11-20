@@ -16,7 +16,7 @@
         <?php the_excerpt(); ?>
         <div class="author-wrapper">
             <?php echo get_avatar(get_the_author_meta('ID')); ?>
-            <span class="byline author vcard"><?= __('By', 'sage'); ?> <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?= get_the_author(); ?></a></span>
+            <span class="byline author vcard"><?= __('Av', 'sage'); ?> <a href="<?= get_author_posts_url(get_the_author_meta('ID')); ?>" rel="author" class="fn"><?= get_the_author(); ?></a></span>
         </div>
         <hr>
         <div class="addthis_sharing_toolbox"></div>
