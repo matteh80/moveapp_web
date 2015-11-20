@@ -38,14 +38,14 @@ $panel-padding: 15px;
     .entry-summary, .entry-content {
       padding: 15px;
     }
-    .author {
+    .author-wrapper {
       .avatar {
         border-radius: 50%;
-        height: 50px;
-        width: 50px;
+        height: 70px;
+        width: 70px;
         @media(min-width: $screen-md-min) {
-          height: 70px;
-          width: 70px;
+          height: 90px;
+          width: 90px;
         }
       }
     }
