@@ -1,51 +1,59 @@
-.blog .main {
+$panel-padding: 15px;
+
+.blog .main, .single-post .main, .search .main, .archive .main {
   article {
     margin-top: 50px;
     position: relative;
     overflow: hidden;
 
-    &.post {
-      transition: 500ms;
-      &:hover {
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    header {
+      background-color: transparent !important;
+      .entry-title {
+        margin-left: $panel-padding; margin-right: $panel-padding; margin-bottom: 5px;
+        //color: darken($brand-primary, 35%);
 
-        .text {
-          bottom: 100%;
-          @media(min-width: $screen-xs-min) {
-            bottom: 40%;
-          }
-          @media(min-width: $screen-sm-min) {
-            bottom: 50%;
-          }
-          @media(min-width: $screen-md-min) {
-            bottom: 30%;
-          }
+        font-size: 20px;
+        @media(min-width: $screen-md-min) {
+          font-size: 30px;
         }
-        .entry-summary {
-          bottom: 0%;
-        }
+
       }
     }
-    .entry-summary {
-      position: absolute;
-      bottom: -95%;
+
+    &.post {
+
+    }
+
+    time {
+      font-size: smaller;
+      margin-left: $panel-padding;
+
       @media(min-width: $screen-md-min) {
-        bottom: -40%;
+
       }
-      transition: 500ms;
-      background-color: rgba(255,255,255,0.85);
-      padding: 10px;
-      max-width: 95%;
-      color: #000;
+    }
+    .byline {
+      font-size: smaller;
+    }
+    .entry-summary, .entry-content {
+      padding: 15px;
+    }
+    .author {
+      .avatar {
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        @media(min-width: $screen-md-min) {
+          height: 70px;
+          width: 70px;
+        }
+      }
     }
   }
 }
 
 .main {
   article {
-    margin-top: 50px;
-    position: relative;
-    overflow: hidden;
 
     header {
       .thumb {
@@ -54,58 +62,9 @@
         img {
 
         }
-
-        .text {
-          position: absolute;
-          bottom: 5%;
-          transition: 500ms;
-
-          h1 {
-            position: relative;
-            background-color: rgba(0,0,0,0.85);
-            max-width: 95%;
-            color: #fff;
-            &.inverted {
-              background-color: #000;
-              color: #fff;
-            }
-            font-size: 18px;
-            @media(min-width: $screen-sm-min) {
-              font-size: 24px;
-            }
-            @media(min-width: $screen-md-min) {
-              font-size: 32px;
-            }
-            @media(min-width: $screen-lg-min) {
-              font-size: 38px;
-            }
-            padding: 10px 10px 10px 30px;
-            margin-bottom: 20px;
-          }
-          time {
-            font-family: "Futura LT";
-            position: absolute;
-            color: black;
-
-            left: 5%;
-            padding: 5px;
-            background: #fff;
-            font-size: 13px;
-            top: -8px;
-            @media(min-width: $screen-md-min) {
-              font-size: 18px;
-              top: -15px;
-            }
-          }
-          .byline {
-            display: none;
-          }
-        }
       }
     }
     .entry-content {
-      margin-top: 20px;
-      position: relative;
       
       .tags {
         color: darken($brand-primary, 25%);

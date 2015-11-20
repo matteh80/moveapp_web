@@ -419,7 +419,7 @@
                             <i class="fa fa-facebook"></i> Logga in med Facebook
                         </div>
                     </div>
-                    <div class="text-center divider col-xs-12">
+                    <div class="text-center divider col-xs-12"<!---->>         OOLOO
                         <span class="or">eller</span>
                     </div>
                 </div>

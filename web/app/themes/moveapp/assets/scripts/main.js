@@ -19,6 +19,7 @@
         'common': {
             init: function () {
                 // JavaScript to be fired on all pages
+                $('body').css("display", "block !important")
             },
             finalize: function () {
                 //FACEBOOK
@@ -86,6 +87,7 @@
                     });
 
                 }
+
             }
         },
         // About us page, note the change from about-us to about_us.
