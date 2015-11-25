@@ -251,7 +251,7 @@
                 </p>
                 <h3>Våra kategorier</h3>
                 <p>
-                    Core, Cykel, Dans, Fokus, Pilates, Puls, Styrka, Yoga, Gravidyoga.
+                    Core, Cykel, Dans, Fokus, Pilates, Puls, Styrka, Yoga, Gravidyoga, Löpning och Calisthenics.
                 </p>
                 <img src="<?= get_template_directory_uri(); ?>/dist/images/partners.png" class="partners img-responsive" />
             </div>
