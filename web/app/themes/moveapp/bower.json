@@ -11,7 +11,8 @@
     "bootstrap-sass-official": "3.3.4",
     "components-font-awesome": "4.3.0",
     "datejs": "~1.0.0-rc3",
-    "jquery-ui": "~1.11.4"
+    "jquery-ui": "~1.11.4",
+    "js-cookie": "~2.0.4"
   },
   "overrides": {
     "modernizr": {

@@ -167,6 +167,17 @@
             </div><!-- /.modal-content -->
         </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
+
+    <div class="modal fade" id="shopModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <h1>nu lanserar vi vår webshop</h1>
+                <h2>15% på hela sortimentet t.o.m. 2015.12.31</h2>
+                <a href="http://moveappshop.com" target="_blank"><button class="btn shop-btn">Kika in i shoppen</button></a>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
 </footer>
 
 <?php

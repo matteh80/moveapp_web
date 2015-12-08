@@ -25,6 +25,9 @@
     },
     "modernizr.js": {
       "bower": ["modernizr"]
+    },
+    "js.cookie.js": {
+      "bower": ["js-cookie"]
     }
   },
   "config": {

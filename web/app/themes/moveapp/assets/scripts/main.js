@@ -52,6 +52,31 @@
                         });
                     });
                 });
+                // SHow shop modal
+                // check cookie
+                var visited = Cookies.get("shop_christmas");
+                if (visited == null) {
+                    $('#shopModal').modal('show');
+                    function centerModal() {
+                        $(this).css('display', 'block');
+                        var $dialog = $(this).find(".modal-dialog"),
+                            offset = ($(window).height() - $dialog.height()) / 2,
+                            bottomMargin = parseInt($dialog.css('marginBottom'), 10);
+
+                        // Make sure you don't hide the top part of the modal w/ a negative margin if it's longer than the screen height, and keep the margin equal to the bottom margin of the modal
+                        if (offset < bottomMargin) offset = bottomMargin;
+                        $dialog.css("margin-top", offset);
+                    }
+
+                    $(document).on('show.bs.modal', '.modal', centerModal);
+                    $(window).on("load resize", function () {
+                        $('.modal:visible').each(centerModal);
+                    });
+                    $('.shop-btn').click(function(e) {
+                        $('#shopModal').modal('hide');
+                    });
+                }
+                Cookies.set('shop_christmas', 'yes', { expires: 60, path: '/' });
             }
         },
         // Home page

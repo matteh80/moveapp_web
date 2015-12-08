@@ -81,7 +81,8 @@ function assets()
     }
 
     wp_enqueue_script('modernizr', asset_path('scripts/modernizr.js'), [], null, true);
-    wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery'], null, true);
+    wp_enqueue_script('js-cookie', asset_path('scripts/js.cookie.js'), [], null, true);
+    wp_enqueue_script('sage_js', asset_path('scripts/main.js'), ['jquery', 'js-cookie'], null, true);
     wp_enqueue_script('remote-api_js', asset_path('scripts/remote-api.js'), ['jquery'], null, true);
     wp_enqueue_script('live-edit_js', asset_path('scripts/live-edit.js'), ['jquery'], null, true);
 }
