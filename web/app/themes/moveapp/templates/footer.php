@@ -171,6 +171,7 @@
     <div class="modal fade" id="shopModal">
         <div class="modal-dialog">
             <div class="modal-content">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                 <h1>nu lanserar vi vår webshop</h1>
                 <h2>15% på hela sortimentet t.o.m. 2015.12.31</h2>
                 <a href="http://moveappshop.com" target="_blank"><button class="btn shop-btn">Kika in i shoppen</button></a>
