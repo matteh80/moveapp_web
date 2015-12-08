@@ -54,7 +54,7 @@
                 });
                 // SHow shop modal
                 // check cookie
-                var visited = Cookies.get("shop_christmas_");
+                var visited = Cookies.get("shop_christmas");
                 if (visited == null) {
                     $('#shopModal').modal('show');
                     function centerModal() {
@@ -76,7 +76,7 @@
                         $('#shopModal').modal('hide');
                     });
                 }
-                //Cookies.set('shop_christmas', 'yes', { expires: 60, path: '/' });
+                Cookies.set('shop_christmas', 'yes', { expires: 60, path: '/' });
             }
         },
         // Home page
