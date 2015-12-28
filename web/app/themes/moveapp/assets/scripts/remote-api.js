@@ -100,7 +100,7 @@ function timer(start) {
     }
 }
 
-var apiUrl = "http://api.moveapp.se/";
+var apiUrl = "http://app.moveapp.se/";
 //var apiUrl = "http://stage2.cmovie.se/";
 var user;
 
