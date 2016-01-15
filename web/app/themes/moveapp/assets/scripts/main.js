@@ -56,7 +56,7 @@
                 // check cookie
                 var visited = Cookies.get("shop_christmas");
                 if (visited == null) {
-                    $('#shopModal').modal('show');
+                    //$('#shopModal').modal('show');
                     function centerModal() {
                         $(this).css('display', 'block');
                         var $dialog = $(this).find(".modal-dialog"),
